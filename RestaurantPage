@@ -22,13 +22,13 @@
             <button type="button">Нэвтрэх</button>
         </nav>
     </header>
-    <section id="Restaurant">
+    <section id="Restaurant overview">
         <header>
             <p id="Restaurant name">Burger&Pizza</p>
             <nav>           </nav>
             </header>
         <article id="overview">
-            <h2>Дэлгэрэнгүй</h2>
+            <h3>Дэлгэрэнгүй</h3>
             <p>
                 <ul>
                     <li>Хоолны төрөл</li>
@@ -37,9 +37,11 @@
                     <li>Хоол</li>
                     <li>Үйлчилгээ</li>
                     <li>Орчин</li>
-
                 </ul>
             </p>
+            <ul>
+                <li><img src="/accest/"></li>
+            </ul>
         </article>
 
     </section>
