@@ -22,46 +22,25 @@
             <button type="button">Нэвтрэх</button>
         </nav>
     </header>
-     <section>
-        <article>
-            <h2>Юм идэх газраа олцгооё.</h2>
+    <section id="Restaurant">
+        <header>
+            <p id="Restaurant name">Burger&Pizza</p>
+            <nav>           </nav>
+            </header>
+        <article id="overview">
+            <h2>Дэлгэрэнгүй</h2>
+            <p>
+                <ul>
+                    <li>Хоолны төрөл</li>
+                    <li>Хоолнууд</li>
+                    <li>Онцлог</li>
+                    <li>Хоол</li>
+                    <li>Үйлчилгээ</li>
+                    <li>Орчин</li>
+                </ul>
+            </p>
         </article>
-        <article>
-                <button>Рестораны нэрээр</button>
-                <button>Үнэлгээгээр</button>
-                <button>Хоолны төрлөөр</button>
-                <button>Үнээр</button>
-                <button>Байршлаар</button>
-            <form role="search">
-            <input type="search" placeholder="Рестораны нэр/хоол">
-                <button type="submit">Хайх</button>
-            </form>
-        </article>
-        <article>
-            <img src="" alt="goy background" width="1128" height="416">
-                <h2>Хаана юу идэхээ мэдэхгүй төөрөөд л явна уу? Биднийг сонго Yumidy</h2>
-        </article>
-     </section>
-     <section>
-        <article>
-            <h3>Best Restaurants</h3>
-            <ul>
-                <li>Restaurant1</li>
-                <li>Restaurant2</li>
-                <li>Restaurant3</li>
-                <li>Restaurant4</li>
-                <li>Restaurant5</li>
-                <li>Restaurant6</li>
-            </ul>
-        </article>
-    </section>
-    <section>
-        <article><h3>Recent reviews</h3>
-            <ul>
-                <li>Review1</li>
-                <li>Review2</li>
-            </ul>
-        </article>
+
     </section>
     <footer>
         <nav>
