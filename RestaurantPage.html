@@ -26,7 +26,7 @@
         <section id="Restaurant-overview">
             <h2 id="Restaurant-name">Burger&Pizza</h2>
             <label for="Restaurant-rating"></label>
-            <meter id="Restaurant-rating" value="3" min="0" max="5"></meter>
+            <meter id="Restaurant-rating" value="3" min="1" max="5"></meter>
             <input name="heart" type="checkbox">
             <button name="share"></button>
             <article id="overview">
@@ -50,17 +50,17 @@
                         <li>
                             Хоол
                             <label for="food-rating"></label>
-                            <meter id="food-rating" value="3" min="0" max="5"></meter>
+                            <meter id="food-rating" value="3" min="1" max="5"></meter>
                         </li>
                         <li>
                             Үйлчилгээ
                             <label for="service-rating"></label>
-                            <meter id="service-rating" value="3" min="0" max="5"></meter>
+                            <meter id="service-rating" value="3" min="1" max="5"></meter>
                         </li>
                         <li>
                             Орчин
                             <label for="atmosphere-rating"></label>
-                            <meter id="atmosphere-rating" value="3" min="0" max="5"></meter>
+                            <meter id="atmosphere-rating" value="3" min="1" max="5"></meter>
                         </li>
                         <li>
                             <nav>403, 4th floor, Shangrila-Mall, olympic Stress Sukhbaatar district, Ulaanbaatar Mongolia</nav>
@@ -83,11 +83,73 @@
                     <li><img src="/accest//restaurantpage5.png" alt="restaurant page images"></li>
                 </ul>
             </article>
-
         </section>
         <section id="Reviews">
             <h2>Нийт санал</h2>
-
+            <form role="write">
+                <button type="button" id="writeReview">Санал өгөх</button>
+            </form>
+            <ul>
+                <li>
+                    <label for="5stars"></label>
+                    <label for="5stars"></label>
+                    <meter id="5starsreviews" value="5" min="1" max="5"></meter>
+                    <progress id="5starsreviews" value="5" min="1" max="5"></progress>
+                </li>
+                <li>
+                    <label for="4stars"></label>
+                    <label for="4stars"></label>
+                    <meter id="4starsreviews" value="4" min="1" max="5"></meter>
+                    <progress id="4starsreviews" value="" min="0" max="100"></progress>
+                </li>
+                <li>
+                    <label for="3stars"></label>
+                    <meter id="3stars" value="3" min="1" max="5"></meter>
+                    <label for="3starsreviews"></label>
+                    <progress id="3starsreviews" value="3" min="" max="100"></progress>
+                </li>
+                <li>
+                    <label for="2stars"></label>
+                    <meter id="2stars" value="2" min="1" max="5"></meter>
+                    <label for="2starsreviews"></label>
+                    <progress id="2starsreviews" value="" min="0" max="100"></progress>
+                </li>
+                <li>
+                    <label for="1stars"></label>
+                    <meter id="1stars" value="1" min="1" max="5"></meter>
+                    <label for="1starsreviews"></label>
+                    <progress id="1starsreviews" value="" min="0" max="100"></progress>
+                </li>
+            </ul>
+            <form>
+                <input type="search" placeholder="Санал хайх" id="searchReview">
+                <select>
+                    <option value="DateFirst">Шинэ нь эхэндээ</option>
+                    <option value="DateLast">Хуучин нь эхэндээ</option>
+                    <option value="DetailFirst">Нарийвчлалтай нь эхэндээ</option>
+                    <option value="DetailLast">Нарийвчлалгүй нь эхэндээ</option>
+                </select>
+            </form>
+            <article id="review">
+                <h3>Билгүүн</h3>
+                <img src="/accest/girl.png">
+                <label for="Review-rating"></label>
+                <meter id="Review-rating" value="3" min="1" max="5"></meter>
+                <p></p>
+                <button type="button" name="report"></button>
+                <p>
+                    Амт гаагүй ээ муухай бол биш. Яагаад ч юм тийм өвөрмөц гоё байх болов уу гэсэн хүлээлттэй байсан.
+                    Хүлээлтэд хүрсэнгүй мөн уух ундаагаа тусад нь авах хэрэгтэй.
+                    Орчин бол миний бодсоноос жижиг байсан. Намайг ороход цэвэрхэн байсан.
+                    Үйлчилгээ бол мэдэхгүй ээ, би өөрөө ажилладаг юм шиг л байсан. Захиалга өгөөд өөрөө хоолоо авч ширээн дээрээ очсон (би л нааш цаашаа гүйгээд) тэгдэг юм байлгүй дээ.
+                    Нэг удаа ороход хангалттай санагдлаа. 
+                </p>
+                <img src="/accest/reviewImage.png">
+                <form>
+                    <input type="radio" name="like">
+                    <input type="radio" name="like">
+                </form>
+            </article>
         </section>
     </main>
     <footer>
