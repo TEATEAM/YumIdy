@@ -23,22 +23,42 @@
         </nav>
     </header>
     <section id="Restaurant overview">
-        <header>
-            <p id="Restaurant name">Burger&Pizza</p>
-            <nav>           </nav>
-            </header>
+        <h2 id="Restaurant name">Burger&Pizza</h2>
+        <label for="Restaurant-rating"></label>
+        <meter id="Restaurant-rating" value="3" min="0" max="5"></meter>
+        
+        </header>
         <article id="overview">
             <h3>Дэлгэрэнгүй</h3>
-            <p>
                 <ul>
-                    <li>Хоолны төрөл</li>
-                    <li>Хоолнууд</li>
-                    <li>Онцлог</li>
-                    <li>Хоол</li>
-                    <li>Үйлчилгээ</li>
-                    <li>Орчин</li>
+                    <li>
+                        Хоолны төрөл
+                        <p><meter>burger</meter></p>
+                    </li>
+                    <li>
+                        Хоолнууд
+                        <p>Lunch, Dinner</p>
+                    </li>
+                    <li>
+                        Онцлог
+                        <p>Free wifi, Takeout, Seating</p>
+                    </li>
+                    <li>
+                        Хоол
+                        <label for="food-rating"></label>
+                        <meter id="Restaurant food" value="3" min="0" max="5"></meter>
+                    </li>
+                    <li>
+                        Үйлчилгээ
+                        <label for="service-rating"></label>
+                        <meter id="Restaurant service" value="3" min="0" max="5"></meter>
+                    </li>
+                    <li>
+                        Орчин
+                        <label for="atmosphere-rating"></label>
+                        <meter id="Restaurant atmosphere" value="3" min="0" max="5"></meter>
+                    </li>
                 </ul>
-            </p>
             <ul>
                 <li><img src="/accest/"></li>
             </ul>
