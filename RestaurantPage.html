@@ -27,9 +27,10 @@
             <h2 id="Restaurant-name">Burger&Pizza</h2>
             <label for="Restaurant-rating"></label>
             <meter id="Restaurant-rating" value="3" min="1" max="5"></meter>
-            <input name="heart" type="checkbox">
+            <label for="heart"></label>
+            <input name="heart" id="heart" type="checkbox">
             <button name="share">
-                <img src="/accest/share.png" alt="share" width="37.03" height="33.79">
+                <img src="/accest/share.png" alt="share">
             </button>
             <article id="overview">
                 <h3>Дэлгэрэнгүй</h3>
@@ -146,11 +147,10 @@
                     Нэг удаа ороход хангалттай санагдлаа. 
                 </p>
                 <img src="/accest/reviewImage.png" alt="food review">    
-                <label for="likedislike"></label>
-                <form id="likedislike">
-                    <input type="radio" name="like" >
-                    <input type="radio" name="dislike">
-                </form>
+                <label for="like"></label>
+                <input type="radio" name="like" >
+                <label for="dislike"></label>
+                <input type="radio" name="dislike">
             </article>
         </section>
     </main>
