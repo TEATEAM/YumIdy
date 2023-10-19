@@ -47,9 +47,9 @@
     </section>
     <footer>
         <nav>
-            <a href="https://www.facebook.com"><img src="Facebook-icon.png" alt="Facebook" width="15" height="17"></a>
-            <a href="https://www.twitter.com"><img src="Twitter-icon.png" alt="Twitter" width="15" height="17"></a>
-            <a href="https://www.instagram.com"><img src="Instagram-icon.png" alt="Instagram" width="15" height="17"></a>
+            <a href="https://www.facebook.com"><img src="/accest/facebook.png" alt="Facebook" width="15" height="17"></a>
+            <a href="https://www.twitter.com"><img src="accest/twitter.png" alt="Twitter" width="15" height="17"></a>
+            <a href="https://www.instagram.com"><img src="accest/instagram.png" alt="Instagram" width="15" height="17"></a>
         </nav>
         <article>
             &copy; 2023 Yumidy. All Rights Reserved.
