@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yumidy Restaurant Page</title>
     <meta name="description" content="Explore Yumidy to find the best restaurants, read reviews, and make informed dining choices.">
+    <link rel="stylesheet" href="restaurantpagestyles.css">
 </head>
 <body>
     <header>
@@ -122,6 +123,7 @@
                     <progress id="1starsreviews" value="0"  max="100"></progress>
                 </li>
             </ul>
+            <label for="searchReview"></label>
             <input type="search" placeholder="Санал хайх" id="searchReview">
             <label for="sort"></label>
             <select name="sort" id="sort">
@@ -148,9 +150,9 @@
                 </p>
                 <img src="/accest/reviewImage.png" alt="food review">    
                 <label for="like"></label>
-                <input type="radio" name="like" >
+                <input type="radio" id="likedislike" name="likedislike" >
                 <label for="dislike"></label>
-                <input type="radio" name="dislike">
+                <input type="radio" id="likedislike" name="likedislike">
             </article>
         </section>
     </main>
