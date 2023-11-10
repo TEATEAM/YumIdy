@@ -69,8 +69,11 @@ h2{
 }
 button{
   background-color: rgba(0, 0, 0, 0);
-  border: 0;
-
+  border: 3;
+  color: var(--text-color);
+  border-color: var(--accent-color);
+  border-radius: 20px;
+  border-style: solid;
 }
 em{
   display: flex;
