@@ -1,90 +1,50 @@
 :root {
-    --color-accent: #EE5151;
-    --color-background: #0F0F0F;
-    --color-second: #C7C8D2;
-    --color-text: #FFFFFF;
+    --accent-color: #EE5151;
+    --bg-color: #0F0F0F;
+    --bg-second-color: #C7C8D2;
+    --text-color: #FFFFFF;
     --text-style {
         align-self: stretch;
-        color: var(--color-text);
+        color: var(--text-color);
         font-family: "Quicksand-Medium", Helvetica;
         font-size: 15px;
         font-weight: 400;
         letter-spacing: 0;
         line-height: normal;
         position: relative;
-      };
+    };
 }
 *{
-    background-color: var(--color-background);
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 .restaurant-page {
-    background-color: var(--color-background);
+    background-color: var(--bg-color);
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
   }
-  
-  .restaurant-page .footer {
-    background-color: transparent;
-    height: 103px;
-    left: 1px;
-    position: absolute;
-    top: 3259px;
-    width: 1440px;
-  }
-  
-  .restaurant-page .copyright {
-    height: 103px;
-    width: 1442px;
-  }
-  
-  .restaurant-page .overlap-group-2 {
-    background-color: var(--color-background);
-    box-shadow: inset 0px 4px 10px #f0fbff33;
-    height: 103px;
-    position: relative;
-    width: 1440px;
-  }
-  
-  .restaurant-page .social-link {
-    height: 17px;
-    left: 664px;
-    position: absolute;
-    top: 26px;
-    width: 107px;
-  }
-  
-  .restaurant-page .element-yumidey-all {
-    color: transparent;
-    font-family: "Roboto-Regular", Helvetica;
-    font-size: 15px;
-    font-weight: 400;
-    left: 592px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    text-align: center;
-    top: 61px;
-    white-space: nowrap;
-    width: 256px;
-  }
-  
-  .restaurant-page .span {
-    color: #ffffff;
-  }
-  
-  .restaurant-page .text-wrapper-2 {
-    color: #ee5151;
-  }
-  
-  .restaurant-page .reviews {
-    height: 2243px;
-    left: 33px;
-    position: absolute;
-    top: 952px;
-    width: 1375px;
-  }
+.restaurant-page .overlap-group-2 {
+  background-color: var(--color-background);
+  box-shadow: inset 0px 4px 10px #f0fbff33;
+  height: 103px;
+  position: relative;
+  width: 1440px;
+} 
+.restaurant-page .span {
+  color: #ffffff;
+}  
+.restaurant-page .text-wrapper-2 {
+  color: #ee5151;
+}
+.restaurant-page .reviews {
+  height: 2243px;
+  left: 33px;
+  position: absolute;
+  top: 952px;
+  width: 1375px;
+}
   
   .restaurant-page .restaurant {
     height: 623px;
