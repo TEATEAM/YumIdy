@@ -38,6 +38,7 @@ h2{
   & h3{
     color: var(--text-color);
     text-align: center;
+    top: 1rem;
     font-size: 1.25rem;
     font-style: normal;
     font-weight: bold;
