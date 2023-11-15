@@ -19,55 +19,12 @@ h2{
     font-weight: bolder;
     font-size: 2.25rem;
 }
-#Restaurant-overview{
-  margin: 5px;
-  display: inline;
-  
-}
 .Restaurant-overview-header{
   position: absolute;
   display: inline;
 
 }
-.overview{
-  background-color: var(--color-bg-second);
-  position: relative;
-  margin: 17px;
-  border-radius: 3.5%;
-  width: 420px;
-  & h3{
-    color: var(--color-text);
-    text-align: center;
-    
-    font-size: 1.25rem;
-    font-style: normal;
-    font-weight: bold;
-  }
-  & h6{
-    color: var(--color-text);
-    font-size: 0.9375rem;
-    font-style: normal;
-    font-weight: normal;
-  }
-  & p{
-    color: var(--color-text);
-    font-size: 0.9375rem;
-    font-style: normal;
-    font-weight: lighter;
-  }
-  & nav{
-    color: var(--color-text);
-    font-size: 0.9375rem;
-    font-style: normal;
-    font-weight: lighter;
-  }
-}
-.Restaurant-images{
-  & img{
-    width: 20.875rem;
-    flex-shrink: 0;;
-  }
-}
+
 button{
   background-color: rgba(0, 0, 0, 0);
   border: 3;
@@ -95,7 +52,47 @@ em{
 ul{
   list-style-type: none;
 }
-.Restaurant-overview{
-  display: grid;
-  grid-column: 30% 70%;
+#Restaurant-overview{
+  display: flex;
+  margin: 1.125rem;
+  & .Restaurant-details{
+    width: 30%;
+    height: 34.9375rem;
+    background-color: var(--color-bg-second);
+    border-radius: 3.5%;
+    & h3{
+      color: var(--color-text);
+      text-align: center;
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: bold;
+    }
+    & h6{
+      color: var(--color-text);
+      font-size: 0.9375rem;
+      font-style: normal;
+      font-weight: normal;
+    }
+    & p{
+      color: var(--color-text);
+      font-size: 0.9375rem;
+      font-style: normal;
+      font-weight: lighter;
+    }
+    & nav{
+      color: var(--color-text);
+      font-size: 0.9375rem;
+      font-style: normal;
+      font-weight: lighter;
+    }
+  }
+  
+  & .Restaurant-images{
+    width: 70%;
+    & img{
+      width: 20.875rem;
+      height: 34.9375rem;;
+      flex-shrink: 0;;
+    }
+  }
 }
