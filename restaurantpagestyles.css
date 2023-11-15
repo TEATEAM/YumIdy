@@ -1,19 +1,19 @@
 :root {
-    --accent-color: #EE5151;
-    --bg-color: #0F0F0F;
-    --bg-second-color: #272727;
-    --text-color: #FFFFFF;
+    --color-accent: #EE5151;
+    --color-bg: #0F0F0F;
+    --color-bg-second: #272727;
+    --color-text: #FFFFFF;
 }
 header{
   display: none;
 }
 body{
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  background-color: var(--color-bg);
+  color: var(--color-text);
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 h2{
-    color: var(--text-color);
+    color: var(--color-text);
     text-align:left;
     font-style: normal;
     font-weight: bolder;
@@ -30,13 +30,13 @@ h2{
 
 }
 .overview{
-  background-color: var(--bg-second-color);
+  background-color: var(--color-bg-second);
   position: relative;
   margin: 17px;
   border-radius: 3.5%;
   width: 420px;
   & h3{
-    color: var(--text-color);
+    color: var(--color-text);
     text-align: center;
     
     font-size: 1.25rem;
@@ -44,19 +44,19 @@ h2{
     font-weight: bold;
   }
   & h6{
-    color: var(--text-color);
+    color: var(--color-text);
     font-size: 0.9375rem;
     font-style: normal;
     font-weight: normal;
   }
   & p{
-    color: var(--text-color);
+    color: var(--color-text);
     font-size: 0.9375rem;
     font-style: normal;
     font-weight: lighter;
   }
   & nav{
-    color: var(--text-color);
+    color: var(--color-text);
     font-size: 0.9375rem;
     font-style: normal;
     font-weight: lighter;
@@ -71,8 +71,8 @@ h2{
 button{
   background-color: rgba(0, 0, 0, 0);
   border: 3;
-  color: var(--text-color);
-  border-color: var(--accent-color);
+  color: var(--color-text);
+  border-color: var(--color-accent);
   border-radius: 20px;
   border-style: solid;
 }
@@ -85,8 +85,8 @@ em{
   gap: 0.5rem;
   flex-shrink: 0;
   border-radius: 6.25rem;
-  background: var(--text-color);
-  color:var(--bg-second-color);
+  background: var(--color-text);
+  color:var(--color-bg-second);
   font-size: 0.75rem;
   font-style: normal;
   font-weight: 600;
@@ -94,4 +94,8 @@ em{
 }
 ul{
   list-style-type: none;
+}
+.Restaurant-overview{
+  display: grid;
+  grid-column: 30% 70%;
 }
