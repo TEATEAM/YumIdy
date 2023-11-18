@@ -1,98 +1,152 @@
+/* @import url(root.css); */
 :root {
-    --color-accent: #EE5151;
-    --color-bg: #0F0F0F;
-    --color-bg-second: #272727;
-    --color-text: #FFFFFF;
+  --color-accent: #EE5151;
+  --color-bg: #0F0F0F;
+  --color-bg-second: #272727;
+  --color-text: #FFFFFF;
+  --color-span: #988e8e;
+  --p-font: normal lighter 1rem Quicksand; 
+  --h-font: normal bold 2rem Quicksand; 
 }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*
 header{
   display: none;
-}
+}*/
 body{
   background-color: var(--color-bg);
   color: var(--color-text);
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-h2{
-    color: var(--color-text);
-    text-align:left;
-    font-style: normal;
-    font-weight: bolder;
-    font-size: 2.25rem;
-}
-.Restaurant-overview-header{
-  position: absolute;
-  display: inline;
-
+  font-family: "Quicksand", sans-serif;
+  max-width: 90rem; 
+  margin: auto;
+} 
+footer{
+  display: none;
 }
 
-button{
-  background-color: rgba(0, 0, 0, 0);
-  border: 3;
-  color: var(--color-text);
-  border-color: var(--color-accent);
-  border-radius: 20px;
-  border-style: solid;
-}
-em{
-  display: flex;
-  width: 3.625rem;
-  height: 1.5rem;
-  padding: 0.25rem 0.625rem;
-  align-items: center;
-  gap: 0.5rem;
-  flex-shrink: 0;
-  border-radius: 6.25rem;
-  background: var(--color-text);
-  color:var(--color-bg-second);
-  font-size: 0.75rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 1rem;
-}
 ul{
   list-style-type: none;
 }
-#Restaurant-overview{
-  display: flex;
-  margin: 1.125rem;
-  & .Restaurant-details{
-    width: 30%;
-    height: 34.9375rem;
-    background-color: var(--color-bg-second);
-    border-radius: 3.5%;
-    & h3{
-      color: var(--color-text);
-      text-align: center;
-      font-size: 1.25rem;
-      font-style: normal;
-      font-weight: bold;
+button {
+  background-color: transparent;
+  border-style: none;
+}
+h2{
+  color: var(--color-text);
+  text-align:left;
+  font:var(--h-font);
+}
+  & .Restaurant-header{
+    display: flex;
+    & label:has(:not(:checked)) {
+      & svg{
+        fill: transparent;
+        border-width: 1rem;
+        stroke: var(--color-text);
+      }
     }
-    & h6{
-      color: var(--color-text);
-      font-size: 0.9375rem;
-      font-style: normal;
-      font-weight: normal;
+    & label:has(:checked) {
+        & svg{
+          fill: #EE5151;
+        }
     }
-    & p{
-      color: var(--color-text);
-      font-size: 0.9375rem;
-      font-style: normal;
-      font-weight: lighter;
-    }
-    & nav{
-      color: var(--color-text);
-      font-size: 0.9375rem;
-      font-style: normal;
-      font-weight: lighter;
+    & input{
+      display: none;
     }
   }
-  
+  & #Restaurant-overview{
+    display: flex;
+    margin-top: 3rem;
+    align-items: center;
+    & .Restaurant-details{
+      width: 25.375rem;
+      height: 34.9375rem;
+      padding-left: 2.5rem;
+      margin: 1rem;
+      background-color: var(--color-bg-second);
+      border-radius: 1.25rem;
+      & h3{
+        color: var(--color-text);
+        text-align: center;
+        font: var(--p-font);
+        margin-top: 2rem;
+      }
+      & p{
+        color: var(--color-text);
+        font: var(--p-font);
+      }
+      & span{
+        color: var(--color-span);
+        font: var(--p-font);
+      }
+      & em{
+        width: 2.9375rem;
+        height: 1.5rem;
+        padding: 0.25rem 0.625rem;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+                flex-shrink: 0;
+      border-radius: 6.25rem;
+      background: var(--color-text);
+      color:var(--color-bg-second);
+      font:var(--p-font);
+      font-size: 0.75rem;
+      line-height: 1rem;
+    }
+    & label{
+        font:var(--p-font) ;
+    }
+    & a{
+      text-decoration: none;
+      color: var(--color-span);
+      font: var(--p-font);
+    }
+    & .rt-location{
+      text-align: center;
+      padding: 3rem;
+    }
+    & .rt-contact{
+      display: flex;
+      justify-content: space-between;
+      margin-left: 5rem;
+      margin-right: 5rem;
+    }
+    & .rt-phone{
+      text-align: center;
+      padding-top: 2rem;
+    }
+  }
   & .Restaurant-images{
-    width: 70%;
+    margin: 1rem;
+    display: flex;
+    width: 20.875rem;
     & img{
       width: 20.875rem;
-      height: 34.9375rem;;
-      flex-shrink: 0;;
+      margin-left: 1.5rem;
+      flex-shrink: 0;
     }
-  }
+    & .img-big{
+      height: 34.9375rem;  
+    }
+    & .img-small{
+      & img{
+        height: 16.875rem;
+      }
+      & .img-up{
+        display: flex;
+        margin-bottom: 1rem;
+      }
+      & .img-down{
+        display: flex;
+        margin-bottom: 1rem;
+      }
+    }
+
+
+  } 
 }
