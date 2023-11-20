@@ -1,0 +1,9 @@
+:root {
+    --color-accent: #EE5151;
+    --color-bg: #0F0F0F;
+    --color-bg-second: #272727;
+    --color-text: #FFFFFF;
+    --color-span: #988e8e;
+    --p-font: normal lighter 1rem Quicksand; 
+    --h-font: normal bold 2rem Quicksand; 
+}

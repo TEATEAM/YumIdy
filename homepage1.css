@@ -1,0 +1,592 @@
+/* CUSTOM PROPERTY--  entities defined by CSS authors that contain specific values to be reused throughout a document.*/
+/* how to create it 
+:root {
+    --name: value;
+}
+for example
+:root{
+    --primary-clr: red;}
+how to use it
+body{
+    color: var(--primary-clr)
+}
+and we can use 
+.sales-point{
+    color: va(--secondary-clr, yellow);
+} it will become yellow color.
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color: #FFFFFF;
+    --background-clr:#0F0F0F;
+     --second-clr: #EE5151;
+     --font-clr: #FFF;
+     --font-family: 'Quicksand', sans-serif ;
+     --font-sizeTom: 2.5rem;
+     --font-weight: 700;
+     --line-height: 50px;
+    --font-style: normal;
+     --font-sizeBR: 3rem;
+     --font-sizeSmall: 1.25rem;
+     --searchBar-width:56.2rem;
+    --searchBar-height:4.8125rem;
+    --searchBar-radius: 2.6rem;
+    --advice-width: 70.5rem;
+    --advice-height: 26rem;
+    --best-res-width:90rem;
+    --background-clr2 : #272727;
+    --border-radius: 1.25rem;
+    --border:3px solid var(--second-clr);
+    --hajuuZai:7.2rem;
+    --small-fontSize:1.2rem;
+    --text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+    --margin-top:1.5rem;
+    --BR-fontWeight : 700;
+    --BR-lineHeight :1.5rem;
+    --letter-spacing: 0.00625rem;
+    --Br-marginLeft :1rem;
+    --tsag-WH : 0.75rem;
+    --marginSVG-tseg : 0.5rem;
+    --margin-bodySmall:1.94rem;
+    --footer-margin :41.5rem;
+ /*    --ug-font: */
+    
+}
+body{
+    background:var(--background-clr) ;
+    font-family: var("Quicksand-Medium");
+    color: var(--font-clr);
+}
+/* Толгой хэсгийн хийх толгой хэсэг нь хоёр зүйл агуулдаг бөгөөд энэ нь нэвтрэх хэсэг болон лого агуулна. Лого-г хөдөлдөг анимашион болгон хийж байна. */
+header{
+    width: 100%;
+    height:5.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin: 25px(top) 50px(right) 75px(bottom) 100px(left)
+    margin: 25px(top) 50px(rightand left) 75px(bottom)
+    margin: 25px(top and bottom) 50px(right and left) 
+    margin: 25px(all four margins are 25px) */
+    margin: 1.1rem;
+    font-family: var("Quicksand-Medium");
+    font-size: var( --font-sizeTom);
+   /*  border-bottom: 2px solid #D9D9D9; */
+   width: 100%;
+   height: 6.44rem;
+   background: var( --background-clr);
+   box-shadow: 0px 0px 10px 0px rgba(240, 251, 255, 0.20) inset;
+    
+   
+}
+/* header */
+/* Толгой хэсэг */
+/* logo section */
+.logo{
+    color: var(--second-clr);
+    text-decoration: none;
+    margin-left: 2.25rem;
+}
+/* толгой хэсгийн нэвтрэх хэсэг болон түүн дээр дээр даран өөр хуудасруу шилжих хэсгийн хийж байна. */
+.nevtreh{
+    color: var(--font-clr);
+    font-size: var(--font-sizeSmall);
+    font-family: var("Quicksand-Medium");
+}
+.nevtreh button{
+   border-radius: 1.25rem;
+   background: none;
+   margin-right: var(--border-radius);
+   width: 8.125rem;
+   height: 3.125rem;
+   border:var(--border);
+}
+.nevtreh :hover{
+    border-color:#FFF;
+}
+
+/* Home page-ний Best restaurants хэсгийг хийсэн нь: */
+.ug {
+    margin-top: 10.9rem;
+    margin-left: var(--margin-bodySmall);
+    width: 25.0625rem;
+    height: 3.125rem;
+    font-weight: 700;
+    line-height: 3.125rem;
+    font: var(--ug-font);
+    font-family: var(--font-family);
+    font-size: var(--font-sizeBR);
+    color: var(--font-clr);
+}
+
+.bestR {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+ /*    margin-left: 7.12rem;
+    margin-right: 7.12rem; */
+    
+}
+/* best Restaurantsig haruulah detailuud:  */
+.bestR_details {
+    width: 24rem; 
+    height: 17.25rem;
+    background: #272727;
+    margin: var(--margin-bodySmall);
+    border-radius: 1.25rem;
+
+    & img {
+        width: 100%;
+        height: 10rem;
+        border-radius: 1.25rem;
+    }
+
+   
+}
+/* ner bolon save hiihed ashiglah zurh icon */
+.IconName {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.nameRes{
+    letter-spacing: var(  --letter-spacing);
+    font-family: var(--font-family);
+    font-size: 1.125rem;
+    font-style: var(--font-style);
+    color: var(--font-clr);
+}
+.iconZurh{
+    background: none;
+    border: none;
+
+}
+.iconZurh:hover{
+   fill: var(--font-clr);
+}
+
+
+
+
+/* une, tsagiin icon, neesen haasan esehiig ilerhiileh p tag */
+.timeIconPrice{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+   
+  
+}
+
+.iconTsag {
+    margin-left: var(--Br-marginLeft);
+    font-weight: var(--BR-fontWeight);
+    line-height: var(--BR-lineHeight);
+    width:var( --tsag-WH);
+    height:var( --tsag-WH);
+
+    /* hvcheer */
+   
+}
+
+.time{
+    width: 2.44rem;
+    height: var(--Br-marginLeft);
+    margin-left: 0.38rem;
+    font-family: var(--font-family);
+    font-size: var( --tsag-WH );
+    font-style: var(--font-style);
+    font-weight: var(--BR-fontWeight);
+    line-height: var(--BR-lineHeight);
+    color: var(--font-clr);
+}
+
+.price{
+    height: var(--Br-marginLeft);
+    width: 7rem;
+    font-size: var( --tsag-WH);
+    font-style: var(--font-style);
+    font-weight: var(--BR-fontWeight);
+    line-height: var(--BR-lineHeight);
+    color: var(--font-clr);
+}
+
+.svgTseg{
+    margin-left: var(--marginSVG-tseg);
+    margin-right: var(--marginSVG-tseg);
+}
+
+/* BODY1*/
+
+/* Homepage-ны эхний хэсгийн текст, searchBar, зураг хэсгүүдийг хийх болно. */
+.body1{
+    text-align: center;
+}
+.text1 h2{
+    text-shadow: var(--text-shadow);
+    font-size: var(--font-sizeTom);
+    font-weight: var(--font-weight);
+    line-height: var(--line-height);
+    height: var(--line-height);
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+}
+/* 5 төрлөөр хайлт хийж болох бөгөөд уг хэсгийг эдит хийсэн нь: */
+.search {
+    display: flex;
+    justify-content: space-evenly;
+    /* figma deer hailtuudin hoorondoh zai haragdahgui baisan tul duraaraa avav. */
+    margin-left: 14.375rem;
+    margin-right: 14.375rem;
+
+& h5{
+    color:var( --font-clr) ;
+    font-size: var(--font-sizeSmall);
+   
+}
+& button{
+    background: none;
+    border: none;
+}
+& button :hover{
+    text-decoration: underline;
+    text-decoration-color:var(--second-clr);
+}
+}
+
+/* searchBar */
+/* Search Bar хэсэг энэ хэсэгт яг хайлт хийх хэсгээ бичиж өгөх хэсгийг хийсэн */
+
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: var(--searchBar-width);
+    height: var(--searchBar-height);
+    margin-left: 17%;
+    margin-top: 3.0625rem;
+    flex: 1;
+    outline: none;
+    border-radius: var(--searchBar-radius);
+    background: #fff;
+    border: var(--border);
+    /* gollohgui baisan tul hucheer golluulsan */
+}
+.btn{
+    width: 4.625rem;
+    height: 2.5625rem;
+    justify-content: center;
+    border: var(--border);
+    border-radius: var(--searchBar-radius);
+    /* baruun tiish bolohgui baisan tul hvch hereglev. */
+    margin-right: 1.5rem;
+    background: var(--font-clr);
+    color: var( --second-clr);
+    text-align: center;
+    font-style: var( --font-style);
+    font-size: var(--font-sizeSmall);
+    font-family: var( --font-family);
+}
+/* zasah!!! */
+.btn:hover{
+    border-color:var(--background-clr);
+}
+input{
+    border: none;
+    font-size: var(--font-sizeSmall);
+    /* bvgd center uchir hucheer baruun tiish zuuv */
+    /* margin-right:10rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45rem;
+    height: 2.5625rem;
+    color: rgba(0,0,0,0.10);
+    font-family: var(--font-family);
+    font-size: var(--font-sizeSmall);
+    font-style: var(--font-style);
+    outline: none;
+  /* x ig arilgah */
+
+}  
+ 
+input[type="search"] {
+    color:var( --background-clr); /* Change this to the desired font color */
+}
+
+.searchIcon{
+    margin-left: 21px;
+}
+/* zuragHeseg нь нэг "h2" таг ашиглан хийсэн текст болон зураг ашигласан  */
+.zuragHeseg{
+    position: relative;
+}
+.hoolZurag{
+   
+    
+    align-items: center;
+    margin-top: 63px;
+    width: 70.5rem;
+    height: 26rem;
+    border-radius: 71px;
+    background: linear-gradient(180deg, rgba(199,200,210,0.00), rgba(25,25,25,0.40) 20.39%,rgba(14, 14, 14, 0.50) 45.39%, rgba(0, 0, 0, 0.40) 70.39%, rgba(199, 200, 210, 0.00) 95.92%);
+    filter: blur(4.5px);
+  
+}
+.zuragHeseg h2{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 59rem;
+    height: 12.4rem;
+    font-weight: var(--font-weight);
+    line-height: var(--line-height); 
+    color: var(--font-clr);
+    text-shadow: 0px 4px 4px rgba(181, 165, 165, 0.25);
+    font-size: var(--font-sizeTom);
+    font-style: var(--font-style);
+    /* hucheer tohiruulsan heseg */
+}
+.zuragHeseg span{
+    color: var( --second-clr);
+}
+/* BODY 2 */
+/* Home page-ний Best restaurants хэсгийг хийсэн нь: */
+.ug {
+    margin-top: 10.9rem;
+    margin-left: var(--margin-bodySmall);
+    width: 25.0625rem;
+    height: 3.125rem;
+    font-weight: 700;
+    line-height: 3.125rem;
+    font: var(--ug-font);
+    font-family: var(--font-family);
+    font-size: var(--font-sizeBR);
+    color: var(--font-clr);
+}
+
+.bestR {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+ /*    margin-left: 7.12rem;
+    margin-right: 7.12rem; */
+    
+}
+/* best Restaurantsig haruulah detailuud:  */
+.bestR_details {
+    width: 24rem; 
+    height: 17.25rem;
+    background: #272727;
+    margin: var(--margin-bodySmall);
+    border-radius: 1.25rem;
+
+    & img {
+        width: 100%;
+        height: 10rem;
+        border-radius: 1.25rem;
+    }
+
+   
+}
+/* ner bolon save hiihed ashiglah zurh icon */
+.IconName {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.nameRes{
+    letter-spacing: var(  --letter-spacing);
+    font-family: var(--font-family);
+    font-size: 1.125rem;
+    font-style: var(--font-style);
+    color: var(--font-clr);
+}
+.iconZurh{
+    background: none;
+    border: none;
+
+}
+.iconZurh:hover{
+   fill: var(--font-clr);
+}
+
+
+
+
+/* une, tsagiin icon, neesen haasan esehiig ilerhiileh p tag */
+.timeIconPrice{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+   
+  
+}
+
+.iconTsag {
+    margin-left: var(--Br-marginLeft);
+    font-weight: var(--BR-fontWeight);
+    line-height: var(--BR-lineHeight);
+    width:var( --tsag-WH);
+    height:var( --tsag-WH);
+
+    /* hvcheer */
+   
+}
+
+.time{
+    width: 2.44rem;
+    height: var(--Br-marginLeft);
+    margin-left: 0.38rem;
+    font-family: var(--font-family);
+    font-size: var( --tsag-WH );
+    font-style: var(--font-style);
+    font-weight: var(--BR-fontWeight);
+    line-height: var(--BR-lineHeight);
+    color: var(--font-clr);
+}
+
+.price{
+    height: var(--Br-marginLeft);
+    width: 7rem;
+    font-size: var( --tsag-WH);
+    font-style: var(--font-style);
+    font-weight: var(--BR-fontWeight);
+    line-height: var(--BR-lineHeight);
+    color: var(--font-clr);
+}
+
+.svgTseg{
+    margin-left: var(--marginSVG-tseg);
+    margin-right: var(--marginSVG-tseg);
+}
+
+
+/* Rating bolon uniin medeelel */
+.typeOd{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+.type {
+ 
+    padding: 0.25rem 0.625rem;
+    gap: 0.5rem;
+    border-radius: 6.25rem;
+    background: #FFF;
+    border-color: #FFF;
+    font-family: var(--font-family);
+    font-size: var( --tsag-WH);
+    font-style: var(--font-style);
+    font-weight: 600;
+    line-height: 1rem;
+}
+
+
+/* RECIENT REVIEWS */
+.sanalOgoh{
+    display: flex;
+    justify-content: space-between;
+
+&.sanalOgoh button{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 9.5rem;
+    height: 3.35rem;
+    border-radius: 1.25rem;
+    background: none;
+    margin-right:var(--margin-bodySmall);
+    border:var(--border);
+    font-size: var( --font-sizeSmall);
+    font-style: var(--font-style);
+    font-weight: var(--BR-fontWeight);
+    line-height: 3.125rem;
+    color: var(--font-clr);
+    margin-top: 5.94rem;
+}
+& .recentReviews{
+    margin-top: 5.94rem;
+    margin-left: var(--margin-bodySmall);
+    width: 25.0625rem;
+    height: 3.125rem;
+    font-weight: 700;
+    line-height: 3.125rem;
+    font: var(--ug-font);
+    font-family: var(--font-family);
+    font-size: var(--font-sizeBR);
+    color: var(--font-clr);
+}
+}
+
+/* RECENT REVIEW MAIN */
+
+.recentReview{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left:var(--margin-bodySmall);
+    margin-right: var(--margin-bodySmall);
+    margin-bottom: 4rem;
+    width: 81.62rem;
+    height: 31.6875rem;
+    border-radius: var( --border-radius);
+    margin: var(--margin-bodySmall);
+    background: var( --background-clr2);
+    
+}
+.sanalOgoh svg:hover{
+    color: var(--second-clr);
+}
+
+/* FOOTER */
+footer{
+    width: 100%;
+    height: 6.44rem;
+    background: var( --background-clr);
+    box-shadow: 0px 4px 10px 0px rgba(240, 251, 255, 0.20) inset;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 6.6875rem;
+    height: 1.0625rem;
+    color: var(--color);
+    margin-left: var(--footer-margin);
+    margin-right: var(--footer-margin);
+ 
+}
+.footer a{
+    color: var(--color);
+    margin-top: 1.62rem;
+}
+.end{
+    /* 16rem hurehgui baisan */
+  width:18rem;
+  margin: 1.25rem 36rem 1.7rem 36rem;
+  height: 0.875rem;
+  font-family: var( --font-family);
+  font-size: 0.94rem;
+  font-style: var(--font-style);
+  font-weight: 400;
+  line-height: normal;
+  color: var( --font-clr);
+}
+.footer a :hover{
+    color: var(--second-clr);
+}
