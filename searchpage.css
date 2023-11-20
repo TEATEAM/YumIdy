@@ -1,90 +1,266 @@
-
-.header {
-    background-color: #f5f5f5;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+body{
+    background: #0F0F0F;
 }
-
-.logo {
+header{
+    width: 100%;
+    display: flex;
+    box-shadow: 0px 4px 4px 0px rgba(240, 251, 255, 0.20);
+    align-items: center;
+    justify-content: space-between;   
+}
+.logo{
+    color: var(--second-clr);
     text-decoration: none;
-    color: #333;
-    font-size: 24px;
+    margin-left: 2.25rem;
 }
-
-.search-form {
+.login-button{
+    width: 130px;
+    height: 50px;
+    border-radius: 20px;
+    margin-right: 6%;
+}
+.search-form{
+    width: 334px;
+    height: 50px;
+    border-radius: 41.5px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     display: flex;
-    align-items: center;
+    justify-content: center;
+    margin-left: 60%;
 }
-
-.search-button {
+.search-form input{
+    width: 150%;
+    border-radius: 41.5px;
+    margin-right: 10%;
+    border: none;
+    background: none;
+}
+.search-form button{
     background: none;
     border: none;
-    cursor: pointer;
 }
-
-.search-input {
-    margin-left: 10px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
+main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 70%;
+    grid-gap: 1em 5em;
 }
-
-.login-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-
-.main-content {
-    padding: 20px;
-}
-
-.filters-section {
+.filter_checkbox{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 2px solid #FFF;
+    background: rgba(255, 255, 255, 0.00);
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
-}
-
-.sort-button {
-    background-color: #4CAF50;
+    margin-top: 105px;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 10px;
+}
+.filter_checkbox h3{
+    padding: 20px;
+}
+.filter_checkbox ul{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 20px;
+}
+.filter_checkbox ul li{
+    display: flex;
+}
+.restaurant_article{
+    color: white;
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+    
 }
 
-.filter-options {
-    margin-bottom: 20px;
+.restaurant_list li{
+    display: flex;
+    border-style: none;
+    border-radius: 30px;
+    background: rgba(217, 217, 217, 0.12);
+    gap: 1.84rem;
+    height: 20%;
+    margin-top: 50px;
 }
-
-.checkbox-label {
+.restaurant_list img{
+    width: 10.93563rem;
+    height: 12.01306rem;
+    flex-shrink: 0;
+    border-radius: 40px;
+    margin-top: 10px;
     margin-left: 10px;
+    
 }
 
 
-.restaurant-list {
-    list-style: none;
+.restaurant_list li div{
+    display: flex;
+    flex-direction: column;
+    font-family: Nunito;
+
 }
-
-
-.footer {
-    background-color: #333;
+.filter_button{
+    width: 20%;
+    height: 37.154px;
+    flex-shrink: 0;
+    border-radius: 1.25rem;
     color: white;
-    text-align: center;
-    padding: 10px 0;
-}
+    background: #0F0F0F;
+    margin-left: 80%;
+    padding: 2px;
 
-.social-icon {
-    width: 30px;
-    height: 30px;
-    margin: 0 10px;
 }
+@media (max-width: 1920px) {
+
+        .filter_button {
+            margin-right: 20%;
+        }
+    
+        .restaurant_list li {
+            width: 100%;
+            height: 50%;
+           
+        }
+
+        .restaurant_list img {
+            width: 12.93563rem;
+            height: 14.01306rem;
+            border-radius: 3.25rem;
+            padding: 1%;
+        }
+    }
+    
+    
+    @media (max-width: 768px) {
+        header {
+            align-items: flex-start;
+            font-size: 15px;
+           
+        }
+    
+        .logo {
+            margin-left: 1rem;
+        }
+    
+        .search-form {
+            width: 20%;
+            margin: 1rem;
+        }
+        .search-form input{
+            width: 100%;
+            border-radius: 41.5px;
+            margin-right: 10%;
+            border: none;
+            background: none;
+        }
+        .search-form button{
+            background: none;
+            border: none;
+        }
+        .login-button{
+            margin-right: 0;
+            margin-top: 15px;
+        }
+        main {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 20% 80%;
+            grid-gap: 1em 0em;
+        }
+    
+        .filter_button {
+            margin-right: 70%;
+        }
+    
+        .filter_checkbox {
+            margin-top: 5rem;
+            width: auto;
+        }
+    
+
+    
+        .restaurant_list li {
+            width: 100%;
+            margin-top: 20px;
+        }
+    
+        .restaurant_list img {
+            width: 10.93563rem;
+            height: 12.01306rem;
+            flex-shrink: 0;
+            border-radius: 3.25rem;
+            padding: 6%;
+        }
+        .restaurant_list li div{
+            display: flex;
+            flex-direction: column;
+            width: 100px;
+            
+        }
+        .display-star{
+            width: 100px;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        header {
+            
+            align-items: flex-start;
+        }
+    
+        .logo {
+            margin-left: 1rem;
+        }
+    
+        .search-form {
+            width: 30%;
+            margin: 1rem;
+        }
+        .login-button{
+            margin-right: 0;
+            margin-top: 15px;
+        }
+        main {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 20% 80%;
+            grid-gap: 1em 0em;
+        }
+    
+        .filter_button {
+            margin-right: 70%;
+        }
+    
+        .filter_checkbox {
+            margin-top: 5rem;
+            width: auto;
+        }
+    
+
+    
+        .restaurant_list li {
+            width: 100%;
+            margin-top: 20px;
+        }
+    
+        .restaurant_img {
+            width: 10.93563rem;
+            height: 12.01306rem;
+            flex-shrink: 0; 
+            border-radius: 1.25rem;
+            padding: 30px;
+        }
+        .restaurant_list li div{
+            display: flex;
+            flex-direction: column;
+            width: 100px;
+            
+        }
+        .display-star{
+            width: 100px;
+        }
+    }
