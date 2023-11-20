@@ -3,5 +3,7 @@
     --color-bg: #0F0F0F;
     --color-bg-second: #272727;
     --color-text: #FFFFFF;
-    --color-p: #988e8e;
-}
+    --color-span: #988e8e;
+    --p-font: normal lighter 1rem Quicksand; 
+    --h-font: normal bold 2rem Quicksand; 
+  }
