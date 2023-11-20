@@ -58,7 +58,7 @@
                 <h2 class="Restaurant-name">Burger & Pizza</h2>
                 <!--reviewstars-->
                 <label for="Restaurant-rating" class="restaurant-star">
-                    <meter class="Restaurant-rating" value="3" min="1" max="5"></meter>
+                    <meter id="Restaurant-rating" class="average-rating" min="0" max="5" value="4" title="4 out of 5 stars"></meter>
                 </label>
                 <!--wishlistiin zurh-->
                 <label for="heart-checkbox" class="heart-label">
@@ -104,15 +104,15 @@
                         </li>
                         <li>
                             <label for="food-rating">Хоол</label>
-                            <meter id="food-rating" value="3" min="1" max="5"></meter>
+                            <meter id="food-rating" class="average-rating" min="0" max="5" value="4" title="4 out of 5 stars"></meter>
                         </li>
                         <li>
                             <label for="service-rating">Үйлчилгээ</label>
-                            <meter id="service-rating" value="3" min="1" max="5"></meter>
+                            <meter id="service-rating" class="average-rating" min="0" max="5" value="4" title="4 out of 5 stars"></meter>
                         </li>
                         <li>
                             <label for="atmosphere-rating">Орчин</label>  
-                            <meter id="atmosphere-rating" value="3" min="1" max="5"></meter>
+                            <meter id="atmosphere-rating" class="average-rating" min="0" max="5" value="4" title="4 out of 5 stars"></meter>
                         </li>
                         <li>
                             <div class="rt-location"><a href="https://www.google.com/maps/" target="_blank"><img src="/accest/location-icon.png" alt="location-icon"> 403, 4th floor, Shangrila-Mall, olympic Stress Sukhbaatar district, Ulaanbaatar Mongolia</a></div>
@@ -152,7 +152,7 @@
                 <ul>
                     <li>
                         <label for="5stars">
-                            <meter id="5stars" value="5" min="1" max="5"></meter>
+                            <meter id="5stars" class="average-rating" min="0" max="5" value="5" title="5 out of 5 stars"></meter>
                         </label>    
                         <label for="5starsreviews">
                             <progress id="5starsreviews" value="30" max="100"></progress>
@@ -160,7 +160,7 @@
                     </li>
                     <li>
                         <label for="4stars">
-                            <meter id="4stars" value="4" min="1" max="5"></meter>
+                            <meter id="4stars" class="average-rating" min="0" max="5" value="4" title="4 out of 5 stars"></meter>
                         </label>    
                         <label for="4starsreviews">
                         <progress id="4starsreviews" value="10"  max="100"></progress>
@@ -168,7 +168,7 @@
                     </li>
                     <li>
                         <label for="3stars">
-                            <meter id="3stars" value="3" min="1" max="5"></meter>
+                            <meter  id="3stars" class="average-rating" min="0" max="5" value="3" title="3 out of 5 stars"></meter>
                         </label>    
                         <label for="3starsreviews">
                             <progress id="3starsreviews" value="0" max="100"></progress>
@@ -176,7 +176,7 @@
                     </li>
                     <li>
                         <label for="2stars">
-                            <meter id="2stars" value="2" min="1" max="5"></meter>
+                            <meter id="2stars" class="average-rating" min="0" max="5" value="2" title="2 out of 5 stars"></meter>
                         </label>    
                         <label for="2starsreviews">
                             <progress id="2starsreviews" value="0"  max="100"></progress>
@@ -184,7 +184,7 @@
                     </li>
                     <li>
                         <label for="1stars">
-                            <meter id="1stars" value="1" min="1" max="5"></meter>
+                            <meter id="1stars" class="average-rating" min="0" max="5" value="1" title="1 out of 5 stars"></meter>
                         </label>    
                         <label for="1starsreviews">
                             <progress id="1starsreviews" value="0"  max="100"></progress>
@@ -255,7 +255,7 @@
                 <div class="review-main">
                     <!--review star, date time, report-->
                     <label for="Review-rating"></label>
-                    <meter id="Review-rating" value="3" min="1" max="5"></meter>
+                    <meter id="Review-rating" class="average-rating" min="0" max="5" value="1" title="1 out of 5 stars"></meter>
                     <span>1 өдрийн өмнө</span>
                     <button type="button" name="report">
                         <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
