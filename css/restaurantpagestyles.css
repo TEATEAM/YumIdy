@@ -267,6 +267,7 @@ h2{
   }
 
 }
+/*Review star shuu*/
 .star-rating {
   display: flex;
   flex-direction: row-reverse;
@@ -289,7 +290,7 @@ h2{
 .radio-label:before {
   content: "★";
   display: inline-block;
-  font-size: 32px;
+  font-size: 2rem;
 }
 
 .radio-input:checked ~ .radio-label {
@@ -311,38 +312,47 @@ h2{
 
 
 .average-rating {
-  position: relative;
   appearance: none;
   color: transparent;
   width: auto;
   display: inline-block;
   vertical-align: baseline;
-  font-size: 25px;
+  font-size: 2rem;
 }
-
 .average-rating::before {
   --percent: calc(3/5*100%);
-  content: '★★★★★';
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: rgba(0,0,0,0.2);
+  content: '★★★★★'; 
   background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
-#5stars .average-rating::before{
+#stars5::before{
   --percent: calc(5/5*100%);
+  content: '★★★★★'; 
+  background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+  -webkit-background-clip: text;
 }
-#4stars .average-rating::before{
+#stars4::before{
   --percent: calc(4/5*100%);
+  content: '★★★★★'; 
+  background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+  -webkit-background-clip: text;
 }
-#3stars .average-rating::before{
+#stars3::before{
   --percent: calc(3/5*100%);
+  content: '★★★★★'; 
+  background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+  -webkit-background-clip: text;
 }
-#2stars .average-rating::before{
+#stars2::before{
   --percent: calc(2/5*100%);
+  content: '★★★★★'; 
+  background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+  -webkit-background-clip: text;
 }
-#1stars .average-rating::before{
+#stars1::before{
   --percent: calc(1/5*100%);
+  content: '★★★★★'; 
+  background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+  -webkit-background-clip: text;  
+
 }
