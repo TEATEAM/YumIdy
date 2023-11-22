@@ -15,6 +15,7 @@ and we can use
     color: va(--secondary-clr, yellow);
 } it will become yellow color.
 */
+@import url(root.css);
 *{
     margin: 0;
     padding: 0;
@@ -590,3 +591,173 @@ footer{
 .footer a :hover{
     color: var(--second-clr);
 }
+/*review-n css*/
+article{
+    margin-top: 3rem;
+    background-color: var(--color-bg-second);
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    & .reviewer{
+        align-self: start;
+        & img{
+        border-radius: 100%;
+        width: 6.5rem;
+        height: 6.5rem;
+        }
+        & h3{
+        font: var(--p-font);
+        text-align: center;
+        }
+
+    }
+    & button{
+        background-color: transparent;
+        border-width: 0;
+        & :hover{
+            cursor: pointer;
+            opacity: 0.8;
+        }
+    }
+    & .review-main{
+        margin-left: 1rem;
+        & span{
+        font: var(--p-font);
+        font-size: 0.8rem;
+        color: var(--color-span);
+        }
+        & p{
+        margin-top: 1.5rem;
+        display: block;
+        font: var(--p-font);
+        padding-right:25%;
+        line-height: 1.5rem;
+        word-spacing: normal;
+        }
+        & img{
+        display: block;
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+        width: 10.25rem;
+        height: 12.625rem;
+        }
+        & .dislike-label, & .like-label{
+        margin-left: 1rem;
+        cursor: pointer;
+        fill: none;
+        stroke: var(--color-accent);
+        stroke-width: 1.5;
+        & :hover{
+            opacity: 0.8;
+        }
+        }
+        & .dislike-label:has(:checked)  {
+        fill: var(--color-accent);
+        stroke: var(--color-accent);
+        stroke-width: 1.5;
+        }
+        
+        & .like-label:has(:checked)  {
+        fill: var(--color-accent);
+        stroke: var(--color-accent);
+        stroke-width: 1.5;
+        }
+        & input {
+        display: none;
+        }
+        & label > span{
+        font: var(--p-font);
+        font-size: 0.8rem;
+        font-weight: bold;
+        }
+    }
+}
+/*Review star shuu*/
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+  
+  .radio-input {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .radio-label {
+    cursor: pointer;
+    font-size: 0;
+    color: var(--color-span);
+    transition: color 0.1s ease-in-out;
+  }
+  
+  .radio-label:before {
+    content: "★";
+    display: inline-block;
+    font-size: 2rem;
+  }
+  
+  .radio-input:checked ~ .radio-label {
+    color: var(--color-accent);
+  }
+  
+  .radio-label:hover,
+  .radio-label:hover ~ .radio-label {
+    color: var(--color-accent);
+  }
+  
+  .radio-input:checked + .radio-label:hover,
+  .radio-input:checked + .radio-label:hover ~ .radio-label,
+  .radio-input:checked ~ .radio-label:hover,
+  .radio-input:checked ~ .radio-label:hover ~ .radio-label,
+  .radio-label:hover ~ .radio-input:checked ~ .radio-label {
+    color: var(--color-accent);
+  }
+  
+  
+  .average-rating {
+    appearance: none;
+    color: transparent;
+    width: auto;
+    display: inline-block;
+    vertical-align: baseline;
+    font-size: 2rem;
+  }
+  .average-rating::before {
+    --percent: calc(3/5*100%);
+    content: '★★★★★'; 
+    background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+    -webkit-background-clip: text;
+  }
+  #stars5::before{
+    --percent: calc(5/5*100%);
+    content: '★★★★★'; 
+    background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+    -webkit-background-clip: text;
+  }
+  #stars4::before{
+    --percent: calc(4/5*100%);
+    content: '★★★★★'; 
+    background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+    -webkit-background-clip: text;
+  }
+  #stars3::before{
+    --percent: calc(3/5*100%);
+    content: '★★★★★'; 
+    background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+    -webkit-background-clip: text;
+  }
+  #stars2::before{
+    --percent: calc(2/5*100%);
+    content: '★★★★★'; 
+    background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+    -webkit-background-clip: text;
+  }
+  #stars1::before{
+    --percent: calc(1/5*100%);
+    content: '★★★★★'; 
+    background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+    -webkit-background-clip: text;  
+  
+  }
