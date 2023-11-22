@@ -1,45 +1,99 @@
-body{
-    background: #0F0F0F;
+@import url(root.css);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+:root{
+    --color: #FFFFFF;
+    --background-clr:#0F0F0F;
+     --second-clr: #EE5151;
+     --font-clr: #FFF;
+     --font-family: 'Quicksand', sans-serif ;
+     --font-sizeTom: 2.5rem;
+     --font-weight: 700;
+     --line-height: 50px;
+    --font-style: normal;
+     --font-sizeBR: 3rem;
+     --font-sizeSmall: 1.25rem;
+     --searchBar-width:56.2rem;
+    --searchBar-height:4.8125rem;
+    --searchBar-radius: 2.6rem;
+    --advice-width: 70.5rem;
+    --advice-height: 26rem;
+    --best-res-width:90rem;
+    --background-clr2 : #272727;
+    --border-radius: 1.25rem;
+    --border:3px solid var(--second-clr);
+    --hajuuZai:7.2rem;
+    --small-fontSize:1.2rem;
+    --text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+    --margin-top:1.5rem;
+    --BR-fontWeight : 700;
+    --BR-lineHeight :1.5rem;
+    --letter-spacing: 0.00625rem;
+    --Br-marginLeft :1rem;
+    --tsag-WH : 0.75rem;
+    --marginSVG-tseg : 0.5rem;
+    --margin-bodySmall:1.94rem;
+    --footer-margin :41.5rem;
+    --header-padding:1rem;
+    --logo-margintop:0.5rem;
+ /*    --ug-font: */
+    
+}
+body{
+    background:var(--background-clr) ;
+    font-family: var("Quicksand-Medium");
+    color: var(--font-clr);
+}
+/* Толгой хэсгийн хийх толгой хэсэг нь хоёр зүйл агуулдаг бөгөөд энэ нь нэвтрэх хэсэг болон лого агуулна. Лого-г хөдөлдөг анимашион болгон хийж байна. */
 header{
     width: 100%;
+    height:5.4rem;
     display: flex;
-    box-shadow: 0px 4px 4px 0px rgba(240, 251, 255, 0.20);
     align-items: center;
-    justify-content: space-between;   
+    justify-content: space-between;
+    font-family: var("Quicksand-Medium");
+    font-size: var( --font-sizeTom);
+   /*  border-bottom: 2px solid #D9D9D9; */
+   width: 100%;
+   height: 6.44rem;
+   background: var( --background-clr);
+   box-shadow: 0px 0px 10px 0px rgba(240, 251, 255, 0.20) inset;
+    
+   
 }
+/* header */
+/* Толгой хэсэг */
+/* logo section */
 .logo{
     color: var(--second-clr);
     text-decoration: none;
     margin-left: 2.25rem;
+    padding: var(--header-padding);
+
 }
-.login-button{
-    width: 130px;
-    height: 50px;
-    border-radius: 20px;
-    margin-right: 6%;
+/* толгой хэсгийн нэвтрэх хэсэг болон түүн дээр дээр даран өөр хуудасруу шилжих хэсгийн хийж байна. */
+.nevtreh{
+    color: var(--font-clr);
+    font-size: var(--font-sizeSmall);
+    font-family: var("Quicksand-Medium");
+    margin: 1rem;
 }
-.search-form{
-    width: 334px;
-    height: 50px;
-    border-radius: 41.5px;
-    background: #FFF;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    display: flex;
-    justify-content: center;
-    margin-left: 60%;
+.nevtreh button{
+   border-radius: 1.25rem;
+   background: none;
+   margin-right: var(--border-radius);
+   width: 8.125rem;
+   height: 3.125rem;
+   border:var(--border);
+
 }
-.search-form input{
-    width: 150%;
-    border-radius: 41.5px;
-    margin-right: 10%;
-    border: none;
-    background: none;
+.nevtreh :hover{
+    border-color:#FFF;
 }
-.search-form button{
-    background: none;
-    border: none;
-}
+
 main{
     width: 100%;
     display: grid;
@@ -78,31 +132,47 @@ main{
 }
 
 .restaurant_list li{
-    display: flex;
+    display: grid;
+    grid-template-columns: 0.5fr 3fr;
     border-style: none;
     border-radius: 30px;
     background: rgba(217, 217, 217, 0.12);
-    gap: 1.84rem;
     height: 20%;
     margin-top: 50px;
 }
+
 .restaurant_list img{
     width: 10.93563rem;
     height: 12.01306rem;
     flex-shrink: 0;
     border-radius: 40px;
-    margin-top: 10px;
-    margin-left: 10px;
     
+    padding: 1rem;
+
 }
+.h_stars{
+    display: grid;
+    padding: 1rem;
+    grid-row: 1;
+    grid-column: 2;
+    grid-template-columns: 1fr 2fr;
+}
+.starinli{
+    margin-top: -0.8rem;
+    grid-row: 1;
+    grid-column: 2;
 
-
-.restaurant_list li div{
+}
+.paragraphs{
     display: flex;
     flex-direction: column;
-    font-family: Nunito;
+    grid-row: 2;
+    grid-column: 1;
+    justify-content: space-between;
+
 
 }
+
 .filter_button{
     width: 20%;
     height: 37.154px;
@@ -114,99 +184,12 @@ main{
     padding: 2px;
 
 }
-@media (max-width: 1920px) {
+.filter_button:hover{
+    cursor: pointer;
+    border:var(--border);
+}
 
-        .filter_button {
-            margin-right: 20%;
-        }
-    
-        .restaurant_list li {
-            width: 100%;
-            height: 50%;
-           
-        }
-
-        .restaurant_list img {
-            width: 12.93563rem;
-            height: 14.01306rem;
-            border-radius: 3.25rem;
-            padding: 1%;
-        }
-    }
-    
-    
-    @media (max-width: 768px) {
-        header {
-            align-items: flex-start;
-            font-size: 15px;
-           
-        }
-    
-        .logo {
-            margin-left: 1rem;
-        }
-    
-        .search-form {
-            width: 20%;
-            margin: 1rem;
-        }
-        .search-form input{
-            width: 100%;
-            border-radius: 41.5px;
-            margin-right: 10%;
-            border: none;
-            background: none;
-        }
-        .search-form button{
-            background: none;
-            border: none;
-        }
-        .login-button{
-            margin-right: 0;
-            margin-top: 15px;
-        }
-        main {
-            width: 100%;
-            display: grid;
-            grid-template-columns: 20% 80%;
-            grid-gap: 1em 0em;
-        }
-    
-        .filter_button {
-            margin-right: 70%;
-        }
-    
-        .filter_checkbox {
-            margin-top: 5rem;
-            width: auto;
-        }
-    
-
-    
-        .restaurant_list li {
-            width: 100%;
-            margin-top: 20px;
-        }
-    
-        .restaurant_list img {
-            width: 10.93563rem;
-            height: 12.01306rem;
-            flex-shrink: 0;
-            border-radius: 3.25rem;
-            padding: 6%;
-        }
-        .restaurant_list li div{
-            display: flex;
-            flex-direction: column;
-            width: 100px;
-            
-        }
-        .display-star{
-            width: 100px;
-        }
-    }
-    
-    @media (min-width: 768px) {
+    /*@media (min-width: 768px) {
         header {
             
             align-items: flex-start;
@@ -227,8 +210,8 @@ main{
         main {
             width: 100%;
             display: grid;
-            grid-template-columns: 20% 80%;
-            grid-gap: 1em 0em;
+            grid-template-columns: 15% 80%;
+            grid-gap: 2rem;
         }
     
         .filter_button {
@@ -254,13 +237,96 @@ main{
             border-radius: 1.25rem;
             padding: 30px;
         }
-        .restaurant_list li div{
-            display: flex;
-            flex-direction: column;
-            width: 100px;
-            
-        }
-        .display-star{
-            width: 100px;
-        }
+        
+
     }
+    */
+/*Review star shuu*/
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+  
+  .radio-input {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .radio-label {
+    cursor: pointer;
+    font-size: 0;
+    color: var(--color-span);
+    transition: color 0.1s ease-in-out;
+  }
+  
+  .radio-label:before {
+    content: "★";
+    display: inline-block;
+    font-size: 2rem;
+  }
+  
+  .radio-input:checked ~ .radio-label {
+    color: var(--color-accent);
+  }
+  
+  .radio-label:hover,
+  .radio-label:hover ~ .radio-label {
+    color: var(--color-accent);
+  }
+  
+  .radio-input:checked + .radio-label:hover,
+  .radio-input:checked + .radio-label:hover ~ .radio-label,
+  .radio-input:checked ~ .radio-label:hover,
+  .radio-input:checked ~ .radio-label:hover ~ .radio-label,
+  .radio-label:hover ~ .radio-input:checked ~ .radio-label {
+    color: var(--color-accent);
+  }
+  
+  
+  .average-rating {
+    appearance: none;
+    color: transparent;
+    width: auto;
+    display: inline-block;
+    vertical-align: baseline;
+    font-size: 2rem;
+  }
+  .average-rating::before {
+    --percent: calc(3/5*100%);
+    content: '★★★★★'; 
+    background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+    -webkit-background-clip: text;
+  }
+  #stars5::before{
+    --percent: calc(5/5*100%);
+    content: '★★★★★'; 
+    background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+    -webkit-background-clip: text;
+  }
+  #stars4::before{
+    --percent: calc(4/5*100%);
+    content: '★★★★★'; 
+    background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+    -webkit-background-clip: text;
+  }
+  #stars3::before{
+    --percent: calc(3/5*100%);
+    content: '★★★★★'; 
+    background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+    -webkit-background-clip: text;
+  }
+  #stars2::before{
+    --percent: calc(2/5*100%);
+    content: '★★★★★'; 
+    background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+    -webkit-background-clip: text;
+  }
+  #stars1::before{
+    --percent: calc(1/5*100%);
+    content: '★★★★★'; 
+    background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+    -webkit-background-clip: text;  
+  
+  }

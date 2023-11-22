@@ -16,6 +16,7 @@ class SearchPage {
         this.filterButton.addEventListener('click', this.sortByName.bind(this));
         this.fetchRestaurants();
     }
+
     fetchRestaurants() {
         fetch('searchpage.json')
             .then(response => response.json())
@@ -56,7 +57,13 @@ class SearchPage {
     }
 
     displayStars(stars) {
-        return Array(stars).fill('<span>&#9733;</span>').join('');
+        let starHtml = '';
+        for (let i = 1; i <= 5; i++) {
+            starHtml += `
+                <label for="stars${i}" class="star ${i <= stars ? 'filled' : ''}">&#9733;</label>
+            `;
+        }
+        return starHtml;
     }
 
     sortByName() {
@@ -64,4 +71,5 @@ class SearchPage {
         this.displayRestaurants();
     }
 }
+
 const searchPage = new SearchPage();
