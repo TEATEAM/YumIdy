@@ -1,0 +1,38 @@
+[
+    {
+      "name": "Royal Sushi House",
+      "stars": 4,
+      "rank": 1,
+      "openingHours": "11am-22am",
+      "description": "Best Sushi House in Ub"
+    },
+    {
+      "name": "Burgers & Pizza",
+      "stars": 3,
+      "rank": 5,
+      "openingHours": "12pm-23pm",
+      "description": "Best burger and pizza in town"
+    },
+    {
+      "name": "Mongolian Grill",
+      "stars": 5,
+      "rank": 2,
+      "openingHours": "10am-20pm",
+      "description": "Savor the flavors of Mongolia"
+    },
+    {
+      "name": "Burger Haven",
+      "stars": 4,
+      "rank": 8,
+      "openingHours": "11am-21pm",
+      "description": "Home of the juiciest burgers"
+    },
+    {
+      "name": "Sizzling Steaks",
+      "stars": 4,
+      "rank": 4,
+      "openingHours": "18pm-01am",
+      "description": "Experience the best steaks in town"
+    }
+  ]
+  
