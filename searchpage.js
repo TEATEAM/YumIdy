@@ -9,16 +9,16 @@ class Restaurant {
 }
 
 class SearchPage {
-    constructor() {
+    constructor(jsonUrl = 'searchpage.json') {
         this.restaurants = [];
         this.restaurantList = document.querySelector('.restaurant_list');
         this.filterButton = document.querySelector('.filter_button');
         this.filterButton.addEventListener('click', this.sortByName.bind(this));
-        this.fetchRestaurants();
+        this.fetchRestaurants(jsonUrl);
     }
 
-    fetchRestaurants() {
-        fetch('searchpage.json')
+    fetchRestaurants(jsonUrl) {
+        fetch(jsonUrl)
             .then(response => response.json())
             .then(data => {
                 this.restaurants = data.map(restaurantData => new Restaurant(
@@ -41,29 +41,21 @@ class SearchPage {
         this.restaurants.forEach(restaurant => {
             const listItem = document.createElement('li');
             listItem.innerHTML = `
-                <img src="/accest/restaurantpage1.png" alt="">
-                <div>
-                    <div class="display-stars">
-                        <h3>${restaurant.name}</h3>
-                        ${this.displayStars(restaurant.stars)}
+                <img src="/accest/restaurantpage2.png" alt="">
+                <div class="h_stars">
+                    <h2 class="resnamebtn">${restaurant.name}</h2>
+                    <label for="stars${restaurant.rank}" class="starinli">
+                        <meter id="stars${restaurant.rank}" class="average-rating" min="0" max="5" value="${restaurant.stars}" title="${restaurant.stars} out of 5 stars"></meter>
+                    </label>
+                    <div class="paragraphs">
+                        <p>#${restaurant.rank} of 300</p>
+                        <p>${restaurant.openingHours}</p>
+                        <p>${restaurant.description}</p>
                     </div>
-                    <p>#${restaurant.rank} of 300</p>
-                    <p>${restaurant.openingHours}</p>
-                    <p>${restaurant.description}</p>
                 </div>
             `;
             this.restaurantList.appendChild(listItem);
         });
-    }
-
-    displayStars(stars) {
-        let starHtml = '';
-        for (let i = 1; i <= 5; i++) {
-            starHtml += `
-                <label for="stars${i}" class="star ${i <= stars ? 'filled' : ''}">&#9733;</label>
-            `;
-        }
-        return starHtml;
     }
 
     sortByName() {
