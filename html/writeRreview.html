@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write Review section</title>
+    <link rel="stylesheet" href="sign-in.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h2><a href="Yumidylogo.png">Yumidy</a></h2>
+            <button type="button">Нэвтрэх</button>
+        </nav>
+     </header>
+
+   <section>
+    <h1>Таны зочилсон газар ямархуу байв?</h1>
+    <img src="hool.png" alt="zoogiin gazrin orchnii zurag" width="300px" height="400px">
+   <p>chili shabu shabu&sushi</p>
+   </section>
+
+   <section>
+    <article>
+        <h4>Таны хоол таалагдсан уу?</h4>
+        <meter value="1" max="5" min="1"></meter>
+    </article>
+
+    <article>
+        <h4>Таны ая тухтай байдлыг хангаж чадсан уу?</h4>
+        <meter value="1" max="5" min="1"></meter>
+    </article>
+   
+    <article>
+        <h4>Үйлчилгээ нь ямархуу байсан бэ?</h4>
+        <meter value="1" max="5" min="1"></meter>
+    </article>
+
+    <article>
+        <form action="/server-хаяг" method="POST">
+            <label for="comment">Сэтгэгдэл бичих:</label>
+            <textarea id="comment" name="comment" cols="30" rows="10">Энд бичээрэй</textarea>
+            <button type="submit">Илгээх</button>
+        </form>
+     </article>
+
+     <article>
+        <form action="/server-хаяг" method="POST" enctype="multipart/form-data">
+            <label for="file">Зураг оруулах:</label>
+            <input type="file" id="file" name="file">
+            <button type="submit">Илгээх</button>
+        </form>
+    </article>
+
+     <nav> <button type="submit">Үргэлжлүүлэх</button></nav>
+</section>
+
+
+</body>
+</html>

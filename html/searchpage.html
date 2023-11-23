@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page</title>
+    <meta name="description" content="Use the search box to find the best restaurants.">
+    <link rel="stylesheet" href="/css/searchpage.css">
+</head>
+
+<body class="body">
+    <header>
+        <!--  logo heseg -->
+        <a class="logo"  href="homepage.html" ><img class="logoImg" src="/accest/logo.svg" alt="logoImg"></a>
+        <!--  suuderleh zuraas -->
+        
+         <!-- nevtreh hesgiin button -->
+         <nav class="nevtreh">
+             <button type="button" class="nevtreh">Нэвтрэх</button>
+         </nav>  
+     </header>
+    <main>
+    <section class="hero_container">
+    <article  class="filter_checkbox">
+            <h3>Meals</h3>
+            <ul>
+                <li><input type="checkbox" id="breakfast"> <label for="breakfast">Breakfast</label></li>
+                <li><input type="checkbox" id="lunch"> <label for="lunch">Lunch</label></li>
+                <li><input type="checkbox" id="dinner"> <label for="dinner">Dinner</label></li>
+            </ul>
+            <h3>Price</h3>
+            <ul>
+                <li><input type="checkbox" id="cheap-eats"> <label for="cheap-eats">Cheap Eats</label></li>
+                <li><input type="checkbox" id="mid-range"> <label for="mid-range">Mid-range</label></li>
+                <li><input type="checkbox" id="fine-dining"> <label for="fine-dining">Fine Dining</label></li>
+            </ul>
+            <h3>Cuisines</h3>
+            <ul>
+                <li><input type="checkbox" id="mongolian"> <label for="mongolian">Mongolian</label></li>
+                <li><input type="checkbox" id="asian"> <label for="asian">Asian</label></li>
+                <li><input type="checkbox" id="european"> <label for="european">European</label></li>
+                <li><input type="checkbox" id="american"> <label for="american">American</label></li>
+            </ul>
+            <h3>Dishes</h3>
+            <ul>
+                <li><input type="checkbox" id="salad"> <label for="salad">Salad</label></li>
+                <li><input type="checkbox" id="burger"> <label for="burger">Burger</label></li>
+                <li><input type="checkbox" id="beef"> <label for="beef">Beef</label></li>
+                <li><input type="checkbox" id="lamb"> <label for="lamb">Lamb</label></li>
+            </ul>
+        </article>
+    </section>
+    <section class="restaurant container">
+        <article class="restaurant_article">
+        <button type="button" class="filter_button">Sort by name</button>        
+            <ul  class="restaurant_list">
+                <!-- <li>   
+                    <img src="/accest/restaurantpage1.png" alt="">
+                    <div class="h_stars">
+                        <h2 class="resnamebtn">Royal Sushi House</h2>
+                        <label for="stars5" class="starinli">
+                            <meter id="stars5" class="average-rating" min="0" max="5" value="5" title="5 out of 5 stars"></meter>
+                        </label>
+                        <div class="paragraphs">
+                            <p>#1 of 300</p>
+                            <p>11am-22am</p>
+                            <p>Best Sushi House in Ub</p>
+                        </div>
+                    </div>      
+                </li>
+                <li>   
+                    <img src="/accest/restaurantpage3.png" alt="">
+                    <div class="h_stars">
+                        <h2>Burger&Pizza</h2>
+                        <label for="stars5" class="starinli">
+                            <meter id="stars5" class="average-rating" min="0" max="5" value="5" title="5 out of 5 stars"></meter>
+                        </label>
+                        <div class="paragraphs">
+                            <p>#2 of 300</p>
+                            <p>11am-22am</p>
+                            <p>Best Sushi House in Ub</p>
+                        </div>
+                    </div>      
+                </li>
+                <li>   
+                    <img src="/accest/restaurantpage2.png" alt="">
+                    <div class="h_stars">
+                        <h2>Ninja Sushi</h2>
+                        <label for="stars5" class="starinli">
+                            <meter id="stars5" class="average-rating" min="0" max="5" value="5" title="5 out of 5 stars"></meter>
+                        </label>
+                        <div class="paragraphs">
+                            <p>#1 of 300</p>
+                            <p>11am-22am</p>
+                            <p>Best Sushi House in Ub</p>
+                        </div>
+                    </div>      
+                </li>
+                <li>   
+                    <img src="/accest/restaurantpage1.png" alt="">
+                    <div class="h_stars">
+                        <h2>Royal Sushi House</h2>
+                        <label for="stars5" class="starinli">
+                            <meter id="stars5" class="average-rating" min="0" max="5" value="5" title="5 out of 5 stars"></meter>
+                        </label>
+                        <div class="paragraphs">
+                            <p>#1 of 300</p>
+                            <p>11am-22am</p>
+                            <p>Best Sushi House in Ub</p>
+                        </div>
+                    </div>      
+                </li>
+                <li>   
+                    <img src="/accest/restaurantpage1.png" alt="">
+                    <div class="h_stars">
+                        <h2>Royal Sushi House</h2>
+                        <label for="stars5" class="starinli">
+                            <meter id="stars5" class="average-rating" min="0" max="5" value="5" title="5 out of 5 stars"></meter>
+                        </label>
+                        <div class="paragraphs">
+                            <p>#1 of 300</p>
+                            <p>11am-22am</p>
+                            <p>Best Sushi House in Ub</p>
+                        </div>
+                    </div>      
+                </li>
+                <li>   
+                    <img src="/accest/restaurantpage1.png" alt="">
+                    <div class="h_stars">
+                        <h2>Royal Sushi House</h2>
+                        <label for="stars5" class="starinli">
+                            <meter id="stars5" class="average-rating" min="0" max="5" value="5" title="5 out of 5 stars"></meter>
+                        </label>
+                        <div class="paragraphs">
+                            <p>#1 of 300</p>
+                            <p>11am-22am</p>
+                            <p>Best Sushi House in Ub</p>
+                        </div>
+                    </div>      
+                </li> -->
+            </ul>
+        </article>
+    </section>
+</main>
+    <footer>
+        <nav>
+            <a href="https://www.facebook.com"><img src="/accest/facebook.png" alt="Facebook" ></a>
+            <a href="https://www.twitter.com"><img src="accest/twitter.png" alt="Twitter" ></a>
+            <a href="https://www.instagram.com"><img src="accest/instagram.png" alt="Instagram" ></a>
+        </nav>
+        <article>
+            &copy; 2023 Yumidy. All Rights Reserved.
+        </article>
+    </footer>
+    <script src="searchpage.js"></script>
+
+    
+    
+</body>
+
+</html>
