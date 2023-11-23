@@ -46,7 +46,7 @@ h2{
       stroke: var(--color-text);
       stroke-width: 0.1rem;
       position: relative;
-      right: -65%;
+      right: -60%;
       margin-right: 5rem;
     }
     & #heart-checkbox {
@@ -59,7 +59,8 @@ h2{
     }
     & .share{
       position: relative  ;
-      right: -60%;
+      right: -58%;
+      margin-right: 2rem;
     }   
   }
   & #Restaurant-overview{
@@ -120,6 +121,9 @@ h2{
         margin-top: 2rem;
         text-align: center;
         line-height: normal;
+        & i{
+          color: aliceblue;
+        }
       }
       & .rt-contact{
         margin-left: -2.5rem;
@@ -273,44 +277,6 @@ h2{
   flex-direction: row-reverse;
   justify-content: flex-end;
 }
-
-.radio-input {
-  position: fixed;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.radio-label {
-  cursor: pointer;
-  font-size: 0;
-  color: var(--color-span);
-  transition: color 0.1s ease-in-out;
-}
-
-.radio-label:before {
-  content: "★";
-  display: inline-block;
-  font-size: 2rem;
-}
-
-.radio-input:checked ~ .radio-label {
-  color: var(--color-accent);
-}
-
-.radio-label:hover,
-.radio-label:hover ~ .radio-label {
-  color: var(--color-accent);
-}
-
-.radio-input:checked + .radio-label:hover,
-.radio-input:checked + .radio-label:hover ~ .radio-label,
-.radio-input:checked ~ .radio-label:hover,
-.radio-input:checked ~ .radio-label:hover ~ .radio-label,
-.radio-label:hover ~ .radio-input:checked ~ .radio-label {
-  color: var(--color-accent);
-}
-
-
 .average-rating {
   appearance: none;
   color: transparent;
@@ -355,4 +321,40 @@ h2{
   background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
   -webkit-background-clip: text;  
 
+}
+
+.radio-input {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.radio-label {
+  cursor: pointer;
+  font-size: 0;
+  color: var(--color-span);
+  transition: color 0.1s ease-in-out;
+}
+
+.radio-label:before {
+  content: "★";
+  display: inline-block;
+  font-size: 2rem;
+}
+
+.radio-input:checked ~ .radio-label {
+  color: var(--color-accent);
+}
+
+.radio-label:hover,
+.radio-label:hover ~ .radio-label {
+  color: var(--color-accent);
+}
+
+.radio-input:checked + .radio-label:hover,
+.radio-input:checked + .radio-label:hover ~ .radio-label,
+.radio-input:checked ~ .radio-label:hover,
+.radio-input:checked ~ .radio-label:hover ~ .radio-label,
+.radio-label:hover ~ .radio-input:checked ~ .radio-label {
+  color: var(--color-accent);
 }
