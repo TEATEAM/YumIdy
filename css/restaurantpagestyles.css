@@ -1,8 +1,8 @@
 @import url(root.css);
 @media (prefers-color-scheme: dark) {
   :root{   
-    --color-bg: #FFFFFF;
-    --color-bg-second: #988e8e;
+    --color-bg: #d9d9d0;
+    --color-bg-second: #FFFFFF;
     --color-text: #0F0F0F;
     --color-span: #272727;
   }
@@ -69,6 +69,7 @@ h2{
       position: relative  ;
       right: -58%;
       margin-right: 2rem;
+      fill: var(--color-text)
     }   
   }
   & #Restaurant-overview{
@@ -196,7 +197,7 @@ h2{
       height: 1.57706rem;
     }
     & progress::-webkit-progress-bar {
-      background-color: var(--color-text);
+      background-color:#d9d9d9;
       border-radius: 0.75rem; 
     }
     & progress::-webkit-progress-value {
@@ -296,37 +297,37 @@ h2{
 .average-rating::before {
   --percent: calc(3/5*100%);
   content: '★★★★★'; 
-  background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+  background: linear-gradient(90deg, var(--color-accent) var(--percent), #d9d9d9 var(--percent));
   -webkit-background-clip: text;
 }
 #stars5::before{
   --percent: calc(5/5*100%);
   content: '★★★★★'; 
-  background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+  background: linear-gradient(90deg, var(--color-accent) var(--percent), #d9d9d9 var(--percent));
   -webkit-background-clip: text;
 }
 #stars4::before{
   --percent: calc(4/5*100%);
   content: '★★★★★'; 
-  background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+  background: linear-gradient(90deg, var(--color-accent) var(--percent), #d9d9d9 var(--percent));
   -webkit-background-clip: text;
 }
 #stars3::before{
   --percent: calc(3/5*100%);
   content: '★★★★★'; 
-  background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+  background: linear-gradient(90deg, var(--color-accent) var(--percent), #d9d9d9 var(--percent));
   -webkit-background-clip: text;
 }
 #stars2::before{
   --percent: calc(2/5*100%);
   content: '★★★★★'; 
-  background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+  background: linear-gradient(90deg, var(--color-accent) var(--percent), #d9d9d9 var(--percent));
   -webkit-background-clip: text;
 }
 #stars1::before{
   --percent: calc(1/5*100%);
   content: '★★★★★'; 
-  background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+  background: linear-gradient(90deg, var(--color-accent) var(--percent), #d9d9d9 var(--percent));
   -webkit-background-clip: text;  
 
 }
