@@ -1,4 +1,12 @@
 @import url(root.css);
+@media (prefers-color-scheme: dark) {
+  :root{   
+    --color-bg: #FFFFFF;
+    --color-bg-second: #988e8e;
+    --color-text: #0F0F0F;
+    --color-span: #272727;
+  }
+}
 *{
   margin: 0;
   padding: 0;
