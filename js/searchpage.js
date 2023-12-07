@@ -21,10 +21,6 @@ class SearchPage {
         fetch(jsonUrl)
             .then(response => response.json())
             .then(data => {
-
-                //
-                filtereddata=data;
-                //filter
                 this.restaurants = data.map(restaurantData => new Restaurant(
                     restaurantData.name,
                     restaurantData.stars,
@@ -61,7 +57,6 @@ class SearchPage {
             this.restaurantList.appendChild(listItem);
         });
     }
-
     sortByName() {
         this.restaurants.sort((a, b) => a.name.localeCompare(b.name));
         this.displayRestaurants();
