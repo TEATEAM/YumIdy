@@ -246,9 +246,21 @@ body{
 /* Нууц үг сэргээх хэсэг */
 .sergeeh{
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
+     width: 26%;
+    height: 4%;
+    margin-left: 9%;
+    margin-top: 2%;
     background: none;
     border: none;
     color: #FFF;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+   
 
+}
+.sergeeh button:hover{
+   
+        text-decoration-line: underline;
+        text-decoration-color: #EE5151;
 }
