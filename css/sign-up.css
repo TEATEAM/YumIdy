@@ -1,0 +1,254 @@
+@import url(root.css);
+body{
+    width: 100%;
+    height: 100%;
+    background: #0F0F0F;
+}
+/* Header section */
+.head{
+    display: flex;
+    justify-content: space-evenly;
+    width: 86%;
+    height: 14%;
+    flex-shrink: 0;
+    & button{
+        display: flex;
+        padding: 0rem 2.4375rem 0.1875rem 0.25rem;
+        align-items: center;
+        line-height: 4.375rem;
+        width: 17%;
+        font-size: 1.5rem;
+        font-family:  'Quicksand', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        background: none;
+        border: none;
+        color: #FFFFFF;
+        flex-shrink: 0;
+      /*   opacity: 0.7; */
+
+    }
+    & .nevtreh{
+        margin-left: 8.9%;
+    }
+
+    & .bvrtgvvleh{
+        margin-right: 49%;  
+    }
+    & :hover{
+        text-decoration-line: underline;
+        text-decoration-color: #EE5151;
+    }
+    & .x{
+        width: 4.3125rem;
+        height: 4.3125rem;
+    }
+    & .x :hover{
+        opacity: 0.7;
+        text-decoration-line: none;
+    }
+}
+
+/* main body heseg bogood google bolon facebookeer shuud nevreh heseg */
+.google{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 9%;
+    border-radius: 2.52469rem;
+    border: 6.059px solid var(--color-accent, #EE5151);
+    margin-left: 9%;
+    margin-top: 6%;
+    
+    & a{
+        width: 11%;
+        height: 4.4%;
+        color: #FFF;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration: none;
+        margin: 0.7rem;
+        margin-left: 2% ;
+    }
+    & span{
+        width: 2.2%;
+        height: 2.5%;
+        flex-shrink: 0;
+        font-size: 2rem;
+        color: #1877f2;
+        
+    }
+   
+}
+.google :hover{
+    color: #EE5151;
+   border: #EE5151;
+}
+.fb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 9%;
+    border-radius: 2.52469rem;
+    border: 6.059px solid var(--color-accent, #EE5151);
+    margin-left: 9%;
+    margin-top: 3%;
+  & a{
+    width: 16%;
+    height: 4.4%;
+    flex-shrink: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    margin: 0.7rem;
+    color: #FFF;
+  }
+  & span{
+    width: 2.2%;
+    height: 2.5%;
+    flex-shrink: 0;
+    font-size: 2rem;
+    color: #1877f2;
+    margin-left: 5%;
+  }
+  & :hover{
+    border-color: #FFFFFF;
+    color: #EE5151;
+   
+}
+}
+
+/* google tei heseg bolon bogloh heseg hoyrig tusgaarlah line or line heseg */
+.lines{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 4.4%;
+         
+    
+   & div{
+    width: 36%;
+    border-bottom: 1px solid #ccc;
+    transform: rotate(-0.417deg);
+    stroke-width: 2px;
+    stroke: #FFF;
+    margin-top: 7.3%; 
+   }
+   & p{
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 9.5%; 
+    height: 5.5%;
+    color: #FFF;
+    font-family:'Quicksand', sans-serif;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+  }
+}
+
+/* Bvrtgeltei bol medeelleeree nevterch oroh heseg */
+.email{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 72%;
+    height: 9%;
+    margin-left: 9%;
+    margin-top: 6%;
+    border-radius: 2.52469rem;
+    border:none;
+    background: rgba(217, 217, 217, 0.12);
+    /* padding-top: 2%;
+    padding-bottom: 2%; */
+    & input{
+        margin-right: 60%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        background: none;
+        border: none;
+        position: inherit;
+        font-family:  'Quicksand', sans-serif;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: #FFF;
+    }
+}
+
+/* passwordoo oruulah */
+.password{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 72%;
+    height: 9%;
+    margin-left: 9%;
+    margin-top: 4%;
+    border-radius: 2.52469rem;
+    border:none;
+    background: rgba(217, 217, 217, 0.12);
+    & input{
+        margin-right: 60%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        background: none;
+        border: none;
+        position: inherit;
+        font-family:  'Quicksand', sans-serif;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: #FFF;
+    }
+}
+
+/* Nevtreh gesen tovchluur deer darj nevtren orno */
+.nevtreh button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 72%;
+    height: 9%;
+    margin-left: 9%;
+    margin-top: 6%;
+    border-radius: 2.52469rem;
+    background: var(--color-accent, #EE5151);
+    
+    & h4{
+        font-family: 'Quicksand', sans-serif;
+        /* font-size: 1.5rem; */
+        font-style: normal;
+        color: #FFF;
+    }
+    
+}
+
+.nevtreh :hover{
+    background-color: #FFF;
+    color: #EE5151;
+}
+
+/* Нууц үг сэргээх хэсэг */
+.sergeeh{
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    color: #FFF;
+
+}
