@@ -1,0 +1,334 @@
+[
+   {
+    "catagoryID": 1,
+    "catagoryName": "Meals",
+    "subcat":[
+        {
+            "subcatId":1.1,
+            "subcatName":"Breakfast",
+            "restaurants":[
+                {
+                    "id": 1,
+                    "name": "Royal Sushi House",
+                    "stars": 4,
+                    "rank": 1,
+                    "openingHours": "11am-22am",
+                    "description": "Best Sushi House in Ub"
+                  },
+                  {
+                    "id": 2,
+                    "name": "Burgers & Pizza",
+                    "stars": 3,
+                    "rank": 5,
+                    "openingHours": "12pm-23pm",
+                    "description": "Best burger and pizza in town"
+                  }
+            ]
+        },
+        {
+            "subcatId":1.2,
+            "subcatName":"Lunch",
+            "restaurants":[
+                {
+                    "id": 1,
+                    "name": "Royal Sushi House",
+                    "stars": 4,
+                    "rank": 1,
+                    "openingHours": "11am-22am",
+                    "description": "Best Sushi House in Ub"
+                  },
+                  {
+                    "id": 2,
+                    "name": "Burgers & Pizza",
+                    "stars": 3,
+                    "rank": 5,
+                    "openingHours": "12pm-23pm",
+                    "description": "Best burger and pizza in town"
+                  }
+            ]
+        },
+        {
+            "subcatId":1.3,
+            "subcatName":"Dinner",
+            "restaurants":[
+                {
+                    "id": 1,
+                    "name": "Royal Sushi House",
+                    "stars": 4,
+                    "rank": 1,
+                    "openingHours": "11am-22am",
+                    "description": "Best Sushi House in Ub"
+                  },
+                  {
+                    "id": 2,
+                    "name": "Burgers & Pizza",
+                    "stars": 3,
+                    "rank": 5,
+                    "openingHours": "12pm-23pm",
+                    "description": "Best burger and pizza in town"
+                  }
+            ]
+        }
+    ]
+   }, 
+   {
+    "catagoryID": 2,
+    "catagoryName": "Price",
+    "subcat":[
+        {
+            "subcatId":2.1,
+            "subcatName":"Cheap-eats",
+            "restaurants":[
+                {
+                    "id": 1,
+                    "name": "Royal Sushi House",
+                    "stars": 4,
+                    "rank": 1,
+                    "openingHours": "11am-22am",
+                    "description": "Best Sushi House in Ub"
+                  },
+                  {
+                    "id": 2,
+                    "name": "Burgers & Pizza",
+                    "stars": 3,
+                    "rank": 5,
+                    "openingHours": "12pm-23pm",
+                    "description": "Best burger and pizza in town"
+                  }
+            ]
+        },
+        {
+            "subcatId":2.2,
+            "subcatName":"Mid-range",
+            "restaurants":[
+                {
+                    "id": 1,
+                    "name": "Royal Sushi House",
+                    "stars": 4,
+                    "rank": 1,
+                    "openingHours": "11am-22am",
+                    "description": "Best Sushi House in Ub"
+                  },
+                  {
+                    "id": 2,
+                    "name": "Burgers & Pizza",
+                    "stars": 3,
+                    "rank": 5,
+                    "openingHours": "12pm-23pm",
+                    "description": "Best burger and pizza in town"
+                  }
+            ]
+        },
+        {
+            "subcatId":2.3,
+            "subcatName":"Fine-Dinning",
+            "restaurants":[
+                {
+                    "id": 1,
+                    "name": "Royal Sushi House",
+                    "stars": 4,
+                    "rank": 1,
+                    "openingHours": "11am-22am",
+                    "description": "Best Sushi House in Ub"
+                  },
+                  {
+                    "id": 2,
+                    "name": "Burgers & Pizza",
+                    "stars": 3,
+                    "rank": 5,
+                    "openingHours": "12pm-23pm",
+                    "description": "Best burger and pizza in town"
+                  }
+            ]
+        }
+    ]
+   }, 
+   {
+    "catagoryID": 3,
+    "catagoryName": "Cuisines",
+    "subcat":[
+        {
+            "subcatId":3.1,
+            "subcatName":"Mongolian",
+            "restaurants":[
+                {
+                    "id": 1,
+                    "name": "Royal Sushi House",
+                    "stars": 4,
+                    "rank": 1,
+                    "openingHours": "11am-22am",
+                    "description": "Best Sushi House in Ub"
+                  },
+                  {
+                    "id": 2,
+                    "name": "Burgers & Pizza",
+                    "stars": 3,
+                    "rank": 5,
+                    "openingHours": "12pm-23pm",
+                    "description": "Best burger and pizza in town"
+                  }
+            ]
+        },
+        {
+            "subcatId":3.2,
+            "subcatName":"Asian",
+            "restaurants":[
+                {
+                    "id": 1,
+                    "name": "Royal Sushi House",
+                    "stars": 4,
+                    "rank": 1,
+                    "openingHours": "11am-22am",
+                    "description": "Best Sushi House in Ub"
+                  },
+                  {
+                    "id": 2,
+                    "name": "Burgers & Pizza",
+                    "stars": 3,
+                    "rank": 5,
+                    "openingHours": "12pm-23pm",
+                    "description": "Best burger and pizza in town"
+                  }
+            ]
+        },
+        {
+            "subcatId":3.3,
+            "subcatName":"European",
+            "restaurants":[
+                {
+                    "id": 1,
+                    "name": "Royal Sushi House",
+                    "stars": 4,
+                    "rank": 1,
+                    "openingHours": "11am-22am",
+                    "description": "Best Sushi House in Ub"
+                  },
+                  {
+                    "id": 2,
+                    "name": "Burgers & Pizza",
+                    "stars": 3,
+                    "rank": 5,
+                    "openingHours": "12pm-23pm",
+                    "description": "Best burger and pizza in town"
+                  }
+            ]
+        },
+        {
+            "subcatId":3.4,
+            "subcatName":"American",
+            "restaurants":[
+                {
+                    "id": 1,
+                    "name": "Royal Sushi House",
+                    "stars": 4,
+                    "rank": 1,
+                    "openingHours": "11am-22am",
+                    "description": "Best Sushi House in Ub"
+                  },
+                  {
+                    "id": 2,
+                    "name": "Burgers & Pizza",
+                    "stars": 3,
+                    "rank": 5,
+                    "openingHours": "12pm-23pm",
+                    "description": "Best burger and pizza in town"
+                  }
+            ]
+        }
+    ]
+   }, 
+   {
+    "catagoryID": 4,
+    "catagoryName": "Dishes",
+    "subcat":[
+        {
+            "subcatId":4.1,
+            "subcatName":"Salad",
+            "restaurants":[
+                {
+                    "id": 1,
+                    "name": "Royal Sushi House",
+                    "stars": 4,
+                    "rank": 1,
+                    "openingHours": "11am-22am",
+                    "description": "Best Sushi House in Ub"
+                  },
+                  {
+                    "id": 2,
+                    "name": "Burgers & Pizza",
+                    "stars": 3,
+                    "rank": 5,
+                    "openingHours": "12pm-23pm",
+                    "description": "Best burger and pizza in town"
+                  }
+            ]
+        },
+        {
+            "subcatId":4.2,
+            "subcatName":"Burger",
+            "restaurants":[
+                {
+                    "id": 1,
+                    "name": "Royal Sushi House",
+                    "stars": 4,
+                    "rank": 1,
+                    "openingHours": "11am-22am",
+                    "description": "Best Sushi House in Ub"
+                  },
+                  {
+                    "id": 2,
+                    "name": "Burgers & Pizza",
+                    "stars": 3,
+                    "rank": 5,
+                    "openingHours": "12pm-23pm",
+                    "description": "Best burger and pizza in town"
+                  }
+            ]
+        },
+        {
+            "subcatId":4.3,
+            "subcatName":"Beef",
+            "restaurants":[
+                {
+                    "id": 1,
+                    "name": "Royal Sushi House",
+                    "stars": 4,
+                    "rank": 1,
+                    "openingHours": "11am-22am",
+                    "description": "Best Sushi House in Ub"
+                  },
+                  {
+                    "id": 2,
+                    "name": "Burgers & Pizza",
+                    "stars": 3,
+                    "rank": 5,
+                    "openingHours": "12pm-23pm",
+                    "description": "Best burger and pizza in town"
+                  }
+            ]
+        },
+        {
+            "subcatId":4.4,
+            "subcatName":"Lamb",
+            "restaurants":[
+                {
+                    "id": 1,
+                    "name": "Royal Sushi House",
+                    "stars": 4,
+                    "rank": 1,
+                    "openingHours": "11am-22am",
+                    "description": "Best Sushi House in Ub"
+                  },
+                  {
+                    "id": 2,
+                    "name": "Burgers & Pizza",
+                    "stars": 3,
+                    "rank": 5,
+                    "openingHours": "12pm-23pm",
+                    "description": "Best burger and pizza in town"
+                  }
+            ]
+        }
+    ]
+   }
+]

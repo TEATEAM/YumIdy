@@ -5,7 +5,8 @@
       "stars": 4,
       "rank": 1,
       "openingHours": "11am-22am",
-      "description": "Best Sushi House in Ub"
+      "description": "Best Sushi House in Ub",
+      "meals":""
     },
     {
       "id": 2,
@@ -96,4 +97,5 @@
       "description": "Experience the best steaks in town"
     }
   ]
+  
   

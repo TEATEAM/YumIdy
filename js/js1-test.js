@@ -11,17 +11,17 @@ class Restaurant {
     //build & return
     render() {
         return `
-            <article>
+            <article id="restaurant_${this.id}">
                 <img src="/accest/restaurantpage2.png" alt="">
                 <div class="h_stars">
-                    <h2 class="resnamebtn">${restaurant.name}</h2>
-                    <label for="stars${restaurant.stars}" class="starinli">
-                        <meter id="stars${restaurant.stars}" class="star-rating" min="0" max="5" value="${restaurant.stars}" title="${restaurant.stars} out of 5 stars"></meter>
+                    <h2 class="resnamebtn">${this.name}</h2>
+                    <label for="stars${this.stars}" class="starinli">
+                        <meter id="stars${this.stars}" class="star-rating" min="0" max="5" value="${this.stars}" title="${restaurant.stars} out of 5 stars"></meter>
                     </label>
                     <div class="paragraphs">
-                        <p>#${restaurant.rank} of 300</p>
-                        <p>${restaurant.openingHours}</p>
-                        <p>${restaurant.description}</p>
+                        <p>#${this.rank} of 300</p>
+                        <p>${this.openingHours}</p>
+                        <p>${this.description}</p>
                     </div>
                 </div>
             </article>`;
