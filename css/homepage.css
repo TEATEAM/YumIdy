@@ -645,7 +645,7 @@ footer{
     }
   }
 /*Review star shuu*/
-.average-rating {
+.star-rating {
     appearance: none;
     color: transparent;
     width: auto;
@@ -653,7 +653,7 @@ footer{
     vertical-align: baseline;
     font-size: 2rem;
   }
-  .average-rating::before {
+  .star-rating::before {
     --percent: calc(3/5*100%);
     content: '★★★★★'; 
     background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));

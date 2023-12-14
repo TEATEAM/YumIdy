@@ -1,5 +1,6 @@
 [
     {
+      "id": 1,
       "name": "Royal Sushi House",
       "stars": 4,
       "rank": 1,
@@ -7,6 +8,7 @@
       "description": "Best Sushi House in Ub"
     },
     {
+      "id": 2,
       "name": "Burgers & Pizza",
       "stars": 3,
       "rank": 5,
@@ -14,6 +16,7 @@
       "description": "Best burger and pizza in town"
     },
     {
+      "id": 3,
       "name": "Mongolian Grill",
       "stars": 5,
       "rank": 2,
@@ -21,6 +24,7 @@
       "description": "Savor the flavors of Mongolia"
     },
     {
+      "id": 4,
       "name": "Burger Haven",
       "stars": 4,
       "rank": 8,
@@ -28,6 +32,63 @@
       "description": "Home of the juiciest burgers"
     },
     {
+      "id": 5,
+      "name": "Sizzling Steaks",
+      "stars": 4,
+      "rank": 4,
+      "openingHours": "18pm-01am",
+      "description": "Experience the best steaks in town"
+    },
+    {
+      "id": 6,
+      "name": "Sizzling Steaks",
+      "stars": 4,
+      "rank": 4,
+      "openingHours": "18pm-01am",
+      "description": "Experience the best steaks in town"
+    },
+    {
+      "id": 7,
+      "name": "Sizzling Steaks",
+      "stars": 4,
+      "rank": 4,
+      "openingHours": "18pm-01am",
+      "description": "Experience the best steaks in town"
+    },
+    {
+      "id": 8,
+      "name": "Sizzling Steaks",
+      "stars": 4,
+      "rank": 4,
+      "openingHours": "18pm-01am",
+      "description": "Experience the best steaks in town"
+    },
+    {
+      "id": 9,
+      "name": "Sizzling Steaks",
+      "stars": 4,
+      "rank": 4,
+      "openingHours": "18pm-01am",
+      "description": "Experience the best steaks in town"
+    },
+    {
+      "id": 10,
+      "name": "Sizzling Steaks",
+      "stars": 4,
+      "rank": 4,
+      "openingHours": "18pm-01am",
+      "description": "Experience the best steaks in town"
+    },
+    {
+      "id": 11,
+      "name": "Sizzling Steaks",
+      "stars": 4,
+      "rank": 4,
+      "openingHours": "18pm-01am",
+      "description": "Experience the best steaks in town"
+    },
+    {
+      "id": 12,
       "name": "Sizzling Steaks",
       "stars": 4,
       "rank": 4,
