@@ -1,8 +1,8 @@
 @import url(root.css);
 @media (prefers-color-scheme: dark) {
   :root{   
-    --color-bg: #d9d9d0;
-    --color-bg-second: #FFFFFF;
+    --color-bg: #FFFFFF;
+    --color-bg-second: #d9d9d9;
     --color-text: #0F0F0F;
     --color-span: #272727;
   }
@@ -331,6 +331,43 @@ h2{
   -webkit-background-clip: text;  
 
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*review uguhud ashiglagdah*/
 .radio-input {
   position: fixed;
@@ -341,7 +378,7 @@ h2{
 .radio-label {
   cursor: pointer;
   font-size: 0;
-  color: var(--color-span);
+  color: #d9d9d9;
   transition: color 0.1s ease-in-out;
 }
 
