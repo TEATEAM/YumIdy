@@ -6,4 +6,35 @@
     --color-span: #988e8e;
     --p-font: normal lighter 1rem Quicksand; 
     --h-font: normal bold 2rem Quicksand; 
+    
+    /*homepage-ariunaa*/
+     --font-family: 'Quicksand', sans-serif ;
+     --font-sizeTom: 2.5rem;
+     --font-weight: 700;
+     --line-height: 50px;
+    --font-style: normal;
+     --font-sizeBR: 3rem;
+     --font-sizeSmall: 1.25rem;
+     --searchBar-width:56.2rem;
+    --searchBar-height:4.8125rem;
+    --searchBar-radius: 2.6rem;
+    --advice-width: 70.5rem;
+    --advice-height: 26rem;
+    --best-res-width:90rem;
+    --border-radius: 1.25rem;
+    --border:3px solid var(--color-accent);
+    --hajuuZai:7.2rem;
+    --small-fontSize:1.2rem;
+    --text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+    --margin-top:1.5rem;
+    --BR-fontWeight : 700;
+    --BR-lineHeight :1.5rem;
+    --letter-spacing: 0.00625rem;
+    --Br-marginLeft :1rem;
+    --tsag-WH : 0.75rem;
+    --marginSVG-tseg : 0.5rem;
+    --margin-bodySmall:1.94rem;
+    --footer-margin :41.5rem;
+ /*    --ug-font: */
+    
 }

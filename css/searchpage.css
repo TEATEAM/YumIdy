@@ -326,5 +326,6 @@ main{
   #stars1::before{
     --percent: calc(1/5*100%);
     content: '★★★★★'; 
-    background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));   
+    background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent)); 
+    -webkit-background-clip: text;
   }

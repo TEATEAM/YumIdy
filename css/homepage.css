@@ -21,46 +21,12 @@ and we can use
     padding: 0;
     box-sizing: border-box;
 }
-:root{
-    --color: #FFFFFF;
-    --background-clr:#0F0F0F;
-     --second-clr: #EE5151;
-     --font-clr: #FFF;
-     --font-family: 'Quicksand', sans-serif ;
-     --font-sizeTom: 2.5rem;
-     --font-weight: 700;
-     --line-height: 50px;
-    --font-style: normal;
-     --font-sizeBR: 3rem;
-     --font-sizeSmall: 1.25rem;
-     --searchBar-width:56.2rem;
-    --searchBar-height:4.8125rem;
-    --searchBar-radius: 2.6rem;
-    --advice-width: 70.5rem;
-    --advice-height: 26rem;
-    --best-res-width:90rem;
-    --background-clr2 : #272727;
-    --border-radius: 1.25rem;
-    --border:3px solid var(--second-clr);
-    --hajuuZai:7.2rem;
-    --small-fontSize:1.2rem;
-    --text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
-    --margin-top:1.5rem;
-    --BR-fontWeight : 700;
-    --BR-lineHeight :1.5rem;
-    --letter-spacing: 0.00625rem;
-    --Br-marginLeft :1rem;
-    --tsag-WH : 0.75rem;
-    --marginSVG-tseg : 0.5rem;
-    --margin-bodySmall:1.94rem;
-    --footer-margin :41.5rem;
- /*    --ug-font: */
-    
-}
+
+
 body{
-    background:var(--background-clr) ;
+    background:var(--color-bg) ;
     font-family: var("Quicksand-Medium");
-    color: var(--font-clr);
+    color: var(--color-text);
 }
 /* Толгой хэсгийн хийх толгой хэсэг нь хоёр зүйл агуулдаг бөгөөд энэ нь нэвтрэх хэсэг болон лого агуулна. Лого-г хөдөлдөг анимашион болгон хийж байна. */
 header{
@@ -79,7 +45,7 @@ header{
    /*  border-bottom: 2px solid #D9D9D9; */
    width: 100%;
    height: 6.44rem;
-   background: var( --background-clr);
+   background: var( --color-bg);
    box-shadow: 0px 0px 10px 0px rgba(240, 251, 255, 0.20) inset;
     
    
@@ -88,13 +54,13 @@ header{
 /* Толгой хэсэг */
 /* logo section */
 .logo{
-    color: var(--second-clr);
+    color: var(--color-accent);
     text-decoration: none;
     margin-left: 2.25rem;
 }
 /* толгой хэсгийн нэвтрэх хэсэг болон түүн дээр дээр даран өөр хуудасруу шилжих хэсгийн хийж байна. */
 .nevtreh{
-    color: var(--font-clr);
+    color: var(--color-text);
     font-size: var(--font-sizeSmall);
     font-family: var("Quicksand-Medium");
 }
@@ -121,7 +87,7 @@ header{
     font: var(--ug-font);
     font-family: var(--font-family);
     font-size: var(--font-sizeBR);
-    color: var(--font-clr);
+    color: var(--color-text);
 }
 
 .bestR {
@@ -162,7 +128,7 @@ header{
     font-family: var(--font-family);
     font-size: 1.125rem;
     font-style: var(--font-style);
-    color: var(--font-clr);
+    color: var(--color-text);
 }
 .iconZurh{
     background: none;
@@ -170,7 +136,7 @@ header{
 
 }
 .iconZurh:hover{
-   fill: var(--font-clr);
+   fill: var(color-text);
 }
 
 
@@ -205,7 +171,7 @@ header{
     font-style: var(--font-style);
     font-weight: var(--BR-fontWeight);
     line-height: var(--BR-lineHeight);
-    color: var(--font-clr);
+    color: var(--color-text);
 }
 
 .price{
@@ -215,7 +181,7 @@ header{
     font-style: var(--font-style);
     font-weight: var(--BR-fontWeight);
     line-height: var(--BR-lineHeight);
-    color: var(--font-clr);
+    color: var(--color-text);
 }
 
 .svgTseg{
@@ -247,7 +213,7 @@ header{
     margin-right: 14.375rem;
 
 & h5{
-    color:var( --font-clr) ;
+    color:var( --color-text) ;
     font-size: var(--font-sizeSmall);
    
 }
@@ -257,7 +223,7 @@ header{
 }
 & button :hover{
     text-decoration: underline;
-    text-decoration-color:var(--second-clr);
+    text-decoration-color:var(--color-accent);
 }
 }
 
@@ -287,8 +253,8 @@ header{
     border-radius: var(--searchBar-radius);
     /* baruun tiish bolohgui baisan tul hvch hereglev. */
     margin-right: 1.5rem;
-    background: var(--font-clr);
-    color: var( --second-clr);
+    background: var(--color-text);
+    color: var( --color-accent);
     text-align: center;
     font-style: var( --font-style);
     font-size: var(--font-sizeSmall);
@@ -296,7 +262,7 @@ header{
 }
 /* zasah!!! */
 .btn:hover{
-    border-color:var(--background-clr);
+    border-color:var(--color-bg);
 }
 input{
     border: none;
@@ -318,7 +284,7 @@ input{
 }  
  
 input[type="search"] {
-    color:var( --background-clr); /* Change this to the desired font color */
+    color:var( --color-bg); /* Change this to the desired font color */
 }
 
 .searchIcon{
@@ -349,7 +315,7 @@ input[type="search"] {
     height: 12.4rem;
     font-weight: var(--font-weight);
     line-height: var(--line-height); 
-    color: var(--font-clr);
+    color: var(--color-text);
     text-shadow: 0px 4px 4px rgba(1, 1, 1, 0.25);
     font-size: var(--font-sizeTom);
     font-style: var(--font-style);
@@ -368,7 +334,7 @@ input[type="search"] {
     font: var(--ug-font);
     font-family: var(--font-family);
     font-size: var(--font-sizeBR);
-    color: var(--font-clr);
+    color: var(--color-text);
 }
 
 .bestR {
@@ -409,7 +375,7 @@ input[type="search"] {
     font-family: var(--font-family);
     font-size: 1.125rem;
     font-style: var(--font-style);
-    color: var(--font-clr);
+    color: var(--color-text);
 }
 .iconZurh{
     background: none;
@@ -417,7 +383,7 @@ input[type="search"] {
 
 }
 .iconZurh:hover{
-   fill: var(--font-clr);
+   fill: var(--color-text);
 }
 
 
@@ -452,7 +418,7 @@ input[type="search"] {
     font-style: var(--font-style);
     font-weight: var(--BR-fontWeight);
     line-height: var(--BR-lineHeight);
-    color: var(--font-clr);
+    color: var(--color-text);
 }
 
 .price{
@@ -462,7 +428,7 @@ input[type="search"] {
     font-style: var(--font-style);
     font-weight: var(--BR-fontWeight);
     line-height: var(--BR-lineHeight);
-    color: var(--font-clr);
+    color: var(--color-text);
 }
 
 .svgTseg{
@@ -515,7 +481,7 @@ input[type="search"] {
     font-style: var(--font-style);
     font-weight: var(--BR-fontWeight);
     line-height: 3.125rem;
-    color: var(--font-clr);
+    color: var(--color-text);
     margin-top: 5.94rem;
 }
 & .recentReviews{
@@ -528,7 +494,7 @@ input[type="search"] {
     font: var(--ug-font);
     font-family: var(--font-family);
     font-size: var(--font-sizeBR);
-    color: var(--font-clr);
+    color: var(--color-text);
 }
 }
 
@@ -545,18 +511,18 @@ input[type="search"] {
     height: 31.6875rem;
     border-radius: var( --border-radius);
     margin: var(--margin-bodySmall);
-    background: var( --background-clr2);
+    background: var( --color-bg-second);
     
 }
 .sanalOgoh svg:hover{
-    color: var(--second-clr);
+    color: var(--color-accent);
 }
 
 /* FOOTER */
 footer{
     width: 100%;
     height: 6.44rem;
-    background: var( --background-clr);
+    background: var( --color-bg);
     box-shadow: 0px 4px 10px 0px rgba(240, 251, 255, 0.20) inset;
 }
 .footer{
@@ -565,13 +531,13 @@ footer{
     align-items: center;
     width: 6.6875rem;
     height: 1.0625rem;
-    color: var(--color);
+    color: var(--color-text);
     margin-left: var(--footer-margin);
     margin-right: var(--footer-margin);
  
 }
 .footer a{
-    color: var(--color);
+    color: var(--color-text);
     margin-top: 1.62rem;
 }
 .end{
@@ -584,10 +550,10 @@ footer{
   font-style: var(--font-style);
   font-weight: 400;
   line-height: normal;
-  color: var( --font-clr);
+  color: var( --color-text);
 }
 .footer a :hover{
-    color: var(--second-clr);
+    color: var(--color-accent);
 }
 /*review*/
 .recentR article{
@@ -721,4 +687,4 @@ footer{
     background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
     -webkit-background-clip: text;  
   
-  }
+  } 
