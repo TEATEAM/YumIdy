@@ -1,0 +1,46 @@
+@import url(root.css);
+/*Review star using radio shuu*/
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+  
+  .radio-input {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .radio-label {
+    cursor: pointer;
+    font-size: 0;
+    color: var(--color-span);
+    transition: color 0.1s ease-in-out;
+  }
+  
+  .radio-label:before {
+    content: "★";
+    display: inline-block;
+    font-size: 2rem;
+  }
+  
+  .radio-input:checked ~ .radio-label {
+    color: var(--color-accent);
+  }
+  
+  .radio-label:hover,
+  .radio-label:hover ~ .radio-label {
+    color: var(--color-accent);
+  }
+  
+  .radio-input:checked + .radio-label:hover,
+  .radio-input:checked + .radio-label:hover ~ .radio-label,
+  .radio-input:checked ~ .radio-label:hover,
+  .radio-input:checked ~ .radio-label:hover ~ .radio-label,
+  .radio-label:hover ~ .radio-input:checked ~ .radio-label {
+    color: var(--color-accent);
+  }
+  
+  
+  

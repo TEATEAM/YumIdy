@@ -16,13 +16,20 @@ and we can use
 } it will become yellow color.
 */
 @import url(root.css);
+@media (prefers-color-scheme: dark) {
+    :root{   
+      --color-bg: #FFFFFF;
+      --color-bg-second: #d9d9d9;
+      --color-text: #0F0F0F;
+      --color-span: #272727;
+    }
+  }
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-
 body{
     background:var(--color-bg) ;
     font-family: var("Quicksand-Medium");
@@ -637,13 +644,8 @@ footer{
         }
     }
   }
-  /*Review star shuu*/
-.star-rating {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-  }
-  .average-rating {
+/*Review star shuu*/
+.average-rating {
     appearance: none;
     color: transparent;
     width: auto;
@@ -686,5 +688,4 @@ footer{
     content: '★★★★★'; 
     background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
     -webkit-background-clip: text;  
-  
   } 

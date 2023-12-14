@@ -1,51 +1,22 @@
 @import url(root.css);
+@media (prefers-color-scheme: dark) {
+    :root{   
+      --color-bg: #FFFFFF;
+      --color-bg-second: #d9d9d9;
+      --color-text: #0F0F0F;
+      --color-span: #272727;
+    }
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-:root{
-    --color: #FFFFFF;
-    --background-clr:#0F0F0F;
-     --second-clr: #EE5151;
-     --font-clr: #FFF;
-     --font-family: 'Quicksand', sans-serif ;
-     --font-sizeTom: 2.5rem;
-     --font-weight: 700;
-     --line-height: 50px;
-    --font-style: normal;
-     --font-sizeBR: 3rem;
-     --font-sizeSmall: 1.25rem;
-     --searchBar-width:56.2rem;
-    --searchBar-height:4.8125rem;
-    --searchBar-radius: 2.6rem;
-    --advice-width: 70.5rem;
-    --advice-height: 26rem;
-    --best-res-width:90rem;
-    --background-clr2 : #272727;
-    --border-radius: 1.25rem;
-    --border:3px solid var(--second-clr);
-    --hajuuZai:7.2rem;
-    --small-fontSize:1.2rem;
-    --text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
-    --margin-top:1.5rem;
-    --BR-fontWeight : 700;
-    --BR-lineHeight :1.5rem;
-    --letter-spacing: 0.00625rem;
-    --Br-marginLeft :1rem;
-    --tsag-WH : 0.75rem;
-    --marginSVG-tseg : 0.5rem;
-    --margin-bodySmall:1.94rem;
-    --footer-margin :41.5rem;
-    --header-padding:1rem;
-    --logo-margintop:0.5rem;
- /*    --ug-font: */
-    
-}
 body{
-    background:var(--background-clr) ;
+    background:var(--color-bg); ;
     font-family: var("Quicksand-Medium");
-    color: var(--font-clr);
+    color: var(--color-text);
 }
 /* Толгой хэсгийн хийх толгой хэсэг нь хоёр зүйл агуулдаг бөгөөд энэ нь нэвтрэх хэсэг болон лого агуулна. Лого-г хөдөлдөг анимашион болгон хийж байна. */
 header{
@@ -59,7 +30,7 @@ header{
    /*  border-bottom: 2px solid #D9D9D9; */
    width: 100%;
    height: 6.44rem;
-   background: var( --background-clr);
+   background: var( --color-bg);
    box-shadow: 0px 0px 10px 0px rgba(240, 251, 255, 0.20) inset;
     
    
@@ -68,7 +39,7 @@ header{
 /* Толгой хэсэг */
 /* logo section */
 .logo{
-    color: var(--second-clr);
+    color: var(--color-accent);
     text-decoration: none;
     margin-left: 2.25rem;
     padding: var(--header-padding);
@@ -76,7 +47,7 @@ header{
 }
 /* толгой хэсгийн нэвтрэх хэсэг болон түүн дээр дээр даран өөр хуудасруу шилжих хэсгийн хийж байна. */
 .nevtreh{
-    color: var(--font-clr);
+    color: var(--color-text);
     font-size: var(--font-sizeSmall);
     font-family: var("Quicksand-Medium");
     margin: 1rem;
@@ -91,7 +62,7 @@ header{
 
 }
 .nevtreh :hover{
-    border-color:#FFF;
+    border-color:var(--color-text);
 }
 
 main{
@@ -104,12 +75,12 @@ main{
     width: 100%;
     height: 100%;
     border-radius: 20px;
-    border: 2px solid #FFF;
+    border: 2px solid var(--color-text);
     background: rgba(255, 255, 255, 0.00);
     display: flex;
     flex-direction: column;
     margin-top: 105px;
-    color: white;
+    color: var(--color-text);
 }
 .filter_checkbox h3{
     padding: 20px;
@@ -124,7 +95,7 @@ main{
     display: flex;
 }
 .restaurant_article{
-    color: white;
+    color: var(--color-text);
     margin-top: 20px;
     width: 100%;
     height: 100%;
@@ -178,8 +149,8 @@ main{
     height: 37.154px;
     flex-shrink: 0;
     border-radius: 1.25rem;
-    color: white;
-    background: #0F0F0F;
+    color: var(--color-text);
+    background: var(--color-bg);
     margin-left: 80%;
     padding: 2px;
 
@@ -188,6 +159,51 @@ main{
     cursor: pointer;
     border:var(--border);
 }
+
+.average-rating {
+    appearance: none;
+    color: transparent;
+    width: auto;
+    display: inline-block;
+    vertical-align: baseline;
+    font-size: 2rem;
+  }
+  .average-rating::before {
+    --percent: calc(3/5*100%);
+    content: '★★★★★'; 
+    background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+    -webkit-background-clip: text;
+  }
+  #stars5::before{
+    --percent: calc(5/5*100%);
+    content: '★★★★★'; 
+    background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+    -webkit-background-clip: text;
+  }
+  #stars4::before{
+    --percent: calc(4/5*100%);
+    content: '★★★★★'; 
+    background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+    -webkit-background-clip: text;
+  }
+  #stars3::before{
+    --percent: calc(3/5*100%);
+    content: '★★★★★'; 
+    background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+    -webkit-background-clip: text;
+  }
+  #stars2::before{
+    --percent: calc(2/5*100%);
+    content: '★★★★★'; 
+    background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+    -webkit-background-clip: text;
+  }
+  #stars1::before{
+    --percent: calc(1/5*100%);
+    content: '★★★★★'; 
+    background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
+    -webkit-background-clip: text;  
+  } 
 
     /*@media (min-width: 768px) {
         header {
@@ -241,91 +257,3 @@ main{
 
     }
     */
-/*Review star shuu*/
-.star-rating {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-  }
-  
-  .radio-input {
-    position: fixed;
-    opacity: 0;
-    pointer-events: none;
-  }
-  
-  .radio-label {
-    cursor: pointer;
-    font-size: 0;
-    color: var(--color-span);
-    transition: color 0.1s ease-in-out;
-  }
-  
-  .radio-label:before {
-    content: "★";
-    display: inline-block;
-    font-size: 2rem;
-  }
-  
-  .radio-input:checked ~ .radio-label {
-    color: var(--color-accent);
-  }
-  
-  .radio-label:hover,
-  .radio-label:hover ~ .radio-label {
-    color: var(--color-accent);
-  }
-  
-  .radio-input:checked + .radio-label:hover,
-  .radio-input:checked + .radio-label:hover ~ .radio-label,
-  .radio-input:checked ~ .radio-label:hover,
-  .radio-input:checked ~ .radio-label:hover ~ .radio-label,
-  .radio-label:hover ~ .radio-input:checked ~ .radio-label {
-    color: var(--color-accent);
-  }
-  
-  
-  .average-rating {
-    appearance: none;
-    color: transparent;
-    width: auto;
-    display: inline-block;
-    vertical-align: baseline;
-    font-size: 2rem;
-  }
-  .average-rating::before {
-    --percent: calc(3/5*100%);
-    content: '★★★★★'; 
-    background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
-    -webkit-background-clip: text;
-  }
-  #stars5::before{
-    --percent: calc(5/5*100%);
-    content: '★★★★★'; 
-    background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
-    -webkit-background-clip: text;
-  }
-  #stars4::before{
-    --percent: calc(4/5*100%);
-    content: '★★★★★'; 
-    background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
-    -webkit-background-clip: text;
-  }
-  #stars3::before{
-    --percent: calc(3/5*100%);
-    content: '★★★★★'; 
-    background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
-    -webkit-background-clip: text;
-  }
-  #stars2::before{
-    --percent: calc(2/5*100%);
-    content: '★★★★★'; 
-    background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
-    -webkit-background-clip: text;
-  }
-  #stars1::before{
-    --percent: calc(1/5*100%);
-    content: '★★★★★'; 
-    background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent)); 
-    -webkit-background-clip: text;
-  }

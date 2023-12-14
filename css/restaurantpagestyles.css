@@ -1,7 +1,7 @@
 @import url(root.css);
 @media (prefers-color-scheme: dark) {
   :root{   
-    --color-bg: #FFFFFF;
+    --color-bg: var(--color-span)FFF;
     --color-bg-second: #d9d9d9;
     --color-text: #0F0F0F;
     --color-span: #272727;
@@ -197,7 +197,7 @@ h2{
       height: 1.57706rem;
     }
     & progress::-webkit-progress-bar {
-      background-color:#d9d9d9;
+      background-color: var(--color-span);
       border-radius: 0.75rem; 
     }
     & progress::-webkit-progress-value {
@@ -278,14 +278,9 @@ h2{
 
     }
   }
+}
 
-}
 /*Review star shuu*/
-.star-rating {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-}
 .average-rating {
   appearance: none;
   color: transparent;
@@ -297,41 +292,39 @@ h2{
 .average-rating::before {
   --percent: calc(3/5*100%);
   content: '★★★★★'; 
-  background: linear-gradient(90deg, var(--color-accent) var(--percent), #d9d9d9 var(--percent));
+  background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
   -webkit-background-clip: text;
 }
 #stars5::before{
   --percent: calc(5/5*100%);
   content: '★★★★★'; 
-  background: linear-gradient(90deg, var(--color-accent) var(--percent), #d9d9d9 var(--percent));
+  background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
   -webkit-background-clip: text;
 }
 #stars4::before{
   --percent: calc(4/5*100%);
   content: '★★★★★'; 
-  background: linear-gradient(90deg, var(--color-accent) var(--percent), #d9d9d9 var(--percent));
+  background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
   -webkit-background-clip: text;
 }
 #stars3::before{
   --percent: calc(3/5*100%);
   content: '★★★★★'; 
-  background: linear-gradient(90deg, var(--color-accent) var(--percent), #d9d9d9 var(--percent));
+  background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
   -webkit-background-clip: text;
 }
 #stars2::before{
   --percent: calc(2/5*100%);
   content: '★★★★★'; 
-  background: linear-gradient(90deg, var(--color-accent) var(--percent), #d9d9d9 var(--percent));
+  background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
   -webkit-background-clip: text;
 }
 #stars1::before{
   --percent: calc(1/5*100%);
   content: '★★★★★'; 
-  background: linear-gradient(90deg, var(--color-accent) var(--percent), #d9d9d9 var(--percent));
-  -webkit-background-clip: text;  
-
-}
-
+  background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));  
+  -webkit-background-clip: text;
+} 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
@@ -351,56 +344,4 @@ h2{
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*review uguhud ashiglagdah*/
-.radio-input {
-  position: fixed;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.radio-label {
-  cursor: pointer;
-  font-size: 0;
-  color: #d9d9d9;
-  transition: color 0.1s ease-in-out;
-}
-
-.radio-label:before {
-  content: "★";
-  display: inline-block;
-  font-size: 2rem;
-}
-
-.radio-input:checked ~ .radio-label {
-  color: var(--color-accent);
-}
-
-.radio-label:hover,
-.radio-label:hover ~ .radio-label {
-  color: var(--color-accent);
-}
-
-.radio-input:checked + .radio-label:hover,
-.radio-input:checked + .radio-label:hover ~ .radio-label,
-.radio-input:checked ~ .radio-label:hover,
-.radio-input:checked ~ .radio-label:hover ~ .radio-label,
-.radio-label:hover ~ .radio-input:checked ~ .radio-label {
-  color: var(--color-accent);
 }
