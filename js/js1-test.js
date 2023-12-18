@@ -393,7 +393,7 @@ class App{
                  }
              ]
             }
-         ];
+         ]
     }
     //appiin targetid-d insert hiih
     init(){
@@ -403,7 +403,7 @@ class App{
             {
                 for (const restaurant of subcat.restaurants) {
                     const restaurant = new Restaurant(restaurant);
-                    myhtml = "<li>";
+                    myhtml += "<li>";
                     myhtml += restaurant.render();
                     myhtml+="</li>";
                 }

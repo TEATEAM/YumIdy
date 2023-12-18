@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page</title>
+    <meta name=description content="Use the search box to find the best restaurants.">
+    <link rel="stylesheet" href="/css/searchpage.css">
+    <script>  
+        class Restaurant {
+             //constuctor
+             constructor(restaurant) {
+                 this.id = restaurant.id;
+                 this.name = restaurant.name;
+                 this.stars = restaurant.stars;
+                 this.rank = restaurant.rank;
+                 this.openingHours = restaurant.openingHours;
+                 this.description = restaurant.description;
+             }
+             //build & return
+             render() {
+                 return `
+                    <img src="/accest/restaurantpage${this.id}.png" alt="img of restaurantpage${this.id}">
+                    <div class="h_stars">
+                        <h2>${this.name}</h2>
+                        <label for="stars${this.rank}" class="starinli">
+                            <meter id="stars${this.stars}" class="star-rating" min="0" max="5" value="${this.stars}" title="${this.stars} out of 5 stars"></meter>
+                        </label>
+                        <div class="paragraphs">
+                            <p>#${this.rank} of 300</p>
+                            <p>${this.openingHours}</p>
+                            <p>${this.description}</p>
+                        </div>
+                    </div>
+                `;
+             }
+         }
+ 
+         class App{
+             constructor(targetid){
+                 this.targetid=targetid;
+                 this.restaurantData =
+                 [
+                     {
+                     catagoryID: 1,
+                     catagoryName: "Meals",
+                     subcats:[
+                         {
+                             subcatId: 1.1,
+                             subcatName: "Breakfast",
+                             restaurants:[
+                                 {
+                                     id: 1,
+                                     name: "Royal Sushi House",
+                                     stars: 4,
+                                     rank: 1,
+                                     openingHours: "11am-22am",
+                                     description: "Best Sushi House in Ub"
+                                 },
+                                 {
+                                     id: 2,
+                                     name: "Burgers & Pizza",
+                                     stars: 3,
+                                     rank: 5,
+                                     openingHours: "12pm-23pm",
+                                     description: "Best burger and pizza in town"
+                                 }
+                             ]
+                         },
+                         {
+                             subcatId:1.2,
+                             subcatName:"Lunch",
+                             restaurants:[
+                                 {
+                                     id: 1,
+                                     name: "Royal Sushi House",
+                                     stars: 4,
+                                     rank: 1,
+                                     openingHours: "11am-22am",
+                                     description: "Best Sushi House in Ub"
+                                 },
+                                 {
+                                     id: 2,
+                                     name: "Burgers & Pizza",
+                                     stars: 3,
+                                     rank: 5,
+                                     openingHours: "12pm-23pm",
+                                     description: "Best burger and pizza in town"
+                                 }
+                             ]
+                         },
+                         {
+                             subcatId:1.3,
+                             subcatName:"Dinner",
+                             restaurants:[
+                                 {
+                                     id: 1,
+                                     name: "Royal Sushi House",
+                                     stars: 4,
+                                     rank: 1,
+                                     openingHours: "11am-22am",
+                                     description: "Best Sushi House in Ub"
+                                 },
+                                 {
+                                     id: 2,
+                                     name: "Burgers & Pizza",
+                                     stars: 3,
+                                     rank: 5,
+                                     openingHours: "12pm-23pm",
+                                     description: "Best burger and pizza in town"
+                                 }
+                             ]
+                         }
+                     ]
+                     }, 
+                     {
+                     catagoryID: 2,
+                     catagoryName: "Price",
+                     subcats:[
+                         {
+                             subcatId:2.1,
+                             subcatName:"Cheap-eats",
+                             restaurants:[
+                                 {
+                                     id: 1,
+                                     name: "Royal Sushi House",
+                                     stars: 4,
+                                     rank: 1,
+                                     openingHours: "11am-22am",
+                                     description: "Best Sushi House in Ub"
+                                 },
+                                 {
+                                     id: 2,
+                                     name: "Burgers & Pizza",
+                                     stars: 3,
+                                     rank: 5,
+                                     openingHours: "12pm-23pm",
+                                     description: "Best burger and pizza in town"
+                                 }
+                             ]
+                         },
+                         {
+                             subcatId:2.2,
+                             subcatName:"Mid-range",
+                             restaurants:[
+                                 {
+                                     id: 1,
+                                     name: "Royal Sushi House",
+                                     stars: 4,
+                                     rank: 1,
+                                     openingHours: "11am-22am",
+                                     description: "Best Sushi House in Ub"
+                                 },
+                                 {
+                                     id: 2,
+                                     name: "Burgers & Pizza",
+                                     stars: 3,
+                                     rank: 5,
+                                     openingHours: "12pm-23pm",
+                                     description: "Best burger and pizza in town"
+                                 }
+                             ]
+                         },
+                         {
+                             subcatId:2.3,
+                             subcatName:"Fine-Dinning",
+                             restaurants:[
+                                 {
+                                     id: 1,
+                                     name: "Royal Sushi House",
+                                     stars: 4,
+                                     rank: 1,
+                                     openingHours: "11am-22am",
+                                     description: "Best Sushi House in Ub"
+                                 },
+                                 {
+                                     id: 2,
+                                     name: "Burgers & Pizza",
+                                     stars: 3,
+                                     rank: 5,
+                                     openingHours: "12pm-23pm",
+                                     description: "Best burger and pizza in town"
+                                 }
+                             ]
+                         }
+                     ]
+                     }, 
+                     {
+                     catagoryID: 3,
+                     catagoryName: "Cuisines",
+                     subcats:[
+                         {
+                             subcatId:3.1,
+                             subcatName:"Mongolian",
+                             restaurants:[
+                                 {
+                                     id: 1,
+                                     name: "Royal Sushi House",
+                                     stars: 4,
+                                     rank: 1,
+                                     openingHours: "11am-22am",
+                                     description: "Best Sushi House in Ub"
+                                 },
+                                 {
+                                     id: 2,
+                                     name: "Burgers & Pizza",
+                                     stars: 3,
+                                     rank: 5,
+                                     openingHours: "12pm-23pm",
+                                     description: "Best burger and pizza in town"
+                                 }
+                             ]
+                         },
+                         {
+                             subcatId:3.2,
+                             subcatName:"Asian",
+                             restaurants:[
+                                 {
+                                     id: 1,
+                                     name: "Royal Sushi House",
+                                     stars: 4,
+                                     rank: 1,
+                                     openingHours: "11am-22am",
+                                     description: "Best Sushi House in Ub"
+                                 },
+                                 {
+                                     id: 2,
+                                     name: "Burgers & Pizza",
+                                     stars: 3,
+                                     rank: 5,
+                                     openingHours: "12pm-23pm",
+                                     description: "Best burger and pizza in town"
+                                 }
+                             ]
+                         },
+                         {
+                             subcatId:3.3,
+                             subcatName:"European",
+                             restaurants:[
+                                 {
+                                     id: 1,
+                                     name: "Royal Sushi House",
+                                     stars: 4,
+                                     rank: 1,
+                                     openingHours: "11am-22am",
+                                     description: "Best Sushi House in Ub"
+                                 },
+                                 {
+                                     id: 2,
+                                     name: "Burgers & Pizza",
+                                     stars: 3,
+                                     rank: 5,
+                                     openingHours: "12pm-23pm",
+                                     description: "Best burger and pizza in town"
+                                 }
+                             ]
+                         },
+                         {
+                             subcatId:3.4,
+                             subcatName:"American",
+                             restaurants:[
+                                 {
+                                     id: 1,
+                                     name: "Royal Sushi House",
+                                     stars: 4,
+                                     rank: 1,
+                                     openingHours: "11am-22am",
+                                     description: "Best Sushi House in Ub"
+                                 },
+                                 {
+                                     id: 2,
+                                     name: "Burgers & Pizza",
+                                     stars: 3,
+                                     rank: 5,
+                                     openingHours: "12pm-23pm",
+                                     description: "Best burger and pizza in town"
+                                 }
+                             ]
+                         }
+                     ]
+                     }, 
+                     {
+                     catagoryID: 4,
+                     catagoryName: "Dishes",
+                     subcats:[
+                         {
+                             subcatId:4.1,
+                             subcatName:"Salad",
+                             restaurants:[
+                                 {
+                                     id: 1,
+                                     name: "Royal Sushi House",
+                                     stars: 4,
+                                     rank: 1,
+                                     openingHours: "11am-22am",
+                                     description: "Best Sushi House in Ub"
+                                 },
+                                 {
+                                     id: 2,
+                                     name: "Burgers & Pizza",
+                                     stars: 3,
+                                     rank: 5,
+                                     openingHours: "12pm-23pm",
+                                     description: "Best burger and pizza in town"
+                                 }
+                             ]
+                         },
+                         {
+                             subcatId:4.2,
+                             subcatName:"Burger",
+                             restaurants:[
+                                 {
+                                     id: 1,
+                                     name: "Royal Sushi House",
+                                     stars: 4,
+                                     rank: 1,
+                                     openingHours: "11am-22am",
+                                     description: "Best Sushi House in Ub"
+                                 },
+                                 {
+                                     id: 2,
+                                     name: "Burgers & Pizza",
+                                     stars: 3,
+                                     rank: 5,
+                                     openingHours: "12pm-23pm",
+                                     description: "Best burger and pizza in town"
+                                 }
+                             ]
+                         },
+                         {
+                             subcatId:4.3,
+                             subcatName:"Beef",
+                             restaurants:[
+                                 {
+                                     id: 1,
+                                     name: "Royal Sushi House",
+                                     stars: 4,
+                                     rank: 1,
+                                     openingHours: "11am-22am",
+                                     description: "Best Sushi House in Ub"
+                                 },
+                                 {
+                                     id: 2,
+                                     name: "Burgers & Pizza",
+                                     stars: 3,
+                                     rank: 5,
+                                     openingHours: "12pm-23pm",
+                                     description: "Best burger and pizza in town"
+                                 }
+                             ]
+                         },
+                         {
+                             subcatId:4.4,
+                             subcatName:"Lamb",
+                             restaurants:[
+                                 {
+                                     id: 1,
+                                     name: "Royal Sushi House",
+                                     stars: 4,
+                                     rank: 1,
+                                     openingHours: "11am-22am",
+                                     description: "Best Sushi House in Ub"
+                                 },
+                                 {
+                                     id: 2,
+                                     name: "Burgers & Pizza",
+                                     stars: 3,
+                                     rank: 5,
+                                     openingHours: "12pm-23pm",
+                                     description: "Best burger and pizza in town"
+                                 }
+                             ]
+                         }
+                     ]
+                     }
+                 ]
+             }
+ 
+             init() {
+ 
+             let myhtml = "";
+             for (const category of this.restaurantData) {
+                     for(const subcat of category.subcats)
+                     {
+                         for (const data of subcat.restaurants) {
+                             const restaurant = new Restaurant(data);
+                             myhtml+="<li>";
+                             myhtml += restaurant.render();
+                             myhtml+="</li>";
+                             }
+                         }
+             }
+ 
+             //app idtai elemented insertleh html
+             //elementee oloh
+             //html ee insertleh function duudah
+             const myapp = document.getElementById(this.targetid);
+             myapp.insertAdjacentHTML("afterbegin",myhtml);
+             // myapp.innerHTML += myhtml;
+ 
+         }
+         }
+    </script>
+</head>
+
+<body class="body">
+    <header>
+        <!--  logo heseg -->
+        <a class="logo"  href="homepage.html" ><img class="logoImg" src="/accest/logo.svg" alt="logoImg"></a>
+        <!--  suuderleh zuraas -->
+        
+         <!-- nevtreh hesgiin button -->
+         <nav class="nevtreh">
+             <button type="button" class="nevtreh">Нэвтрэх</button>
+         </nav>  
+     </header>
+    <main>
+    <section class="hero_container">
+    <article  class="filter_checkbox">
+            <h3>Meals</h3>
+            <ul>
+                <li><input type="checkbox" id="breakfast"> <label for="breakfast">Breakfast</label></li>
+                <li><input type="checkbox" id="lunch"> <label for="lunch">Lunch</label></li>
+                <li><input type="checkbox" id="dinner"> <label for="dinner">Dinner</label></li>
+            </ul>
+            <h3>Price</h3>
+            <ul>
+                <li><input type="checkbox" id="cheap-eats"> <label for="cheap-eats">Cheap Eats</label></li>
+                <li><input type="checkbox" id="mid-range"> <label for="mid-range">Mid-range</label></li>
+                <li><input type="checkbox" id="fine-dining"> <label for="fine-dining">Fine Dining</label></li>
+            </ul>
+            <h3>Cuisines</h3>
+            <ul>
+                <li><input type="checkbox" id="mongolian"> <label for="mongolian">Mongolian</label></li>
+                <li><input type="checkbox" id="asian"> <label for="asian">Asian</label></li>
+                <li><input type="checkbox" id="european"> <label for="european">European</label></li>
+                <li><input type="checkbox" id="american"> <label for="american">American</label></li>
+            </ul>
+            <h3>Dishes</h3>
+            <ul>
+                <li><input type="checkbox" id="salad"> <label for="salad">Salad</label></li>
+                <li><input type="checkbox" id="burger"> <label for="burger">Burger</label></li>
+                <li><input type="checkbox" id="beef"> <label for="beef">Beef</label></li>
+                <li><input type="checkbox" id="lamb"> <label for="lamb">Lamb</label></li>
+            </ul>
+        </article>
+    </section>
+    <section class="restaurant container">
+        <article class="restaurant_article">
+        <button type="button" class="filter_button">Sort by name</button>        
+            <ul  id="restaurant_list">
+            </ul>
+            <script>
+                const app = new App("restaurant_list");
+                app.init();
+            </script>
+        </article>
+    </section>
+</main>
+    <footer>
+        <nav>
+            <a href="https://www.facebook.com"><img src="/accest/facebook.png" alt="Facebook" ></a>
+            <a href="https://www.twitter.com"><img src="accest/twitter.png" alt="Twitter" ></a>
+            <a href="https://www.instagram.com"><img src="accest/instagram.png" alt="Instagram" ></a>
+        </nav>
+        <article>
+            &copy; 2023 Yumidy. All Rights Reserved.
+        </article>
+    </footer>
+</body>
+
+</html>

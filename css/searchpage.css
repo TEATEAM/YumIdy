@@ -102,7 +102,7 @@ main{
     
 }
 
-.restaurant_list li{
+#restaurant_list li{
     display: grid;
     grid-template-columns: 0.5fr 3fr;
     border-style: none;
@@ -112,7 +112,7 @@ main{
     margin-top: 50px;
 }
 
-.restaurant_list img{
+#restaurant_list img{
     width: 10.93563rem;
     height: 12.01306rem;
     flex-shrink: 0;
@@ -140,8 +140,6 @@ main{
     grid-row: 2;
     grid-column: 1;
     justify-content: space-between;
-
-
 }
 
 .filter_button{
