@@ -96,9 +96,9 @@ export default class restaurantList{
             result.json().then(data => {
 
                     //filter by meals&prices&cuisines&dishes     
-                    const filteredArray = data.record.filter( restaurantItem => restaurantItem.meals === this.mealFilter &&
-                                                                                restaurantItem.prices === this.priceFilter &&
-                                                                                restaurantItem.cuisines === this.cuisineFilter &&
+                    const filteredArray = data.record.filter( restaurantItem => restaurantItem.meals === this.mealFilter ||
+                                                                                restaurantItem.prices === this.priceFilter ||
+                                                                                restaurantItem.cuisines === this.cuisineFilter ||
                                                                                 restaurantItem.dishes === this.dishFilter)
         
                     //updating own javascript
