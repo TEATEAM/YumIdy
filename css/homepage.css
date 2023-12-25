@@ -56,22 +56,22 @@ header{
    box-shadow: 0px 0px 10px 0px rgba(240, 251, 255, 0.20) inset;
     
    
-}
+
 /* header */
 /* Толгой хэсэг */
 /* logo section */
-.logo{
+& .logo{
     color: var(--color-accent);
     text-decoration: none;
     margin-left: 2.25rem;
 }
 /* толгой хэсгийн нэвтрэх хэсэг болон түүн дээр дээр даран өөр хуудасруу шилжих хэсгийн хийж байна. */
-.nevtreh{
+& .nevtreh{
     color: var(--color-text);
     font-size: var(--font-sizeSmall);
     font-family: var("Quicksand-Medium");
 }
-.nevtreh button{
+& .nevtreh button{
    border-radius: 1.25rem;
    background: none;
    margin-right: var(--border-radius);
@@ -79,10 +79,14 @@ header{
    height: 3.125rem;
    border:var(--border);
 }
-.nevtreh :hover{
+& .nevtreh :hover{
     border-color:#FFF;
 }
 
+}
+
+
+/* BEST RESTAURANT  */
 /* Home page-ний Best restaurants хэсгийг хийсэн нь: */
 .ug {
     margin-top: 10.9rem;
@@ -234,7 +238,7 @@ header{
 }
 }
 
-/* searchBar */
+/* SEARCHBAR formtoi heseg*/
 /* Search Bar хэсэг энэ хэсэгт яг хайлт хийх хэсгээ бичиж өгөх хэсгийг хийсэн */
 
 .form{
@@ -251,12 +255,13 @@ header{
     background: #fff;
     border: var(--border);
     /* gollohgui baisan tul hucheer golluulsan */
-}
-.btn{
+
+& .btn{
     width: 4.625rem;
     height: 2.5625rem;
     justify-content: center;
     border: var(--border);
+    align-items: center;
     border-radius: var(--searchBar-radius);
     /* baruun tiish bolohgui baisan tul hvch hereglev. */
     margin-right: 1.5rem;
@@ -267,11 +272,12 @@ header{
     font-size: var(--font-sizeSmall);
     font-family: var( --font-family);
 }
+
 /* zasah!!! */
-.btn:hover{
-    border-color:var(--color-bg);
+& .btn:hover{
+    border-color:#FFF;
 }
-input{
+& input{
     border: none;
     font-size: var(--font-sizeSmall);
     /* bvgd center uchir hucheer baruun tiish zuuv */
@@ -290,20 +296,19 @@ input{
 
 }  
  
-input[type="search"] {
+& input[type="search"] {
     color:var( --color-bg); /* Change this to the desired font color */
 }
 
-.searchIcon{
+& .searchIcon{
     margin-left: 21px;
+}
 }
 /* zuragHeseg нь нэг "h2" таг ашиглан хийсэн текст болон зураг ашигласан  */
 .zuragHeseg{
     position: relative;
-}
-.hoolZurag{
-   
-    
+
+& .hoolZurag{
     align-items: center;
     margin-top: 63px;
     width: 70.5rem;
@@ -311,9 +316,8 @@ input[type="search"] {
     border-radius: 71px;
     background: linear-gradient(180deg, rgba(199,200,210,0.00), rgba(25,25,25,0.40) 20.39%,rgba(14, 14, 14, 0.50) 45.39%, rgba(0, 0, 0, 0.40) 70.39%, rgba(199, 200, 210, 0.00) 95.92%);
     filter: blur(4.5px);
-  
 }
-.zuragHeseg h2{
+& h2{
     position: absolute;
     top: 60%;
     left: 50%;
@@ -329,8 +333,11 @@ input[type="search"] {
     font-family: Quicksand;
     /* hucheer tohiruulsan heseg */
 }
+}
+
 /* BODY 2 */
 /* Home page-ний Best restaurants хэсгийг хийсэн нь: */
+/* best restaurant gesen ug ni */
 .ug {
     margin-top: 10.9rem;
     margin-left: var(--margin-bodySmall);
@@ -341,7 +348,8 @@ input[type="search"] {
     font: var(--ug-font);
     font-family: var(--font-family);
     font-size: var(--font-sizeBR);
-    color: var(--color-text);
+     color: var(--color-text);
+    
 }
 
 .bestR {
@@ -368,7 +376,7 @@ input[type="search"] {
 
    
 }
-/* ner bolon save hiihed ashiglah zurh icon */
+
 .IconName {
     display: flex;
     justify-content: space-between;
@@ -385,9 +393,11 @@ input[type="search"] {
     color: var(--color-text);
 }
 .iconZurh{
+    font-size: 1.5rem;
+    flex-shrink: 0;
     background: none;
     border: none;
-
+    color: #FFF;
 }
 .iconZurh:hover{
    fill: var(--color-text);
@@ -406,12 +416,14 @@ input[type="search"] {
 }
 
 .iconTsag {
+    align-items: center;
     margin-left: var(--Br-marginLeft);
     font-weight: var(--BR-fontWeight);
     line-height: var(--BR-lineHeight);
-    width:var( --tsag-WH);
-    height:var( --tsag-WH);
-
+   /*  width:var( --tsag-WH);
+    height:var( --tsag-WH); */
+    font-size: 0.8rem;
+    color: #FFF;
     /* hvcheer */
    
 }
