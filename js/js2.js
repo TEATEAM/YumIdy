@@ -18,6 +18,7 @@ class Restaurant {
     //build & return
     render() {
         return `
+        <li>
            <img src="/accest/restaurantpage${this.id}.png" alt="img of restaurantpage${this.id}">
            <div class="h_stars">
                <h2>${this.name}</h2>
@@ -30,11 +31,13 @@ class Restaurant {
                    <p>${this.description}</p>
                </div>
            </div>
+        </li>
        `;
     }
 }
 
 //1. filter-checkbox checklegdsn bh uyd url soligddog bh
+var newURL;
 function updateURL() {
     // checklegdsn mealsiin utguudig avah
     var selectedMeals = document.querySelectorAll('input[name="meal[]"]:checked');
@@ -67,15 +70,19 @@ function updateURL() {
     });
 
     // Update the URL
-    var newURL = window.location.origin + window.location.pathname + '?' + params.join('&');
+    newURL = window.location.origin + window.location.pathname + '?' + params.join('&');
     history.pushState(null, '', newURL);
+    //window.location.href = newURL; 
 }
-
 // Attach event listeners to checkboxes
 var checkboxes = document.querySelectorAll('input[name="meal[]"], input[name="price[]"], input[name="cuisine[]"], input[name="dish[]"]');
 checkboxes.forEach(function(checkbox) {
     checkbox.addEventListener('change', updateURL);
+    console.log("")
 });
+refresh(){
+    window.location.href = newURL;
+}
 
 //2. server-s uggdluu avdag
 export default class restaurantList{
@@ -89,17 +96,28 @@ export default class restaurantList{
         this.dishFilter = dishFilter;
     }
     //download then filter() then map() then reduce() 
-    Download(targetElement) {
+    async Download(targetElement) {
         
-        fetch(`${this._restauranListUrl}`)
+        await fetch(this._restauranListUrl)
         .then(result => {
             result.json().then(data => {
 
                     //filter by meals&prices&cuisines&dishes     
-                    const filteredArray = data.record.filter( restaurantItem => restaurantItem.meals === this.mealFilter ||
-                                                                                restaurantItem.prices === this.priceFilter ||
-                                                                                restaurantItem.cuisines === this.cuisineFilter ||
-                                                                                restaurantItem.dishes === this.dishFilter)
+                    const filteredArray = data.record.filter( restaurantItem => (restaurantItem.meals.includes(this.mealFilter[0]) ||
+                                                                                restaurantItem.meals.includes(this.mealFilter[1]) ||
+                                                                                restaurantItem.meals.includes(this.mealFilter[2]) )&&(
+                                                                                restaurantItem.prices.includes(this.priceFilter[0]) ||
+                                                                                restaurantItem.prices.includes(this.priceFilter[1]) ||
+                                                                                restaurantItem.prices.includes(this.priceFilter[2]) ||
+                                                                                restaurantItem.prices.includes(this.priceFilter[2])) &&(
+                                                                                restaurantItem.cuisines.includes(this.cuisineFilter[0]) ||
+                                                                                restaurantItem.cuisines.includes(this.cuisineFilter[1]) ||
+                                                                                restaurantItem.cuisines.includes(this.cuisineFilter[2]) ||
+                                                                                restaurantItem.cuisines.includes(this.cuisineFilter[3])) && (
+                                                                                restaurantItem.dishes.includes(this.dishFilter[0])||
+                                                                                restaurantItem.dishes.includes(this.dishFilter[1])||
+                                                                                restaurantItem.dishes.includes(this.dishFilter[2])||
+                                                                                restaurantItem.dishes.includes(this.dishFilter[3])) );
         
                     //updating own javascript
                     if (filteredArray.length > 0) { 
@@ -134,4 +152,6 @@ const dishFilter = params.getAll("dish");
 const resList = new restaurantList("https://api.jsonbin.io/v3/b/6582b163dc74654018862966",mealFilter, priceFilter, cuisineFilter, dishFilter);
 
 //Load content from RecentNewsURL
-resList.Download("restaurant_list");
+document.addEventListener("DOMContentLoaded" , async() => {
+    resList.Download("restaurant_list");
+});

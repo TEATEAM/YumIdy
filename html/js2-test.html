@@ -26,7 +26,7 @@
         <article  class="filter_checkbox">
             <h3>Meals</h3>
             <ul class="meals">
-                <li><input type="checkbox" name="meal[]" id="breakfast" value="1.1"> <label for="breakfast">Breakfast</label></li>
+                <li><input type="checkbox" name="meal[]" id="breakfast" value="1.1"> <label for="breakfast" checked>Breakfast</label></li>
                 <li><input type="checkbox" name="meal[]" id="lunch" value="1.2"> <label for="lunch">Lunch</label></li>
                 <li><input type="checkbox" name="meal[]" id="dinner" value="1.3"> <label for="dinner">Dinner</label></li>
             </ul>
@@ -54,7 +54,7 @@
     </section>
     <section class="restaurant container">
         <article class="restaurant_article">
-        <button type="button" class="filter_button">Sort by name</button>        
+        <button type="button" class="filter_button" onclick="refresh()">Sort by name</button>        
             <ul  id="restaurant_list">
             </ul>
         </article>
