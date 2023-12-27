@@ -313,6 +313,7 @@ header{
     margin-top: 63px;
     width: 70.5rem;
     height: 26rem;
+    object-fit: cover;
     border-radius: 71px;
     background: linear-gradient(180deg, rgba(199,200,210,0.00), rgba(25,25,25,0.40) 20.39%,rgba(14, 14, 14, 0.50) 45.39%, rgba(0, 0, 0, 0.40) 70.39%, rgba(199, 200, 210, 0.00) 95.92%);
     filter: blur(4.5px);
