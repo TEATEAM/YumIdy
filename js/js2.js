@@ -80,9 +80,7 @@ checkboxes.forEach(function(checkbox) {
     checkbox.addEventListener('change', updateURL);
     console.log("")
 });
-refresh(){
-    window.location.href = newURL;
-}
+
 
 //2. server-s uggdluu avdag
 export default class restaurantList{
@@ -105,19 +103,19 @@ export default class restaurantList{
                     //filter by meals&prices&cuisines&dishes     
                     const filteredArray = data.record.filter( restaurantItem => (restaurantItem.meals.includes(this.mealFilter[0]) ||
                                                                                 restaurantItem.meals.includes(this.mealFilter[1]) ||
-                                                                                restaurantItem.meals.includes(this.mealFilter[2]) )&&(
+                                                                                restaurantItem.meals.includes(this.mealFilter[2]) ||
                                                                                 restaurantItem.prices.includes(this.priceFilter[0]) ||
                                                                                 restaurantItem.prices.includes(this.priceFilter[1]) ||
                                                                                 restaurantItem.prices.includes(this.priceFilter[2]) ||
-                                                                                restaurantItem.prices.includes(this.priceFilter[2])) &&(
+                                                                                restaurantItem.prices.includes(this.priceFilter[2]) ||
                                                                                 restaurantItem.cuisines.includes(this.cuisineFilter[0]) ||
                                                                                 restaurantItem.cuisines.includes(this.cuisineFilter[1]) ||
                                                                                 restaurantItem.cuisines.includes(this.cuisineFilter[2]) ||
-                                                                                restaurantItem.cuisines.includes(this.cuisineFilter[3])) && (
+                                                                                restaurantItem.cuisines.includes(this.cuisineFilter[3]) ||
                                                                                 restaurantItem.dishes.includes(this.dishFilter[0])||
                                                                                 restaurantItem.dishes.includes(this.dishFilter[1])||
                                                                                 restaurantItem.dishes.includes(this.dishFilter[2])||
-                                                                                restaurantItem.dishes.includes(this.dishFilter[3])) );
+                                                                                restaurantItem.dishes.includes(this.dishFilter[3])));
         
                     //updating own javascript
                     if (filteredArray.length > 0) { 
