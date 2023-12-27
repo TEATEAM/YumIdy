@@ -1,29 +1,22 @@
-class HeaderWc extends HTMLElement {
+class Headercomponent extends HTMLElement {
     constructor() {
-        super();
-        this.#render();
+      super();
+      this.#render();
     }
-
-    connectedCallback() {
-        //implementation
+  
+    connectedCallback() {}
+  
+    #render() {
+      this.innerHTML = `
+      <header>
+     <a class="logo"  href="homepage.html" ><img class="logoImg" src="/accest/logo.svg" alt="logoImg"></a>
+      <nav class="nevtreh">
+          <button type="button" class="nevtreh">Нэвтрэх</button>
+      </nav>  
+  </header>
+      `;
     }
-    #render(){
-        this.innerHTML = `<header>
-            <a class="logo"  href="homepage.html" ><img class="logoImg" src="/accest/logo.svg" alt="logoImg"></a>
-            <nav class="nevtreh">
-                <button type="button" class="nevtreh">Нэвтрэх</button>
-            </nav>  
-        </header>`
-    }
-
-    attributeChangedCallback(name, oldVal, newVal) {
-        //implementation
-    }
-
-    adoptedCallback() {
-        //implementation
-    }
-
-}
-
-window.customElements.define('header-wc', HeaderWc);
+  }
+  
+  window.customElements.define("header-component", Headercomponent);
+  
