@@ -118,9 +118,7 @@ h2{
       & li{
         line-height: 2rem;
       }
-      & label{
-          font:var(--p-font) ;
-      }
+      
       & a{
         text-decoration: none;
         color: var(--color-span);
@@ -281,51 +279,6 @@ h2{
   }
 }
 
-/*Review star shuu*/
-.star-rating {
-  appearance: none;
-  color: transparent;
-  width: auto;
-  display: inline-block;
-  vertical-align: baseline;
-  font-size: 2rem;
-}
-.star-rating::before {
-  --percent: calc(3/5*100%);
-  content: '★★★★★'; 
-  background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
-  -webkit-background-clip: text;
-}
-#stars5::before{
-  --percent: calc(5/5*100%);
-  content: '★★★★★'; 
-  background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
-  -webkit-background-clip: text;
-}
-#stars4::before{
-  --percent: calc(4/5*100%);
-  content: '★★★★★'; 
-  background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
-  -webkit-background-clip: text;
-}
-#stars3::before{
-  --percent: calc(3/5*100%);
-  content: '★★★★★'; 
-  background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
-  -webkit-background-clip: text;
-}
-#stars2::before{
-  --percent: calc(2/5*100%);
-  content: '★★★★★'; 
-  background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));
-  -webkit-background-clip: text;
-}
-#stars1::before{
-  --percent: calc(1/5*100%);
-  content: '★★★★★'; 
-  background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-span) var(--percent));  
-  -webkit-background-clip: text;
-} 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
