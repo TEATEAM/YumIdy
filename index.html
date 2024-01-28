@@ -15,6 +15,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/header.css" />
     <link rel="stylesheet" href="/css/footer.css">
+    <script src="./component-test/real-add-cart.js"></script>
+    <script src="./components/club-card.js"></script>
+    <script src="./components/club-like-btn.js"></script>
+    <script src="./component/like-btn.js"></script>
 </head>
 
 <body>
@@ -80,11 +84,11 @@
 <!-- Зурагны доор байрлах рес-н талаарх зарим мэдээлэл -->
                 <!-- Зураг дараах ICON болон РЕС-ын нэр -->
                   <div class="IconName">
-                      <p class="nameRes"> Royal Sushi House chiliahhah</p>
-                    <div class="heart-checkbox" id = "heart-button">
-                        <input type="checkbox" id="heart"/>
-                        <label for="heart"><i class="fa-solid fa-heart"></i></label>
-                    </div>
+                        <p class="nameRes"> Royal Sushi House chiliahhah</p>
+                        <div class="heart-checkbox" id = "heart-button">
+                            <input type="checkbox" id="heart"/>
+                            <label for="heart"><i class="fa-solid fa-heart"></i></label>
+                        </div>
                   </div>
 
                   <!-- үнэ болон цагны зураг -->
@@ -108,9 +112,7 @@
                 <img src="/accest/img1.png" alt="1">
                 <div class="IconName">
                     <p class="nameRes"> Royal Sushi House</p>
-                    <button  class="iconZurh">
-                      <i class="fa-regular fa-heart"></i>
-                    </button>
+                    <add-place-card></add-place-card>
                 </div>
 
                 <div class="timeIconPrice">
@@ -134,14 +136,12 @@
             </article>
           </a>
 <!-- 3 DAHI NI -->           
-            <a href="RestaurantPage.html">
+            <div class="general">
               <article class="bestR_details">
                 <img src="/accest/img2.png" alt="2">
                 <div class="IconName">
                     <p class="nameRes"> Royal Sushi House</p>
-                    <button  class="iconZurh">
-                      <i class="fa-regular fa-heart"></i>
-                     </button>
+                    <add-place-card></add-place-card>
                 </div>
 
                 <div class="timeIconPrice">
@@ -163,7 +163,7 @@
                       </svg></p>
                 </div>
               </article>
-            </a>
+            </div>
             
 <!-- 4 DAHI NI -->
             <a href="RestaurantPage.html">

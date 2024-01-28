@@ -7,7 +7,7 @@ class LikeBtn extends HTMLElement {
     }
 
     Render(){
-        this.innerHTML = `
+        this.innerHTML = `  
             <div class="heart-checkbox" id = "heart-button">
                 <input type="checkbox" id="heart"/>
                 <label for="heart"><i class="fa-solid fa-heart"></i></label>
@@ -19,7 +19,7 @@ class LikeBtn extends HTMLElement {
     connectedCallback() {
         if(!this.eventListenerAdded){
             this.eventListenerAdded = true; //hervee evenListener nemegdeegui bol nemeh
-            this.addEventListener(//custom element ruu nemeh
+            this.addEventListener( //custom element ruu nemeh
                 "click",
                 this.clickHandler,
                 true
