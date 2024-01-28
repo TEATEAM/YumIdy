@@ -2,9 +2,11 @@
     {
       "id": 1,
       "name": "Royal Sushi House",
+      "img": "",
       "stars": 4,
       "rank": 1,
       "openingHours": "11am-22am",
+      "tag": "Sushi",
       "description": "Best Sushi House in Ub",
       "meals":["1.2", "1.3"],
       "prices":["2.2", "2.3"],
