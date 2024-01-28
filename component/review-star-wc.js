@@ -1,9 +1,10 @@
 class ReviewStarWc extends HTMLElement {
     constructor() {
         super();
-        this.rating = this.getAttribute("rating");
-        this.ratingID = this.getAttribute("ratingID");//ratingid n yund zoriulsan rating star gdgiig ilerhiine
+        this.rating = this.getAttribute("rating") ?? 0;
+        this.ratingID = this.getAttribute("ratingID") ?? "default";//ratingid n yund zoriulsan rating star gdgiig ilerhiine
         this.labelinput = this.getAttribute("labelinput") ?? "";
+        this.class = this.getAttribute("class") ?? "";
         this.percent = this.rating/5*100;
         this.attachShadow({ mode: "open" });
         this.shadowRoot.innerHTML = `
@@ -25,11 +26,10 @@ class ReviewStarWc extends HTMLElement {
           -webkit-background-clip: text;
         }
         </style>
-        <label for="${this.ratingID}">${this.labelinput}</label>
+        <label for="${this.ratingID}" class= ${this.class}>${this.labelinput}</label>
           <meter id="${this.ratingID}" class="star-rating" min="0" max="5" value="${this.rating}" title="${this.rating} out of 5 stars"></meter>
         `;
     }
-  
 }
 
 window.customElements.define('review-star-wc', ReviewStarWc);

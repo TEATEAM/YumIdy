@@ -21,8 +21,8 @@ class Restaurant {
         <li>
            <img src="/accest/restaurantpage${this.id}.png" alt="img of restaurantpage${this.id}">
            <div class="h_stars">
-               <h2>${this.name}</h2>
-               <review-star-wc rating="${restaurant.stars}" ratingID="restaurant${this.id}"></review-star-wc>
+               <h2>${this.name}</h2>                        
+               <review-star-wc class= "starinli" rating="${this.stars}" ratingID="restaurant${this.id}"></review-star-wc>
                <div class="paragraphs">
                    <p>#${this.rank} of 300</p>
                    <p>${this.openingHours}</p>

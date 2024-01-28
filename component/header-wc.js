@@ -19,4 +19,17 @@ class Headercomponent extends HTMLElement {
   }
   
   window.customElements.define("header-component", Headercomponent);
+  class HeaderWc extends HTMLElement {
+    constructor() {
+      super();
+      //implementation
+    }
+  
+    connectedCallback() {
+      //implementation
+    }
+  
+  }
+  
+  window.customElements.define('header-wc', HeaderWc);
   
