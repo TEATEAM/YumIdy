@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!--wc-->
-    <script type="module" src="/component/review-star-wc.js"></script>
+    <script type="module" src="/./component/review-star-wc.js"></script>
 </head>
 <body>
     <!--header, logo, search-btn, login-btn-->
@@ -62,9 +62,7 @@
             <section class="Restaurant-header">
                 <h2 class="Restaurant-name">Burger & Pizza</h2>
                 <!--reviewstars-->
-                <label for="Restaurant-rating" class="restaurant-star">
-                    <meter id="Restaurant-rating" class="star-rating" min="0" max="5" value="4" title="4 out of 5 stars"></meter>
-                </label>
+                <review-star-wc rating="4" ratingID="Restaurant-rating" class="restaurant-star"></review-star-wc>
                 <!--wishlistiin zurh-->
                 <label for="heart-checkbox" class="heart-label">
                     <svg class="heart" width="32" height="32" viewBox="0 0 34 32"  xmlns="http://www.w3.org/2000/svg">

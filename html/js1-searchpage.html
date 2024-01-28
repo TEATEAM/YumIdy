@@ -7,6 +7,8 @@
     <title>Search Page</title>
     <meta name=description content="Use the search box to find the best restaurants.">
     <link rel="stylesheet" href="/css/searchpage.css">
+    <!--wc-->
+    <script type="module" src="/./component/review-star-wc.js"></script>
     <script>  
         class Restaurant {
              //constuctor
@@ -24,9 +26,7 @@
                     <img src="/accest/restaurantpage${this.id}.png" alt="img of restaurantpage${this.id}">
                     <div class="h_stars">
                         <h2>${this.name}</h2>
-                        <label for="stars${this.rank}" class="starinli">
-                            <meter id="stars${this.stars}" class="star-rating" min="0" max="5" value="${this.stars}" title="${this.stars} out of 5 stars"></meter>
-                        </label>
+                        <review-star-wc class= "starinli" rating="${this.stars}" ratingID="restaurant${this.id}"></review-star-wc>
                         <!--wishlistiin zurh-->
                         <label for="heart-checkbox" class="heart-label">
                             <svg class="heart" width="32" height="32" viewBox="0 0 34 32"  xmlns="http://www.w3.org/2000/svg">
@@ -469,6 +469,7 @@
                 const app = new App("restaurant_list");
                 app.init();
             </script>
+            <script type="module" src="/./component/review-star-wc.js"></script>
         </article>
     </section>
 </main>
@@ -483,5 +484,4 @@
         </article>
     </footer>
 </body>
-
 </html>

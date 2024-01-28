@@ -3,23 +3,50 @@ class RestaurantWc extends HTMLElement {
         super();
         this.id = restaurant.id;
         this.name = restaurant.name;
+        this.img = restaurant.img;
         this.stars = restaurant.stars;
         this.rank = restaurant.rank;
         this.openingHours = restaurant.openingHours;
+        this.tag = restaurant.tag;
         this.description = restaurant.description;
         this.meals = restaurant.meals;
         this.prices = restaurant.prices;
         this.cuisines = restaurant.cuisines;
         this.dishes = restaurant.dishes;
         //implementation
-        this.innerHTML = String.raw`
+    }
+    renderOnHomepage(){
+        this.innerHTML = `
+        <article class="bestR_details">
+            <img src="${this.img}" alt="img of ${this.id}">
+            <div class="IconName">
+                <p class="nameRes">${this.name}</p>
+                    <button  class="iconZurh">
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+                <div class="timeIconPrice">
+                    <p class="iconTsag">
+                      <i class="fa-regular fa-clock"></i>
+                    </p>
+                    <p class="time">Open</p>
+                    <p class="price"> ${this.prices} MNT</p>
+                </div>
+
+                <div class="typeOd">
+                    <button class="type">${this.tag}</button>
+                        <review-star-wc rating="5" ratingID="restaurant${this.id}" class="rating"></review-star-wc>
+                </div>
+            </article>`
+    }
+    renderOnSearchpage(){
+        this.innerHTML = `
+        <style></style>
         <li>
            <img src="/accest/restaurantpage${this.id}.png" alt="img of restaurantpage${this.id}">
            <div class="h_stars">
                <h2>${this.name}</h2>
-               <label for="stars${this.rank}" class="starinli">
-                   <meter id="stars${this.stars}" class="star-rating" min="0" max="5" value="${this.stars}" title="${this.stars} out of 5 stars"></meter>
-               </label>
+               <review-star-wc rating="${this.stars}" ratingID="restaurant${this.id}" class="starinli"></review-star-wc>
                <!--wishlistiin zurh-->
                 <label for="heart-checkbox" class="heart-label">
                     <svg class="heart" width="32" height="32" viewBox="0 0 34 32"  xmlns="http://www.w3.org/2000/svg">

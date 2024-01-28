@@ -1,4 +1,4 @@
-class IdyCard extends HTMLElemnet {
+class ResCard extends HTMLElement {
     constructor() {
         super()
         this.attachShadow({mode: 'open'});
@@ -45,5 +45,7 @@ class IdyCard extends HTMLElemnet {
 
         
     }
- 
+
 }
+
+window.customElements.define('res-card', ResCard);
