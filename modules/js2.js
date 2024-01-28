@@ -22,9 +22,7 @@ class Restaurant {
            <img src="/accest/restaurantpage${this.id}.png" alt="img of restaurantpage${this.id}">
            <div class="h_stars">
                <h2>${this.name}</h2>
-               <label for="stars${this.rank}" class="starinli">
-                   <meter id="stars${this.stars}" class="star-rating" min="0" max="5" value="${this.stars}" title="${this.stars} out of 5 stars"></meter>
-               </label>
+               <review-star-wc rating="${restaurant.stars}" ratingID="restaurant${this.id}"></review-star-wc>
                <div class="paragraphs">
                    <p>#${this.rank} of 300</p>
                    <p>${this.openingHours}</p>

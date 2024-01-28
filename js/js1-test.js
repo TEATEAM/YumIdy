@@ -16,9 +16,8 @@ class Restaurant {
             <article id="restaurant_${this.id}">
                 <img src="/accest/restaurantpage${this.id}.png" alt="restaurantpage${this.id}">
                 <h2 class="resName">${this.name}</h2>
-                <label for="stars${this.stars}">
-                <meter id="stars${this.stars}" class="star-rating" min="0" max="5" value="${this.stars}" title="${restaurant.stars} out of 5 stars"></meter>
-                </label> 
+                <review-star-wc rating="${restaurant.stars}" ratingID="restaurant${this.id}"></review-star-wc>
+                <script type="module" src="/component/review-star-wc.js"></script>
                 <div class="paragraphs">
                     <p>#${this.rank} of 300</p>
                     <p>${this.openingHours}</p>
