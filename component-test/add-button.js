@@ -5,8 +5,8 @@ class AddToCard extends HTMLElement {
         this.shadowRoot.innerHTML = `
         <style>
         .addToCard .fa-heart {
-                    font-size: 1.3rem;
-                }
+            font-size: 1.3rem;
+        }
          .addToCard {
         padding-left:0.15rem;
           background: none;

@@ -4,32 +4,18 @@ class Headercomponent extends HTMLElement {
       this.#render();
     }
   
-    connectedCallback() {}
   
     #render() {
       this.innerHTML = `
       <header>
      <a class="logo"  href="homepage.html" ><img class="logoImg" src="/accest/logo.svg" alt="logoImg"></a>
+     <cart-wc></cart-wc>
       <nav class="nevtreh">
           <button type="button" class="nevtreh">Нэвтрэх</button>
       </nav>  
-  </header>
+      </header>
       `;
     }
   }
   
   window.customElements.define("header-component", Headercomponent);
-  class HeaderWc extends HTMLElement {
-    constructor() {
-      super();
-      //implementation
-    }
-  
-    connectedCallback() {
-      //implementation
-    }
-  
-  }
-  
-  window.customElements.define('header-wc', HeaderWc);
-  

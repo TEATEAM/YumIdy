@@ -1,4 +1,4 @@
-class RestaurantWc extends HTMLElement {
+export class RestaurantWc extends HTMLElement {
     constructor(restaurant) {
         super();
         this.id = restaurant.id;

@@ -29,14 +29,15 @@ class AddToCard extends HTMLElement {
 
     connectedCallback() {
         this.addEventListener('click', () => {
-            // const planInfoDiv = this.closest('.details');
+            const planInfoDiv = this.closest('.h_stars');
+            
             
             // const PlanImageDiv = this.closest('.subNewPlaces');
-            // // const list = document.querySelector("favourite-place");
+            const list = document.querySelector("cart-wc");
             // console.log(planInfoDiv.querySelector('button'))
-            // if (list) {
+            if (list) {
                 const json = {
-                    // "title": planInfoDiv.querySelector('h3').textContent.trim(),
+                    "title": planInfoDiv.querySelector('h2').textContent.trim(),
                     // "image": PlanImageDiv.querySelector('img').getAttribute('src'),
                     // "tag": planInfoDiv.querySelector('p').textContent.trim(),
                     // // "location": planInfoDiv.querySelector('address').textContent.trim(),
@@ -45,8 +46,8 @@ class AddToCard extends HTMLElement {
                     "unit": 1
                 };
                 console.log(json);
-                // list.addToCart(json);
-            // } 
+                list.addToCart(json);
+            } 
         });
     }
 }
