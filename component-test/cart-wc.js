@@ -1,7 +1,7 @@
+let totalNum=0;
 class CartWc extends HTMLElement {
     constructor() {
         super();
-        this.totalNum=0;
         this.render();
         this.listJSON=[];
     }
@@ -28,19 +28,19 @@ class CartWc extends HTMLElement {
         </style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
         <a href="html/liked.html"> <i class="fa-regular fa-heart"></i></a>
-                <div class="countPlace" id="count"><span>${this.totalNum}</span></div>
+                <div class="countPlace" id="count"><span>${totalNum}</span></div>
         `;
     }
     connectedCallback() {
-        render();
+        this.render();
     }
 
     addtoCart(restaurant){
         this.listJSON.push(restaurant);
         localStorage.setItem("lists", JSON.stringify(this.listJSON));
-        this.totalNum++;
+        totalNum++;
         console.log("succesful")
-        this.render()
+        this.render();
     }
 }
 
