@@ -3,6 +3,7 @@ class CartWc extends HTMLElement {
         super();
         this.totalNum=0;
         this.render();
+        this.listJSON=[];
     }
     render() {
         this.innerHTML = `
@@ -39,6 +40,7 @@ class CartWc extends HTMLElement {
         localStorage.setItem("lists", JSON.stringify(this.listJSON));
         this.totalNum++;
         console.log("succesful")
+        this.render()
     }
 }
 
