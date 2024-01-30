@@ -28,6 +28,9 @@ button {
   border-style: none;
   cursor: pointer;
 }
+button:hover{
+  opacity: 0.8;
+}
 
 h2{
   color: var(--color-text);
@@ -50,7 +53,7 @@ h2{
       cursor: pointer;
       fill: none;
       stroke: var(--color-text);
-      stroke-width: 0.1rem;
+      stroke-width: 0.2rem;
       position: relative;
       right: -60%;
       margin-right: 5rem;
@@ -61,7 +64,7 @@ h2{
     & .heart-label:has(:checked)  {
       fill: var(--color-accent);
       stroke: var(--color-accent);
-      stroke-width: 0.1rem;
+      stroke-width: 0.2rem;
     }
     & .share{
       position: relative  ;
