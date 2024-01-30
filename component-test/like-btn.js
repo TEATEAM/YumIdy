@@ -30,9 +30,9 @@ class AddToCard extends HTMLElement {
         this.addEventListener('click', () => {
             const planInfoDiv = this.closest('.h_stars');
             
-            
             // const PlanImageDiv = this.closest('.subNewPlaces');
             const list = document.querySelector("cart-wc");
+            console.log(list)
             // console.log(planInfoDiv.querySelector('button'))
             if (list) {
                 const json = {
@@ -44,8 +44,8 @@ class AddToCard extends HTMLElement {
                     // "type": "place",
                     "unit": 1
                 };
-                console.log(json);
-                list.addToCart(json);
+                console.log(json);  
+                list.addtoCart(json);
             } 
         });
     }

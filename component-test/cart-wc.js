@@ -1,4 +1,6 @@
+let totalNum=0;
 class CartWc extends HTMLElement {
+<<<<<<< HEAD
   constructor() {
     super();
     this.totalNum = 0;
@@ -6,6 +8,15 @@ class CartWc extends HTMLElement {
   }
   render() {
     this.innerHTML = `
+=======
+    constructor() {
+        super();
+        this.render();
+        this.listJSON=[];
+    }
+    render() {
+        this.innerHTML = `
+>>>>>>> 658adc43122fecaf687668a952afe1c823193248
         <style>
         .addToCard .fa-heart {
                     font-size: 1.3rem;
@@ -26,6 +37,7 @@ class CartWc extends HTMLElement {
         }
         </style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+<<<<<<< HEAD
         <a href="html/liked.html">
          <i class="fa-regular fa-heart"></i>
         </a>
@@ -44,6 +56,23 @@ class CartWc extends HTMLElement {
     this.totalNum++;
     console.log("succesful")
   }
+=======
+        <a href="html/liked.html"> <i class="fa-regular fa-heart"></i></a>
+                <div class="countPlace" id="count"><span>${totalNum}</span></div>
+        `;
+    }
+    connectedCallback() {
+        this.render();
+    }
+
+    addtoCart(restaurant){
+        this.listJSON.push(restaurant);
+        localStorage.setItem("lists", JSON.stringify(this.listJSON));
+        totalNum++;
+        console.log("succesful")
+        this.render();
+    }
+>>>>>>> 658adc43122fecaf687668a952afe1c823193248
 }
 
 window.customElements.define('cart-wc', CartWc);
