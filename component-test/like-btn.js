@@ -4,19 +4,18 @@ class AddToCard extends HTMLElement {
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.innerHTML = `
         <style>
-        .addToCard .fa-heart {
+            .addToCard .fa-heart {
                     font-size: 1.3rem;
-                }
-         .addToCard {
-        padding-left:0.15rem;
-          background: none;
-          border-radius: 0.5rem;
-          border: none;
-          width: 1.8rem;
-          height: 1.8rem;
-          & i {
-            color: var( --bg-light-color);
-          }
+            }.addToCard {
+            padding-left:0.15rem;
+            background: none;
+            border-radius: 0.5rem;
+            border: none;
+            width: 1.8rem;
+            height: 1.8rem;
+            & i {
+                color: var( --bg-light-color);
+            }
         }
         .addToCard:hover{
           background-color: var(--deactive-star-color);
@@ -40,7 +39,7 @@ class AddToCard extends HTMLElement {
                     "title": planInfoDiv.querySelector('h2').textContent.trim(),
                     // "image": PlanImageDiv.querySelector('img').getAttribute('src'),
                     // "tag": planInfoDiv.querySelector('p').textContent.trim(),
-                    // // "location": planInfoDiv.querySelector('address').textContent.trim(),
+                    //" location": planInfoDiv.querySelector('address').textContent.trim(),
                     // "buttonText": planInfoDiv.querySelector('button').textContent.trim(),
                     // "type": "place",
                     "unit": 1

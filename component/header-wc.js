@@ -8,11 +8,11 @@ class Headercomponent extends HTMLElement {
     #render() {
       this.innerHTML = `
       <header>
-     <a class="logo"  href="homepage.html" ><img class="logoImg" src="/accest/logo.svg" alt="logoImg"></a>
-     <cart-wc></cart-wc>
-      <nav class="nevtreh">
-          <button type="button" class="nevtreh">Нэвтрэх</button>
-      </nav>  
+        <a class="logo"  href="homepage.html" ><img class="logoImg" src="/accest/logo.svg" alt="logoImg"></a>
+        <cart-wc></cart-wc>
+        <nav class="nevtreh">
+            <button type="button" class="nevtreh">Нэвтрэх</button>
+        </nav>  
       </header>
       `;
     }
