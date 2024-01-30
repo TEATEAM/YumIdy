@@ -3,8 +3,6 @@ class Headercomponent extends HTMLElement {
       super();
       this.#render();
     }
-  
-  
     #render() {
       this.innerHTML = `
       <style>
