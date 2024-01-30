@@ -40,6 +40,13 @@ class Headercomponent extends HTMLElement {
       }
       </style>
       <header>
+<<<<<<< HEAD
+        <a class="logo"  href="homepage.html" ><img class="logoImg" src="/accest/logo.svg" alt="logoImg"></a>
+        <cart-wc></cart-wc>
+        <nav class="nevtreh">
+            <button type="button" class="nevtreh">Нэвтрэх</button>
+        </nav>  
+=======
         <a class="logo"  href="index.html" >
         <svg width="157" height="55" viewBox="0 0 157 55" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <rect y="11.5" width="28" height="27" fill="url(#pattern0)"/>
@@ -67,6 +74,7 @@ class Headercomponent extends HTMLElement {
         </a>
         <cart-wc></cart-wc>
         <button type="button" class="nevtreh">Нэвтрэх</button>  
+>>>>>>> 658adc43122fecaf687668a952afe1c823193248
       </header>
       `;
     }
