@@ -1,31 +1,59 @@
+// 3. productList component uuseh -> filterData eventiig huleej avah
 //restaurant-wc-r list uusgeh
+
 import "./restaurant-wc.js";
+
+class testObject{
+    constructor(item) {
+        this.name = item.name;
+        this.id = item.id;
+        this.value = item.value;
+    }       
+}
 
 class RestaurantList extends HTMLElement {
     constructor() {
         super();
         //implementation
-        this.innerHTML = html`
-        <article> 
-            <img src="/accest/restaurantpage3.png" alt="">
-                <div class="h_stars">
-                    <h2>Burger&Pizza</h2>
-                    <label for="stars5" class="starinli">
-                        <meter id="stars5" class="average-rating" min="0" max="5" value="5" title="5 out of 5 stars"></meter>
-                    </label>
-                    <div class="paragraphs">
-                        <p>#2 of 300</p>
-                        <p>11am-22am</p>
-                        <p>Best Sushi House in Ub</p>
-                    </div>
-                </div> 
-        </article>`
-    }
+        this.checkedTypes = JSON.parse(localStorage.getItem("checkedTypes")); //checklegdsen typenuudig avaad local deer hadgalah
+        this.renderRestaurants();
 
+    }
     connectedCallback() {
-        //implementation
+        //checkbox deer click hiihed checklegdsen bol checkedType-s ustgah, checklegdeegu bol hadgalj uguh hergtei
+        document.addEventListener("filterData" , (event) => {//check gdg event uusehed
+            let item = new testObject(event.detail); 
+            let hasThisItem = false;
+            for(let product of this.checkedTypes) {
+                if(product.name === item.name) {
+                    hasThisItem = true;
+                    break;
+                }
+            }
+            if(!hasThisItem) {
+                this.checkedTypes.push(item);
+            }
+            if(hasThisItem){       
+                //umnu n chekclegdsen bsn tul ustgah
+                for(let i = 0; i < this.checkedTypes.length ; i++) {
+                    if(this.checkedTypes[i].value === event.detail.value) {
+                        this.checkedTypes.splice(i , 1);
+                    }
+                }
+            }
+            // localaa shinechilne
+            localStorage.setItem("checkedTypes" , JSON.stringify(this.checkedTypes));
+            this.renderRestaurants()
+        });
     }
 
+    renderRestaurants(){
+        for (const ckecked of this.checkedTypes) {
+            const addedRes =`
+            <restaurant-wc meals="${checked.value}"></restaurant-wc>`
+            this.querySelector("#restaurant_list").insertAdjacentHTML("beforeend" , addedRes);
+        }
+    }
     disconnectedCallback() {
         //implementation
     }

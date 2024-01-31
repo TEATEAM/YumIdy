@@ -6,6 +6,7 @@
     --color-span: #988e8e;
     --p-font: normal lighter 1rem Quicksand; 
     --h-font: normal bold 2rem Quicksand; 
+    --footer-font: normal bold 1rem Quicksand;
     
     /*homepage-ariunaa*/
      --font-family: 'Quicksand', sans-serif ;
@@ -33,8 +34,5 @@
     --Br-marginLeft :1rem;
     --tsag-WH : 0.75rem;
     --marginSVG-tseg : 0.5rem;
-    --margin-bodySmall:1.94rem;
-    --footer-margin :41.5rem;
- /*    --ug-font: */
-    
+    --margin-bodySmall:1.94rem;  
 }

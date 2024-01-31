@@ -3,8 +3,7 @@ class Headercomponent extends HTMLElement {
       super();
       this.#render();
     }
-  
-  
+
     #render() {
       this.innerHTML = `
       <style>
@@ -17,8 +16,7 @@ class Headercomponent extends HTMLElement {
         font-size: var( --font-sizeTom);
         padding: 1.1rem;
         background: rgba(15, 15, 15, 0.10);
-        box-shadow: 0px 4px 4px 0px rgba(240, 251, 255, 0.20);
-        
+        box-shadow: 0px 4px 4px 0px rgba(240, 251, 255, 0.20);      
         & .logo{
           
         }
@@ -27,6 +25,7 @@ class Headercomponent extends HTMLElement {
           height: 3.125rem;
           background: none;
           font-size: var(--font-sizeSmall);
+          color: var(--color-text);
           border-radius: 1.25rem;
           margin-right: var(--border-radius);
           border:var(--border);

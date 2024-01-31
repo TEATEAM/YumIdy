@@ -1,17 +1,21 @@
+// 1. filter-iin component uuseh
+//      ->checklesen type g hadgalah array(uuniig local deer hadgalah), 
+//      ->checkboxuud deer darahaar customEvent boloh filterData uuseh
+//          filterData gdg event n checklegdsen typeuudiig hadgalaad dispatch hiih
+//              filterdsen data barij avaad renderleh
+
 class SearchpageFilter extends HTMLElement {
     constructor() {
         super();
-        //implementation
-        this.shadowRoot = this.attachShadow({mode: "open"})
         this.#Render();
     }
 
     #Render() {
-        this.shadowRoot.innerHTML = `
+        this.innerHTML = `
         <article  class="filter_checkbox">
             <h3>Meals</h3>
             <ul class="meals">
-                <li><input type="checkbox" name="meal[]" id="breakfast" value="1.1"> <label for="breakfast" checked>Breakfast</label></li>
+                <li><input type="checkbox" name="meal[]" id="breakfast" value="1.1"> <label for="breakfast">Breakfast</label></li>
                 <li><input type="checkbox" name="meal[]" id="lunch" value="1.2"> <label for="lunch">Lunch</label></li>
                 <li><input type="checkbox" name="meal[]" id="dinner" value="1.3"> <label for="dinner">Dinner</label></li>
             </ul>
@@ -42,7 +46,22 @@ class SearchpageFilter extends HTMLElement {
 
     connectedCallback() {
         //implementation
+        //checkbox eer darahad custom event uusjiin
+        let checkbox = this.querySelectorAll("input");//buh inputtei ymnuud hadgalchij bgn
+        checkbox[0].addEventListener("click", ()=> {
+            const event = new CustomEvent("filterData", {
+                bubbles: true,
+                composed: true,
+                detail:{
+                    value: checkbox.getAttribute("value"),
+                }
+            })
+            console.log(checkbox);
+            document.dispatchEvent(event);
+            console.log("ajillajinaaa");
+        })
     }
+
 
     disconnectedCallback() {
         //implementation
