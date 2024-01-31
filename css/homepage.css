@@ -90,14 +90,19 @@ body{
     font-style: var(--font-style);
     color: var(--color-text);
 }
-.iconZurh{
+.heart-checkbox{
     background: none;
     border: none;
 
 }
 .iconZurh:hover{
    fill: var(color-text);
+   color: red;
 }
+/* input[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+} */
 
 
 
