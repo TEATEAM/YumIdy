@@ -1,18 +1,20 @@
+// 2. productCard component uuseh-> ene dotor render bgaa
+
 export class RestaurantWc extends HTMLElement {
     constructor(restaurant) {
         super();
-        this.id = restaurant.id;
-        this.name = restaurant.name;
-        this.img = restaurant.img;
-        this.stars = restaurant.stars;
-        this.rank = restaurant.rank;
-        this.openingHours = restaurant.openingHours;
-        this.tag = restaurant.tag;
-        this.description = restaurant.description;
-        this.meals = restaurant.meals;
-        this.prices = restaurant.prices;
-        this.cuisines = restaurant.cuisines;
-        this.dishes = restaurant.dishes;
+        this.id = this.getAttribute("id") ?? 1;
+        this.name = this.getAttribute("name") ?? "test";
+        this.img = this.getAttribute("img") ?? "/accest/img1.png";
+        this.stars = this.getAttribute("stars") ?? 4;
+        this.rank = this.getAttribute("rank") ?? 1;
+        this.openingHours = this.getAttribute("openingHours") ?? "11am-12pm";
+        this.tag = this.getAttribute("tag") ?? "";
+        this.description = this.getAttribute("description") ?? "null";
+        this.meals = this.getAttribute("meals");
+        this.prices = this.getAttribute("prices");
+        this.cuisines = this.getAttribute("cuisines");
+        this.dishes = this.getAttribute("dishes");
         //implementation
     }
     renderOnHomepage(){
@@ -71,8 +73,16 @@ export class RestaurantWc extends HTMLElement {
        `;
     }
 
-    connectedCallback() {
-        //implementation
+    connectedCallback() {   
+        //button deer darahaar shoppingcartiin addtochart()-g duudah.
+        this.querySelector("button").addEventListener("click", () => {
+            const myCart = document.querySelector("gobi-shoppingcart");
+            myCart.AddToCart(this);
+            myCart.color = "#0f0";
+            // MyApp.SetState("lastColor", "#0f0");
+            // MyApp.AddProductToShoppingCart(this);
+            // alert(MyApp.GetState("lastColor"));
+        })
     }
 
     disconnectedCallback() {
@@ -83,11 +93,6 @@ export class RestaurantWc extends HTMLElement {
         //implementation
     }
 
-    adoptedCallback() {
-        //implementation
-    }
-
 }
 
 window.customElements.define('restaurant-wc', RestaurantWc);
-<restaurant-wc></restaurant-wc>
