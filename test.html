@@ -11,7 +11,7 @@
     <script type="module" src="/./component/review-star-wc.js"></script>
     <script type="module" src="/component/header-wc.js"></script>
     <script type="module" src="/component/footer-wc.js"></script>
-    <script type="module" src="/component/checkbox.js"></script>
+    <script type="module" src="/component/searchpage-filter.js"></script>
     <script type="module" src="/component/restaurant-wc.js"></script>
     <script type="module" src="/component/restaurant-list.js"></script>
 
@@ -22,34 +22,7 @@
     <header-component></header-component>
     <main>
         <section class="hero_container">
-          <article  class="filter_checkbox">
-            <h3>Meals</h3>
-            <ul class="meals">
-              <checkbox-wc name="meal[]" id="breakfast" value="1.1"></checkbox-wc>
-              <checkbox-wc name="meal[]" id="lunch" value="1.2"></checkbox-wc>
-              <checkbox-wc name="meal[]" id="dinner" value="1.3"></checkbox-wc>
-            </ul>
-            <h3>Price</h3>
-            <ul class="price">
-              <checkbox-wc name="price[]" id="cheap-eats" value="2.1"></checkbox-wc>
-              <checkbox-wc name="price[]" id="mid-range" value="2.2"></checkbox-wc>
-              <checkbox-wc name="price[]" id="fine-dining" value="2.3"></checkbox-wc>
-            </ul>
-            <h3>Cuisines</h3>
-            <ul class="cuisines">
-              <checkbox-wc name="cuisine[]" id="mongolian" value="3.1"></checkbox-wc>
-              <checkbox-wc name="cuisine[]" id="asian" value="3.2"></checkbox-wc>
-              <checkbox-wc name="cuisine[]" id="european" value="3.3"></checkbox-wc>
-              <checkbox-wc name="cuisine[]" id="american" value="3.4"></checkbox-wc>
-            </ul>
-            <h3>Dishes</h3>
-            <ul class="dishes">
-              <checkbox-wc name="dish[]" id="salad" value="4.1"></checkbox-wc>
-              <checkbox-wc name="dish[]" id="burger" value="4.2"></checkbox-wc>
-              <checkbox-wc name="dish[]" id="beef" value="4.3"></checkbox-wc>
-              <checkbox-wc name="dish[]" id="lamb" value="4.4"></checkbox-wc>
-            </ul>
-        </article>
+          <searchpage-filter></searchpage-filter>
         </section>
         <section class="restaurant container">
             <article class="restaurant_article">

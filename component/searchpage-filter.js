@@ -47,19 +47,21 @@ class SearchpageFilter extends HTMLElement {
     connectedCallback() {
         //implementation
         //checkbox eer darahad custom event uusjiin
-        let checkbox = this.querySelectorAll("input");//buh inputtei ymnuud hadgalchij bgn
-        checkbox[0].addEventListener("click", ()=> {
-            const event = new CustomEvent("filterData", {
-                bubbles: true,
-                composed: true,
-                detail:{
-                    value: checkbox.getAttribute("value"),
-                }
-            })
-            console.log(checkbox);
-            document.dispatchEvent(event);
-            console.log("ajillajinaaa");
-        })
+        var selectedMeals = document.querySelectorAll('input[name="meal[]"]:checked');
+        console.log(selectedMeals);
+        this.#Render();
+        // checkboxes.addEventListener("click", ()=> {      
+        //     const event = new CustomEvent("filterData", {
+        //         bubbles: true,
+        //         composed: true,
+        //         detail:{
+        //             value: checkbox.getAttribute("value"),
+        //         }
+        //     })
+        //     console.log(checkbox);
+        //     document.dispatchEvent(event);
+        //     console.log("ajillajinaaa");
+        // })
     }
 
 

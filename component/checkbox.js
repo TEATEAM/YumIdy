@@ -1,5 +1,3 @@
-
-
 // 1. filter-iin component uuseh
 //      ->checklesen type g hadgalah array(uuniig local deer hadgalah), 
 //      ->checkboxuud deer darahaar customEvent boloh filterData uuseh
@@ -17,16 +15,16 @@ class CheckboxWC extends HTMLElement {
     }
     #Render() {
         this.innerHTML = `
-            <li><input type="checkbox" name="${this.name}" id="${this.id}" value="${this.value}"> 
+            <li>
+                <input type="checkbox" name="${this.name}" id="${this.id}" value="${this.value}"> 
                 <label for="${this.id}">${this.id}</label>
-            </li>
-        `
+            </li>`
     }
     connectedCallback() {
         //implementation
         //checkbox eer darahad custom event uusjiin
         let input = this.querySelectorAll("input");//buh inputtei ymnuud hadgalchij bgn
-        input[1].addEventListener("click", (e)=> {
+        input[0].addEventListener("click", (e)=> {
             e.stopPropagation();
             const event = new CustomEvent("filterData", {
                 bubbles: true,
@@ -78,3 +76,12 @@ class CheckboxWC extends HTMLElement {
 }
 
 window.customElements.define('checkbox-wc', CheckboxWC);
+
+
+
+
+var starValues = Array.from(starCheckboxes).map(checkbox => checkbox.value);
+
+// Get selected detail values
+var detailCheckboxes = document.querySelectorAll('#detail input[type="checkbox"]:checked');
+var detailValues = Array.from(detailCheckboxes).map(checkbox => checkbox.value);
