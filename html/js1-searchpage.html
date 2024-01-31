@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="/css/searchpage.css">
     <!--wc-->
     <script type="module" src="/./component/review-star-wc.js"></script>
+    <script type="module" src="/component/header-wc.js"></script>
+    <script type="module" src="/component/footer-wc.js"></script>
     <script>  
         class Restaurant {
              //constuctor
@@ -418,70 +420,52 @@
     </script>
 </head>
 
-<body class="body">
-    <header>
-        <!--  logo heseg -->
-        <a class="logo"  href="homepage.html" ><img class="logoImg" src="/accest/logo.svg" alt="logoImg"></a>
-        <!--  suuderleh zuraas -->
-        
-         <!-- nevtreh hesgiin button -->
-         <nav class="nevtreh">
-             <button type="button" class="nevtreh">Нэвтрэх</button>
-         </nav>  
-     </header>
+<body>
+    <header-component></header-component>
     <main>
-    <section class="hero_container">
-        <article  class="filter_checkbox">
-            <h3>Meals</h3>
-            <ul>
-                <li><input type="checkbox" id="breakfast"> <label for="breakfast">Breakfast</label></li>
-                <li><input type="checkbox" id="lunch"> <label for="lunch">Lunch</label></li>
-                <li><input type="checkbox" id="dinner"> <label for="dinner">Dinner</label></li>
-            </ul>
-            <h3>Price</h3>
-            <ul>
-                <li><input type="checkbox" id="cheap-eats"> <label for="cheap-eats">Cheap Eats</label></li>
-                <li><input type="checkbox" id="mid-range"> <label for="mid-range">Mid-range</label></li>
-                <li><input type="checkbox" id="fine-dining"> <label for="fine-dining">Fine Dining</label></li>
-            </ul>
-            <h3>Cuisines</h3>
-            <ul>
-                <li><input type="checkbox" id="mongolian"> <label for="mongolian">Mongolian</label></li>
-                <li><input type="checkbox" id="asian"> <label for="asian">Asian</label></li>
-                <li><input type="checkbox" id="european"> <label for="european">European</label></li>
-                <li><input type="checkbox" id="american"> <label for="american">American</label></li>
-            </ul>
-            <h3>Dishes</h3>
-            <ul>
-                <li><input type="checkbox" id="salad"> <label for="salad">Salad</label></li>
-                <li><input type="checkbox" id="burger"> <label for="burger">Burger</label></li>
-                <li><input type="checkbox" id="beef"> <label for="beef">Beef</label></li>
-                <li><input type="checkbox" id="lamb"> <label for="lamb">Lamb</label></li>
-            </ul>
-        </article>
-    </section>
-    <section class="restaurant container">
-        <article class="restaurant_article">
-        <button type="button" class="filter_button">Sort by name</button>        
-            <ul  id="restaurant_list">
-            </ul>
-            <script>
-                const app = new App("restaurant_list");
-                app.init();
-            </script>
-            <script type="module" src="/./component/review-star-wc.js"></script>
-        </article>
-    </section>
-</main>
-    <footer>
-        <nav>
-            <a href="https://www.facebook.com"><img src="/accest/facebook.png" alt="Facebook" ></a>
-            <a href="https://www.twitter.com"><img src="accest/twitter.png" alt="Twitter" ></a>
-            <a href="https://www.instagram.com"><img src="accest/instagram.png" alt="Instagram" ></a>
-        </nav>
-        <article>
-            &copy; 2023 Yumidy. All Rights Reserved.
-        </article>
-    </footer>
+        <section class="hero_container">
+            <article  class="filter_checkbox">
+                <h3>Meals</h3>
+                <ul>
+                    <li><input type="checkbox" id="breakfast"> <label for="breakfast">Breakfast</label></li>
+                    <li><input type="checkbox" id="lunch"> <label for="lunch">Lunch</label></li>
+                    <li><input type="checkbox" id="dinner"> <label for="dinner">Dinner</label></li>
+                </ul>
+                <h3>Price</h3>
+                <ul>
+                    <li><input type="checkbox" id="cheap-eats"> <label for="cheap-eats">Cheap Eats</label></li>
+                    <li><input type="checkbox" id="mid-range"> <label for="mid-range">Mid-range</label></li>
+                    <li><input type="checkbox" id="fine-dining"> <label for="fine-dining">Fine Dining</label></li>
+                </ul>
+                <h3>Cuisines</h3>
+                <ul>
+                    <li><input type="checkbox" id="mongolian"> <label for="mongolian">Mongolian</label></li>
+                    <li><input type="checkbox" id="asian"> <label for="asian">Asian</label></li>
+                    <li><input type="checkbox" id="european"> <label for="european">European</label></li>
+                    <li><input type="checkbox" id="american"> <label for="american">American</label></li>
+                </ul>
+                <h3>Dishes</h3>
+                <ul>
+                    <li><input type="checkbox" id="salad"> <label for="salad">Salad</label></li>
+                    <li><input type="checkbox" id="burger"> <label for="burger">Burger</label></li>
+                    <li><input type="checkbox" id="beef"> <label for="beef">Beef</label></li>
+                    <li><input type="checkbox" id="lamb"> <label for="lamb">Lamb</label></li>
+                </ul>
+            </article>
+        </section>
+        <section class="restaurant container">
+            <article class="restaurant_article">
+            <button type="button" class="filter_button">Sort by name</button>        
+                <ul  id="restaurant_list">
+                </ul>
+                <script>
+                    const app = new App("restaurant_list");
+                    app.init();
+                </script>
+                <script type="module" src="/./component/review-star-wc.js"></script>
+            </article>
+        </section>
+    </main>
+    <footer-component></footer-component>
 </body>
 </html>
