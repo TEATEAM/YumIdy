@@ -1,42 +1,41 @@
-class likeBtn extends HTMLElement{
+class addtoCard extends HTMLElement{
     constructor(){
         super();
-        this.Render();
-        this.eventListenerAdded = false;
-    }
-
-    Render(){
-        this.innerHTML = ` 
-            <input type="checkbox" class="iconZurh">
-            <i class="fa-regular fa-heart"></i>
-        `;
-    }
-
-    //click hiih uyd clickhandler function ajillana
-    connectedCallback(){
-        if(!this.eventListenerAdded){
-            this.eventListenerAdded = true;
-            this.addEventListener("click", this.clickHandler, true)
+        this.attachShadow({mode: 'open'});
+        this.shadowRoot.innerHTML = `
+            <style>
+                .cardInfo{
+                    display: flex;
+                    justify-content: space-evenly;
+                    & .resName{
+                        width:18rem;
+                        font-family: var("Quicksand-Medium");
+                        font-size: 1.125rem;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height:2rem; /* 133.333% */
+                        letter-spacing: 0.00625rem;
+                        color: var(--color-text);
+                    }
+                    & .heart-checkbox{
+                    margin-top: 0.5rem ;
+                    }
+                    & .heart-checkbox :hover{
+                        color: red;
+                    }
+                }
+            </style>
+            <link rel="stylesheet" href=../homepage.css/>
+            <div class="heart-checkbox">
+                <input type="checkbox" id="heart"/>
+                <label for="heart"><i class="fa-solid fa-heart"></i></label>
+            </div>
+            `
         }
-    }
 
-    clickHandler(e){
-        if(e.target.tagName.toLowerCase() == "input")//click hiisen element ni input baival
-        {
-            let eventName = "like-btn-disliked";
-            if(e.target.checked){
-                eventName = "like-btn-liked";
-            }
-            // Etseg element buyyu card-rii shidne
-            const event = new Event(eventName, {
-                bubbles: true,
-                capture: true,
-                composed: true
-            });
-            this.parentElement.dispatchEvent(event);
-            console.log("tsatsagdlaa");
+        connectedCallback() {
+            this.addEventListener('click', () => {
+                const resName = this.closest('idy-like-btn');
+            })
         }
-    }
 }
-
-window.customElements.define('idy-like-btn', likeBtn);

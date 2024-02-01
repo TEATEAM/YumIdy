@@ -28,7 +28,7 @@ class CartWc extends HTMLElement {
         </style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
         <a href="html/liked.html"> <i class="fa-regular fa-heart"></i></a>
-                <div class="countPlace" id="count"><span>${totalNum}</span></div>
+        <div class="countPlace" id="count"><span>${totalNum}</span></div>
         `;
     }
     connectedCallback() {

@@ -29,7 +29,7 @@ class AddToCard extends HTMLElement {
     connectedCallback() {
         this.addEventListener('click', () => {
             const planInfoDiv = this.closest('.h_stars');
-            
+
             // const PlanImageDiv = this.closest('.subNewPlaces');
             const list = document.querySelector("cart-wc");
             console.log(list)
@@ -44,9 +44,9 @@ class AddToCard extends HTMLElement {
                     // "type": "place",
                     "unit": 1
                 };
-                console.log(json);  
+                // console.log(json);
                 list.addtoCart(json);
-            } 
+            }
         });
     }
 }

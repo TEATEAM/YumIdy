@@ -1,7 +1,7 @@
 
 
 // 1. filter-iin component uuseh
-//      ->checklesen type g hadgalah array(uuniig local deer hadgalah), 
+//      ->checklesen type g hadgalah array(uuniig local deer hadgalah),
 //      ->checkboxuud deer darahaar customEvent boloh filterData uuseh
 //          filterData gdg event n checklegdsen typeuudiig hadgalaad dispatch hiih
 //              filterdsen data barij avaad renderleh
@@ -17,7 +17,7 @@ class CheckboxWC extends HTMLElement {
     }
     #Render() {
         this.innerHTML = `
-            <li><input type="checkbox" name="${this.name}" id="${this.id}" value="${this.value}"> 
+            <li><input type="checkbox" name="${this.name}" id="${this.id}" value="${this.value}">
                 <label for="${this.id}">${this.id}</label>
             </li>
         `
