@@ -1,7 +1,6 @@
 const template = document.createElement("template");
 
 template.innerHTML = `
-    <script type="module" src="/./component/review-star-wc.js"></script>
     <article class="idy-card">
         <img class="foodImg">
         <div class="cardInfo">

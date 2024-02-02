@@ -578,16 +578,13 @@ body{
 
 
   /* Card section css */
-  .idy-card{
+  /* .idy-card{
     width: 24rem;
     height: 17.25rem;
     background: #272727;
     margin: var(--margin-bodySmall);
     border-radius: 1.25rem;
     position: relative;
-    /* font-family: var("Quicksand-Medium"); */
-    /* display: flex; */
-
     & img {
         width: 100%;
         height: 10rem;
@@ -602,7 +599,7 @@ body{
             font-size: 1.125rem;
             font-style: normal;
             font-weight: 700;
-            line-height:2rem; /* 133.333% */
+            line-height:2rem; 
             letter-spacing: 0.00625rem;
             color: var(--color-text);
         }
@@ -627,7 +624,7 @@ body{
             font-size: 0.75rem;
             font-style: normal;
             font-weight: 700;
-            line-height: 1rem; /* 133.333% */
+            line-height: 1rem; 
             margin-left: 0.6rem;
         }
         & .price{
@@ -636,7 +633,7 @@ body{
             font-size: 0.75rem;
             font-style: normal;
             font-weight: 700;
-            line-height: 1rem; /* 133.333% */
+            line-height: 1rem; 
             margin-left: 0.6rem;
         }
     }
@@ -654,4 +651,4 @@ body{
         color: #545563;
         background: var(--color-text);
     }
-  }
+  } */
