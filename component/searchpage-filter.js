@@ -7,6 +7,7 @@
 class SearchpageFilter extends HTMLElement {
     constructor() {
         super();
+        this.eventChecked = false;
         this.#Render();
     }
 
@@ -44,24 +45,27 @@ class SearchpageFilter extends HTMLElement {
         `
     }
 
-    connectedCallback() {
+    connectedCallback(){
         //implementation
         //checkbox eer darahad custom event uusjiin
         var selectedMeals = document.querySelectorAll('input[name="meal[]"]:checked');
         console.log(selectedMeals);
+        if(!this.eventChecked){
+            
+        }
         this.#Render();
-        // checkboxes.addEventListener("click", ()=> {      
-        //     const event = new CustomEvent("filterData", {
-        //         bubbles: true,
-        //         composed: true,
-        //         detail:{
-        //             value: checkbox.getAttribute("value"),
-        //         }
-        //     })
-        //     console.log(checkbox);
-        //     document.dispatchEvent(event);
-        //     console.log("ajillajinaaa");
-        // })
+        checkboxes.addEventListener("click", ()=> {      
+            const event = new CustomEvent("filterData", {
+                bubbles: true,
+                composed: true,
+                detail:{
+                    value: checkbox.getAttribute("value"),
+                }
+            })
+            console.log(checkbox);
+            document.dispatchEvent(event);
+            console.log("ajillajinaaa");
+        })
     }
 
 
