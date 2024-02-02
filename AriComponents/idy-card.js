@@ -18,6 +18,7 @@ template.innerHTML = `
 `
 class IdyCard extends HTMLElement {
     constructor() {
+        super();
         this.attachShadow({mode:'open'});
         //templete-iin talaar
         this.shadowRoot.appendChild(template.content.cloneNode(true));
@@ -72,12 +73,13 @@ class IdyCard extends HTMLElement {
     //         window.location.href = `./aboutRes?id=${resId}`;
     //     }
     // }
-    // connectedCallback() {
-    //     let likedState = localStorage.getItem(this.getAttribute("name"));
-    //     if(likedState === "true"){
-    //         this.shadowRoot.querySelector("idy-like-btn").setAttribute("checked",true);
-    //     }
-    // }
+    connectedCallback() {
+        // let likedState = localStorage.getItem(this.getAttribute("name"));
+        // if(likedState === "true"){
+        //     this.shadowRoot.querySelector("idy-like-btn").setAttribute("checked",true);
+        // }
+        console.log("za lav ene ajillajin");
+    }
 
     static get observedAttributes() {
         return["id", "name", "img", "type", "time", "price"];
