@@ -2,6 +2,13 @@ const template = document.createElement("template");
 
 template.innerHTML = `
     
+    <link rel="stylesheet" href="/css/resCard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+    />
+    <script type="module" src="/./component/review-star-wc.js"></script>
     <article class="idy-card">
         <img class="foodImg">
         <div class="cardInfo">
@@ -24,7 +31,7 @@ class IdyCard extends HTMLElement {
         this.attachShadow({mode:'open'});
         //templete-iin talaar
         this.shadowRoot.appendChild(template.content.cloneNode(true));
-        // club-like-btn component-оос шидсэн эвентийг барьж авах хэсэг
+        //like-btn component-оос шидсэн эвентийг барьж авах хэсэг
         this.addEventListener("heart-btn-liked", ()=>this.heartBtnClicked(true));
         this.addEventListener("heart-btn-disliked", ()=>this.heartBtnClicked(false));
         this.addEventListener("click", (e)=>this.clicked(e));
@@ -33,19 +40,19 @@ class IdyCard extends HTMLElement {
     heartBtnClicked(val){
         console.log("received");
         
-        let Resdatas = {
-            id: thi.getAttribute("id"),
+        let Resdata = {
+            id: this.getAttribute("id"),
             name: this.getAttribute("name"),
-            coverImg: this.getAttribute("coverImg"),
+            img: this.getAttribute("img"),
             type: this.getAttribute("type"),
-            timeIcon: this.getAttribute("timeIcon"),
-            openOrNO: this.getAttribute("openOrNO"),
-            price: this.getAttribute("price")
+            time: this.getAttribute("time"),
+            price: this.getAttribute("price"),
+            star: this.getAttribute("star")
         };
 
         localStorage.setItem(this.getAttribute("name"), val);
 
-        //club-н картууд зүрхлэгдсэн бол түүнийг мэдээллэх зорилгоор CustomEvent бэлдэж байна.
+        //карт зүрхлэгдсэн бол түүнийг мэдээллэх зорилгоор CustomEvent бэлдэж байна.
 
         const event = new CustomEvent(
             'card-heart-clicked',
@@ -54,7 +61,7 @@ class IdyCard extends HTMLElement {
                 detail: {
                     name: this.name,
                     isLiked: val,
-                    theRes: Resdatas
+                    theRes: Resdata
                 }
             }
         );
@@ -70,11 +77,11 @@ class IdyCard extends HTMLElement {
         const isIdyHeartBtn = e.composedPath().includes(this.shadowRoot.querySelector("idy-like-btn"));
 
         if(!isIdyHeartBtn) {
-            const resId = this.getAttribute("id");
-            window.location.href = `./aboutRes?id=${resId}`;
+            window.location.href = `./html/restaurantpage.html`;
         }
     }
     connectedCallback() {
+        //local deer bga medeellees name-r resaa likelasan esehiig medeh herev liked bol checked bolgoh
         let likedState = localStorage.getItem(this.getAttribute("name"));
         if(likedState === "true"){
             this.shadowRoot.querySelector("idy-like-btn").setAttribute("checked",true);
