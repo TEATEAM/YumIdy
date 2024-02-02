@@ -2,6 +2,11 @@ const template = document.createElement("template");
 
 template.innerHTML = `
     <link rel="stylesheet" href="/css/resCard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+    />
     <script type="module" src="/./component/review-star-wc.js"></script>
     <article class="idy-card">
         <img class="foodImg">
@@ -25,62 +30,61 @@ class IdyCard extends HTMLElement {
         this.attachShadow({mode:'open'});
         //templete-iin talaar
         this.shadowRoot.appendChild(template.content.cloneNode(true));
-        // club-like-btn component-оос шидсэн эвентийг барьж авах хэсэг
-        // this.addEventListener("heart-btn-liked", ()=>this.heartBtnClicked(true));
-        // this.addEventListener("heart-btn-disliked", ()=>this.heartBtnClicked(false));
-        // this.addEventListener("click", (e)=>this.clicked(e));
+        //like-btn component-оос шидсэн эвентийг барьж авах хэсэг
+        this.addEventListener("heart-btn-liked", ()=>this.heartBtnClicked(true));
+        this.addEventListener("heart-btn-disliked", ()=>this.heartBtnClicked(false));
+        this.addEventListener("click", (e)=>this.clicked(e));
     }
 
-    // heartBtnClicked(val){
-    //     console.log("received");
+    heartBtnClicked(val){
+        console.log("received");
         
-    //     let Resdatas = {
-    //         id: thi.getAttribute("id"),
-    //         name: this.getAttribute("name"),
-    //         // stars: this.getAttribute("stars"),
-    //         coverImg: this.getAttribute("coverImg"),
-    //         type: this.getAttribute("type"),
-    //         timeIcon: this.getAttribute("timeIcon"),
-    //         openOrNO: this.getAttribute("openOrNO"),
-    //         price: this.getAttribute("price")
-    //     };
+        let Resdata = {
+            id: thi.getAttribute("id"),
+            name: this.getAttribute("name"),
+            img: this.getAttribute("img"),
+            type: this.getAttribute("type"),
+            time: this.getAttribute("time"),
+            price: this.getAttribute("price"),
+            star: this.getAttribute("star")
+        };
 
-    //     localStorage.setItem(this.getAttribute("name"), val);
+        localStorage.setItem(this.getAttribute("name"), val);
 
-    //     //club-н картууд зүрхлэгдсэн бол түүнийг мэдээллэх зорилгоор CustomEvent бэлдэж байна.
+        //карт зүрхлэгдсэн бол түүнийг мэдээллэх зорилгоор CustomEvent бэлдэж байна.
 
-    //     const event = new CustomEvent(
-    //         'card-heart-clicked',
-    //         {
-    //             composed: true,
-    //             detail: {
-    //                 name: this.name,
-    //                 isLiked: val,
-    //                 theRes: Resdatas
-    //             }
-    //         }
-    //     );
+        const event = new CustomEvent(
+            'card-heart-clicked',
+            {
+                composed: true,
+                detail: {
+                    name: this.name,
+                    isLiked: val,
+                    theRes: Resdata
+                }
+            }
+        );
 
-    //     window.dispatchEvent(event);
+        window.dispatchEvent(event);
 
-    //     if(!val){
-    //         this.shadowRoot.querySelector("idy-like-btn").removeAttribute("checked");
-    //     }
-    // }
+        if(!val){
+            this.shadowRoot.querySelector("idy-like-btn").removeAttribute("checked");
+        }
+    }
 
-    // clicked(e){
-    //     const isIdyHeartBtn = e.composedPath().includes(this.shadowRoot.querySelector("idy-like-btn"));
+    clicked(e){
+        const isIdyHeartBtn = e.composedPath().includes(this.shadowRoot.querySelector("idy-like-btn"));
 
-    //     if(!isIdyHeartBtn) {
-    //         const resId = this.getAttribute("id");
-    //         window.location.href = `./aboutRes?id=${resId}`;
-    //     }
-    // }
+        if(!isIdyHeartBtn) {
+            window.location.href = `./html/restaurantpage.html`;
+        }
+    }
     connectedCallback() {
-        // let likedState = localStorage.getItem(this.getAttribute("name"));
-        // if(likedState === "true"){
-        //     this.shadowRoot.querySelector("idy-like-btn").setAttribute("checked",true);
-        // }
+        //local deer bga medeellees name-r resaa likelasan esehiig medeh herev liked bol checked bolgoh
+        let likedState = localStorage.getItem(this.getAttribute("name"));
+        if(likedState === "true"){
+            this.shadowRoot.querySelector("idy-like-btn").setAttribute("checked",true);
+        }
         console.log("za lav ene ajillajin");
     }
 
