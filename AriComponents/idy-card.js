@@ -91,19 +91,19 @@ class IdyCard extends HTMLElement {
                 this.shadowRoot.id = newVal;
                 break;
             case "name":
-                this.shadowRoot.querySelector(".resName h4").innerHTML = newVal;
+                this.shadowRoot.querySelector(".resName").innerHTML = newVal;
                 break;
             case "img":
                 this.shadowRoot.querySelector(".foodImg").src = newVal;
                 break;
             case "type":
-                this.shadowRoot.querySelector(".foodType p").innerHTML = newVal;
+                this.shadowRoot.querySelector(".foodType").innerHTML = newVal;
                 break;
             case "time":
-                this.shadowRoot.querySelector(".time p").innerHTML = newVal;
+                this.shadowRoot.querySelector(".time").innerHTML = newVal;
                 break;
             case "price":
-                this.shadowRoot.querySelector(".price p").innerHTML = newVal;
+                this.shadowRoot.querySelector(".price").innerHTML = newVal;
                 break;
         }
     }
