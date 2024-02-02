@@ -1,6 +1,7 @@
 const template = document.createElement("template");
 
 template.innerHTML = `
+    <script type="module" src="/./component/review-star-wc.js"></script>
     <article class="idy-card">
         <img class="foodImg">
         <div class="cardInfo">
@@ -13,6 +14,7 @@ template.innerHTML = `
             <p class="price"></p>
         </div>
         <p class="foodType"></p>
+        <review-star-wc class="rating"></review-star-wc>
         <slot name="remove"></slot>
     </article>
 `
@@ -82,13 +84,14 @@ class IdyCard extends HTMLElement {
     }
 
     static get observedAttributes() {
-        return["id", "name", "img", "type", "time", "price"];
+        return["id", "name", "img", "type", "time", "price", "star"];
     }
 
     attributeChangedCallback(name, oldVal, newVal) {
         switch(name){
             case "id":
                 this.shadowRoot.id = newVal;
+                this.shadowRoot.querySelector("review-star-wc").setAttribute("ratingID","restaurant"+newVal);
                 break;
             case "name":
                 this.shadowRoot.querySelector(".resName").innerHTML = newVal;
@@ -104,6 +107,9 @@ class IdyCard extends HTMLElement {
                 break;
             case "price":
                 this.shadowRoot.querySelector(".price").innerHTML = newVal;
+                break;
+            case "star":
+                this.shadowRoot.querySelector("review-star-wc").setAttribute("rating", newVal);
                 break;
         }
     }
