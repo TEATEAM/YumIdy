@@ -33,19 +33,22 @@ class ResCart extends HTMLElement {
     }
 
     connectedCallback() {
-        window.addEventListener("")
+        window.addEventListener("card-heart-clicked", (e) => {
+            if(e.detail.isLiked){
+                this.addToCart(e.detail.theRes);
+            }
+            else{
+                this.removeFromCart(e.detail.theRes);
+            }
+        });
     }
 
-    disconnectedCallback() {
-     
-    }
-
-    attributeChangedCallback(name, oldVal, newVal) {
-     
-    }
-
-    adoptedCallback() {
-     
+    readFromLocalStorage(){
+        const resList = JSON.parse(localStorage.getItem("cart"));
+        if(resList !== null){
+            this.restuarants = resList;
+            this.render()
+        }
     }
 
 }
