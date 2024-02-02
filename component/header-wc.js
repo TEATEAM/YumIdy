@@ -6,6 +6,7 @@ class Headercomponent extends HTMLElement {
 
     #render() {
       this.innerHTML = `
+      <script src="./AriComponents/res-cart.js"></script>
       <style>
       header{
         width: 100%;
@@ -17,9 +18,6 @@ class Headercomponent extends HTMLElement {
         padding: 1.1rem;
         background: rgba(15, 15, 15, 0.10);
         box-shadow: 0px 4px 4px 0px rgba(240, 251, 255, 0.20);      
-        & .logo{
-          
-        }
         & .nevtreh{
           width: 8.125rem;
           height: 3.125rem;
@@ -64,7 +62,9 @@ class Headercomponent extends HTMLElement {
           </defs>
         </svg>        
         </a>
-        <cart-wc></cart-wc>
+        <a href="./likedres">
+          <res-cart></res-cart>
+        </a>
         <button type="button" class="nevtreh">Нэвтрэх</button>  
       </header>
       `;
