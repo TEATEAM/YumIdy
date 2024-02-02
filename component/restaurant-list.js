@@ -8,7 +8,7 @@ class testObject{
         this.name = item.name;
         this.id = item.id;
         this.value = item.value;
-    }       
+    }     
 }
 
 class RestaurantList extends HTMLElement {

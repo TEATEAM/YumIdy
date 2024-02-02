@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yumidy home page</title>
+    <meta name="description" content="Explore Yumidy to find the best restaurants, read reviews, and make informed dining choices.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/homepage.css">
+    <script type="module" src="/component/header-wc.js"></script>
+    <script type="module" src="/component/footer-wc.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/footer.css">
+    <script src="./AriComponents/idy-like-btn.js"></script>
+    <script src="./AriComponents/idy-card.js"></script>
+
+</head>
+
+<body>
+<header-component></header-component>
+<main>
+      <!-- SEARCH BAR(olon yanzaar) -->
+<!-- BODY1 -->
+     <section class="body1">
+
+        <article class="text1">
+            <h2>Юм идэх газраа олцгооё !</h2>
+        </article>
+
+        <article>
+            <article class="search">
+                <button class="name"><h5>Рестораны нэрээр</h5></button>
+                <button class="rating"><h5>Үнэлгээгээр</h5></button>
+                <button class="type"><h5>Хоолны төрлөөр</h5></button>
+                <button class="price"><h5>Үнээр</h5></button>
+                <button class="location"><h5>Байршлаар</h5></button>
+            </article>
+<!-- searchBar -->
+            <!-- <form role="search" class="form">
+                <img class="searchIcon" src="/accest/Vector.png" alt="zurag">
+                <input type="search" placeholder="Хоолны газрын нэр, хоолны төрөл, газар........">
+                <input type="button" class="btn" onclick="window.location.href='/html/searchpage.html';" value="Хайх">
+            </form> -->
+        </article>
+<!-- zuragtai heseg -->
+
+        <article class="zuragHeseg">
+            <img class="hoolZurag" src="/accest/hool.jpg" alt="hool">
+            <h2 >Хаана юу идэхээ мэдэхгүй төөрөөд л явна уу? Биднийг сонго
+                <span style="color: #EE5151;">Yum</span>idy
+            </h2>
+        </article>
+     </section>
+
+
+
+<!-- BESTRESTAUANT SECTION-->
+<!-- BODY2 -->
+     <h3 class="ug">Best Restaurants</h3>
+
+    <section class="bestR">
+<!-- 1 DAHI NI -->
+            <!-- <a href="RestaurantPage.html"> -->
+              <!-- <article class="bestR_details">
+
+                  <img src="/accest/img.png" alt="0">
+                <div class="IconName">
+                    <p class="nameRes"> Royal Sushi House</p>
+                    <idy-like-btn></idy-like-btn>
+              </div>
+            <div class="timeIconPrice">
+                <p class="iconTsag">
+                <i class="fa-regular fa-clock"></i>
+                </p>
+                <p class="time">Open</p>
+                <p class="price"> 20,000-100,000 MNT</p>
+            </div>
+
+                  <div class="typeOd">
+                      <button class="type"> Sushi idullddaadddhhhahah</button>
+                  </div>
+              </article> -->
+            <!-- </a> -->
+            <article class="idy-card">
+                <img class="foodImg" src="/accest/img.png" alt="0">
+                <div class="cardInfo">
+                    <h4 class="resName">Chilli shabu shabu restaurant</h4>
+                    <div class="heart-checkbox">
+                        <input type="checkbox" id="heart"/>
+                        <label for="heart"> <i class="fa-regular fa-heart"></i></label>
+                    </div>
+                </div>
+                <div class="cardInfo1">
+                    <i class="fa-regular fa-clock" id="tsagLogo"></i>
+                    <p class="time"> Closed </p>
+                    <p class="price"> 20,000-100,000 MNT</p>
+                </div>
+                <p class="foodType">Burger</p>
+            </article>
+
+<!-- 2 DAHI NI -->
+            <a href="RestaurantPage.html">
+              <article class="bestR_details">
+                <img src="/accest/img1.png" alt="1">
+                <div class="IconName">
+                    <p class="nameRes"> Royal Sushi House</p>
+                    <button  class="iconZurh">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+              </div>
+
+                <div class="timeIconPrice">
+                    <p class="iconTsag">
+                      <i class="fa-regular fa-clock"></i>
+                    </p>
+                    <p class="time"> Closed </p>
+                    <p class="price"> 20,000-100,000 MNT</p>
+                </div>
+
+                <div class="typeOd">
+                    <button class="type"> Sushi</button>
+                    <p class="rating">
+                        <review-star-wc rating="5" ratingID="restaurantiD" class="rating"></review-star-wc>
+                    </p>
+                </div>
+            </article>
+          </a>
+<!-- 3 DAHI NI -->
+            <div class="general">
+              <article class="bestR_details">
+                <img src="/accest/img2.png" alt="2">
+                <div class="IconName">
+                    <p class="nameRes"> Royal Sushi House</p>
+                    <button  class="iconZurh">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+              </div>
+
+                <div class="timeIconPrice">
+                    <p class="iconTsag">
+                      <i class="fa-regular fa-clock"></i>
+                    </p>
+                    <p class="time"> Closed </p>
+                    <p class="price"> 20,000-100,000 MNT</p>
+                </div>
+
+                <div class="typeOd">
+                    <button class="type">ahahhahSushi</button>
+                    <p class="rating"><svg xmlns="http://www.w3.org/2000/svg" width="168" height="30" viewBox="0 0 168 30" fill="none">
+                        <path d="M14.3639 1.37692L17.5713 9.60663L17.6844 9.8967L17.9946 9.92324L26.392 10.6417L19.97 16.5125L19.7563 16.7079L19.8194 16.9906L21.7709 25.7212L14.637 21.071L14.3639 20.8931L14.0909 21.071L6.95702 25.7212L8.90845 16.9906L8.97163 16.7079L8.75785 16.5125L2.33585 10.6417L10.7333 9.92324L11.0435 9.8967L11.1566 9.60663L14.3639 1.37692Z" fill="#EE5151" stroke="#EE5151"/>
+                        <path d="M49.3688 1.3408L52.693 9.61155L52.808 9.89787L53.1156 9.92338L61.7825 10.6424L55.1664 16.5074L54.9441 16.7044L55.0108 16.9939L57.0265 25.7388L49.636 21.0673L49.3688 20.8984L49.1017 21.0673L41.7112 25.7388L43.7269 16.9939L43.7936 16.7044L43.5713 16.5074L36.9552 10.6424L45.6221 9.92338L45.9297 9.89787L46.0447 9.61155L49.3688 1.3408Z" fill="#EE5151" stroke="#EE5151"/>
+                        <path d="M83.9781 1.37695L87.1855 9.60666L87.2985 9.89673L87.6087 9.92327L96.0062 10.6417L89.5842 16.5125L89.3704 16.708L89.4336 16.9906L91.385 25.7212L84.2511 21.0711L83.9781 20.8931L83.705 21.0711L76.5712 25.7212L78.5226 16.9906L78.5858 16.708L78.372 16.5125L71.95 10.6417L80.3474 9.92327L80.6576 9.89673L80.7707 9.60666L83.9781 1.37695Z" fill="#EE5151" stroke="#EE5151"/>
+                        <path d="M118.587 1.3408L121.911 9.61155L122.026 9.89787L122.334 9.92338L131.001 10.6424L124.385 16.5074L124.162 16.7044L124.229 16.9939L126.245 25.7388L118.854 21.0673L118.587 20.8984L118.32 21.0673L110.929 25.7388L112.945 16.9939L113.012 16.7044L112.79 16.5074L106.173 10.6424L114.84 9.92338L115.148 9.89787L115.263 9.61155L118.587 1.3408Z" fill="#EE5151" stroke="#EE5151"/>
+                        <path d="M153.519 1.37695L156.726 9.60666L156.839 9.89673L157.149 9.92327L165.547 10.6417L159.125 16.5125L158.911 16.708L158.974 16.9906L160.926 25.7212L153.792 21.0711L153.519 20.8931L153.246 21.0711L146.112 25.7212L148.063 16.9906L148.126 16.708L147.913 16.5125L141.491 10.6417L149.888 9.92327L150.198 9.89673L150.311 9.60666L153.519 1.37695Z" fill="#EE5151" stroke="#EE5151"/>
+                      </svg></p>
+                </div>
+              </article>
+            </div>
+
+<!-- 4 DAHI NI -->
+            <a href="RestaurantPage.html">
+              <article class="bestR_details">
+                  <img src="/accest/img3.png" alt="3">
+                  <div class="IconName">
+                        <p class="nameRes"> Royal Sushi House</p>
+                        <button  class="iconZurh">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                  </div>
+
+                  <div class="timeIconPrice">
+                      <p class="iconTsag">
+                          <i class="fa-regular fa-clock"></i>
+                      </p>
+                      <p class="time"> Closed </p>
+                      <p class="price"> 20,000-100,000 MNT</p>
+                  </div>
+
+                  <div class="typeOd">
+                      <button class="type"> Sushi</button>
+                      <p class="rating"><svg xmlns="http://www.w3.org/2000/svg" width="168" height="30" viewBox="0 0 168 30" fill="none">
+                          <path d="M14.3639 1.37692L17.5713 9.60663L17.6844 9.8967L17.9946 9.92324L26.392 10.6417L19.97 16.5125L19.7563 16.7079L19.8194 16.9906L21.7709 25.7212L14.637 21.071L14.3639 20.8931L14.0909 21.071L6.95702 25.7212L8.90845 16.9906L8.97163 16.7079L8.75785 16.5125L2.33585 10.6417L10.7333 9.92324L11.0435 9.8967L11.1566 9.60663L14.3639 1.37692Z" fill="#EE5151" stroke="#EE5151"/>
+                          <path d="M49.3688 1.3408L52.693 9.61155L52.808 9.89787L53.1156 9.92338L61.7825 10.6424L55.1664 16.5074L54.9441 16.7044L55.0108 16.9939L57.0265 25.7388L49.636 21.0673L49.3688 20.8984L49.1017 21.0673L41.7112 25.7388L43.7269 16.9939L43.7936 16.7044L43.5713 16.5074L36.9552 10.6424L45.6221 9.92338L45.9297 9.89787L46.0447 9.61155L49.3688 1.3408Z" fill="#EE5151" stroke="#EE5151"/>
+                          <path d="M83.9781 1.37695L87.1855 9.60666L87.2985 9.89673L87.6087 9.92327L96.0062 10.6417L89.5842 16.5125L89.3704 16.708L89.4336 16.9906L91.385 25.7212L84.2511 21.0711L83.9781 20.8931L83.705 21.0711L76.5712 25.7212L78.5226 16.9906L78.5858 16.708L78.372 16.5125L71.95 10.6417L80.3474 9.92327L80.6576 9.89673L80.7707 9.60666L83.9781 1.37695Z" fill="#EE5151" stroke="#EE5151"/>
+                          <path d="M118.587 1.3408L121.911 9.61155L122.026 9.89787L122.334 9.92338L131.001 10.6424L124.385 16.5074L124.162 16.7044L124.229 16.9939L126.245 25.7388L118.854 21.0673L118.587 20.8984L118.32 21.0673L110.929 25.7388L112.945 16.9939L113.012 16.7044L112.79 16.5074L106.173 10.6424L114.84 9.92338L115.148 9.89787L115.263 9.61155L118.587 1.3408Z" fill="#EE5151" stroke="#EE5151"/>
+                          <path d="M153.519 1.37695L156.726 9.60666L156.839 9.89673L157.149 9.92327L165.547 10.6417L159.125 16.5125L158.911 16.708L158.974 16.9906L160.926 25.7212L153.792 21.0711L153.519 20.8931L153.246 21.0711L146.112 25.7212L148.063 16.9906L148.126 16.708L147.913 16.5125L141.491 10.6417L149.888 9.92327L150.198 9.89673L150.311 9.60666L153.519 1.37695Z" fill="#EE5151" stroke="#EE5151"/>
+                        </svg></p>
+                  </div>
+              </article>
+            </a>
+<!-- 5 DAHI NI -->
+
+            <a href="RestaurantPage.html">
+            <article class="bestR_details">
+                <img src="/accest/img4.png" alt="4">
+                <div class="IconName">
+                    <p class="nameRes"> Royal Sushi House</p>
+                    <button  class="iconZurh">
+                       <i class="fa-regular fa-heart"></i>
+                     </button>
+                </div>
+
+                <div class="timeIconPrice">
+                    <p class="iconTsag">
+                      <i class="fa-regular fa-clock"></i>
+                    </p>
+                    <p class="time"> Closed </p>
+
+                    <p class="price"> 20,000-100,000 MNT</p>
+                </div>
+
+                <div class="typeOd">
+                    <button class="type"> Sushi</button>
+                    <p class="rating"><svg xmlns="http://www.w3.org/2000/svg" width="168" height="30" viewBox="0 0 168 30" fill="none">
+                        <path d="M14.3639 1.37692L17.5713 9.60663L17.6844 9.8967L17.9946 9.92324L26.392 10.6417L19.97 16.5125L19.7563 16.7079L19.8194 16.9906L21.7709 25.7212L14.637 21.071L14.3639 20.8931L14.0909 21.071L6.95702 25.7212L8.90845 16.9906L8.97163 16.7079L8.75785 16.5125L2.33585 10.6417L10.7333 9.92324L11.0435 9.8967L11.1566 9.60663L14.3639 1.37692Z" fill="#EE5151" stroke="#EE5151"/>
+                        <path d="M49.3688 1.3408L52.693 9.61155L52.808 9.89787L53.1156 9.92338L61.7825 10.6424L55.1664 16.5074L54.9441 16.7044L55.0108 16.9939L57.0265 25.7388L49.636 21.0673L49.3688 20.8984L49.1017 21.0673L41.7112 25.7388L43.7269 16.9939L43.7936 16.7044L43.5713 16.5074L36.9552 10.6424L45.6221 9.92338L45.9297 9.89787L46.0447 9.61155L49.3688 1.3408Z" fill="#EE5151" stroke="#EE5151"/>
+                        <path d="M83.9781 1.37695L87.1855 9.60666L87.2985 9.89673L87.6087 9.92327L96.0062 10.6417L89.5842 16.5125L89.3704 16.708L89.4336 16.9906L91.385 25.7212L84.2511 21.0711L83.9781 20.8931L83.705 21.0711L76.5712 25.7212L78.5226 16.9906L78.5858 16.708L78.372 16.5125L71.95 10.6417L80.3474 9.92327L80.6576 9.89673L80.7707 9.60666L83.9781 1.37695Z" fill="#EE5151" stroke="#EE5151"/>
+                        <path d="M118.587 1.3408L121.911 9.61155L122.026 9.89787L122.334 9.92338L131.001 10.6424L124.385 16.5074L124.162 16.7044L124.229 16.9939L126.245 25.7388L118.854 21.0673L118.587 20.8984L118.32 21.0673L110.929 25.7388L112.945 16.9939L113.012 16.7044L112.79 16.5074L106.173 10.6424L114.84 9.92338L115.148 9.89787L115.263 9.61155L118.587 1.3408Z" fill="#EE5151" stroke="#EE5151"/>
+                        <path d="M153.519 1.37695L156.726 9.60666L156.839 9.89673L157.149 9.92327L165.547 10.6417L159.125 16.5125L158.911 16.708L158.974 16.9906L160.926 25.7212L153.792 21.0711L153.519 20.8931L153.246 21.0711L146.112 25.7212L148.063 16.9906L148.126 16.708L147.913 16.5125L141.491 10.6417L149.888 9.92327L150.198 9.89673L150.311 9.60666L153.519 1.37695Z" fill="#EE5151" stroke="#EE5151"/>
+                      </svg></p>
+                </div>
+            </article>
+            </a>
+<!-- 6 DAHI NI -->
+            <a href="RestaurantPage.html">
+              <article class="bestR_details">
+                  <img src="/accest/img5.png" alt="5">
+                  <div class="IconName">
+                      <p class="nameRes"> Royal Sushi House</p>
+
+                      <button  class="iconZurh">
+                        <i class="fa-regular fa-heart"></i>
+                      </button>
+                  </div>
+
+                  <div class="timeIconPrice">
+                      <p class="iconTsag">
+                        <i class="fa-regular fa-clock"></i>
+                      </p>
+                      <p class="time"> Closed </p>
+
+                      <p class="price">20,000-100,000 MNT</p>
+                  </div>
+
+                  <div class="typeOd">
+                      <button class="type"> Sushi</button>
+                      <p class="rating"><svg xmlns="http://www.w3.org/2000/svg" width="168" height="30" viewBox="0 0 168 30" fill="none">
+                          <path d="M14.3639 1.37692L17.5713 9.60663L17.6844 9.8967L17.9946 9.92324L26.392 10.6417L19.97 16.5125L19.7563 16.7079L19.8194 16.9906L21.7709 25.7212L14.637 21.071L14.3639 20.8931L14.0909 21.071L6.95702 25.7212L8.90845 16.9906L8.97163 16.7079L8.75785 16.5125L2.33585 10.6417L10.7333 9.92324L11.0435 9.8967L11.1566 9.60663L14.3639 1.37692Z" fill="#EE5151" stroke="#EE5151"/>
+                          <path d="M49.3688 1.3408L52.693 9.61155L52.808 9.89787L53.1156 9.92338L61.7825 10.6424L55.1664 16.5074L54.9441 16.7044L55.0108 16.9939L57.0265 25.7388L49.636 21.0673L49.3688 20.8984L49.1017 21.0673L41.7112 25.7388L43.7269 16.9939L43.7936 16.7044L43.5713 16.5074L36.9552 10.6424L45.6221 9.92338L45.9297 9.89787L46.0447 9.61155L49.3688 1.3408Z" fill="#EE5151" stroke="#EE5151"/>
+                          <path d="M83.9781 1.37695L87.1855 9.60666L87.2985 9.89673L87.6087 9.92327L96.0062 10.6417L89.5842 16.5125L89.3704 16.708L89.4336 16.9906L91.385 25.7212L84.2511 21.0711L83.9781 20.8931L83.705 21.0711L76.5712 25.7212L78.5226 16.9906L78.5858 16.708L78.372 16.5125L71.95 10.6417L80.3474 9.92327L80.6576 9.89673L80.7707 9.60666L83.9781 1.37695Z" fill="#EE5151" stroke="#EE5151"/>
+                          <path d="M118.587 1.3408L121.911 9.61155L122.026 9.89787L122.334 9.92338L131.001 10.6424L124.385 16.5074L124.162 16.7044L124.229 16.9939L126.245 25.7388L118.854 21.0673L118.587 20.8984L118.32 21.0673L110.929 25.7388L112.945 16.9939L113.012 16.7044L112.79 16.5074L106.173 10.6424L114.84 9.92338L115.148 9.89787L115.263 9.61155L118.587 1.3408Z" fill="#EE5151" stroke="#EE5151"/>
+                          <path d="M153.519 1.37695L156.726 9.60666L156.839 9.89673L157.149 9.92327L165.547 10.6417L159.125 16.5125L158.911 16.708L158.974 16.9906L160.926 25.7212L153.792 21.0711L153.519 20.8931L153.246 21.0711L146.112 25.7212L148.063 16.9906L148.126 16.708L147.913 16.5125L141.491 10.6417L149.888 9.92327L150.198 9.89673L150.311 9.60666L153.519 1.37695Z" fill="#EE5151" stroke="#EE5151"/>
+                        </svg></p>
+                  </div>
+              </article>
+            </a>
+    </section>
+
+
+
+<!-- RECENT REVIEWS -->
+    <div class="sanalOgoh">
+        <h3 class="recentReviews">Recent reviews</h3>
+        <button>Санал өгөх</button>
+    </div>
+
+    <section class="recentR">
+      <article class="review1">
+        <!--review bichsen hun: reviewer-name, reviewer-img -->
+        <div class="reviewer" >
+            <img src="/accest/girl.png" alt="reviewer">
+            <h3>Билгүүн</h3>
+        </div>
+        <div class="review-main">
+            <!--review star, date time, report-->
+            <label for="Review-rating"></label>
+            <meter id="Review-rating" class="star-rating" min="0" max="5" value="1" title="1 out of 5 stars"></meter>
+            <span>1 өдрийн өмнө</span>
+            <button type="button" name="report">
+                <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.30608 2.25818L7.70039 4.22753H12.8659V10.1356H9.55365L9.15934 8.16623H2.02233V2.25818H7.30608ZM8.92275 0.288834H0.0507812V17.0283H2.02233V10.1356H7.54267L7.93698 12.1049H14.8374V2.25818H9.31706L8.92275 0.288834Z" fill="#EE5151"/>
+                </svg>              
+            </button>
+            <!--review-main-->
+            <p>
+                Амт гаагүй ээ муухай бол биш. Яагаад ч юм тийм өвөрмөц гоё байх болов уу гэсэн хүлээлттэй байсан.
+                Хүлээлтэд хүрсэнгүй мөн уух ундаагаа тусад нь авах хэрэгтэй.
+                Орчин бол миний бодсоноос жижиг байсан. Намайг ороход цэвэрхэн байсан.
+                Үйлчилгээ бол мэдэхгүй ээ, би өөрөө ажилладаг юм шиг л байсан. Захиалга өгөөд өөрөө хоолоо авч ширээн дээрээ очсон (би л нааш цаашаа гүйгээд) тэгдэг юм байлгүй дээ.
+                Нэг удаа ороход хангалттай санагдлаа. 
+            </p>
+            <img src="/accest/reviewImage.png" alt="food review">    
+            <!--like&dislike button-->
+            <label for="like" class="like-label">
+                <span>23</span> 
+                <svg class="like-btn" width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23 10.8259C23 10.2955 22.7893 9.78679 22.4142 9.41171C22.0391 9.03664 21.5304 8.82593 21 8.82593H14.68L15.64 4.25593C15.66 4.15593 15.67 4.04593 15.67 3.93593C15.67 3.52593 15.5 3.14593 15.23 2.87593L14.17 1.82593L7.59 8.40593C7.22 8.77593 7 9.27593 7 9.82593V19.8259C7 20.3564 7.21071 20.8651 7.58579 21.2401C7.96086 21.6152 8.46957 21.8259 9 21.8259H18C18.83 21.8259 19.54 21.3259 19.84 20.6059L22.86 13.5559C22.95 13.3259 23 13.0859 23 12.8259V10.8259ZM1 21.8259H5V9.82593H1V21.8259Z"/>
+                </svg>                         
+                <input type="radio" id="like" name="likedislike" >
+            </label>
+            <label for="dislike" class="dislike-label">
+                <svg class="dislike-btn" width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.46094 14.988C1.46094 15.5185 1.67165 16.0272 2.04672 16.4023C2.4218 16.7773 2.9305 16.988 3.46094 16.988L9.78094 16.988L8.82094 21.558C8.80094 21.658 8.79094 21.768 8.79094 21.878C8.79094 22.288 8.96094 22.668 9.23094 22.938L10.2909 23.988L16.8709 17.408C17.2409 17.038 17.4609 16.538 17.4609 15.988V5.98804C17.4609 5.4576 17.2502 4.9489 16.8752 4.57382C16.5001 4.19875 15.9914 3.98804 15.4609 3.98804L6.46094 3.98804C5.63094 3.98804 4.92094 4.48804 4.62094 5.20804L1.60094 12.258C1.51094 12.488 1.46094 12.728 1.46094 12.988V14.988ZM23.4609 3.98804H19.4609L19.4609 15.988H23.4609L23.4609 3.98804Z"/>
+                </svg> 
+                <span>2</span>   
+                <input type="radio" id="dislike" name="likedislike">
+            </label>
+        </div>
+    </article>
+    <article class="review2">
+        <!--review bichsen hun: reviewer-name, reviewer-img -->
+        <div class="reviewer" >
+            <img src="/accest/girl.png" alt="reviewer">
+            <h3>Билгүүн</h3>
+        </div>
+        <div class="review-main">
+            <!--review star, date time, report-->
+            <label for="Review-rating"></label>
+            <meter id="Review-rating" class="star-rating" min="0" max="5" value="1" title="1 out of 5 stars"></meter>
+            <span>1 өдрийн өмнө</span>
+            <button type="button" name="report">
+                <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.30608 2.25818L7.70039 4.22753H12.8659V10.1356H9.55365L9.15934 8.16623H2.02233V2.25818H7.30608ZM8.92275 0.288834H0.0507812V17.0283H2.02233V10.1356H7.54267L7.93698 12.1049H14.8374V2.25818H9.31706L8.92275 0.288834Z" fill="#EE5151"/>
+                </svg>              
+            </button>
+            <!--review-main-->
+            <p>
+                Амт гаагүй ээ муухай бол биш. Яагаад ч юм тийм өвөрмөц гоё байх болов уу гэсэн хүлээлттэй байсан.
+                Хүлээлтэд хүрсэнгүй мөн уух ундаагаа тусад нь авах хэрэгтэй.
+                Орчин бол миний бодсоноос жижиг байсан. Намайг ороход цэвэрхэн байсан.
+                Үйлчилгээ бол мэдэхгүй ээ, би өөрөө ажилладаг юм шиг л байсан. Захиалга өгөөд өөрөө хоолоо авч ширээн дээрээ очсон (би л нааш цаашаа гүйгээд) тэгдэг юм байлгүй дээ.
+                Нэг удаа ороход хангалттай санагдлаа. 
+            </p>
+            <img src="/accest/reviewImage.png" alt="food review">    
+            <!--like&dislike button-->
+            <label for="like1" class="like-label">
+                <span>23</span> 
+                <svg class="like-btn" width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23 10.8259C23 10.2955 22.7893 9.78679 22.4142 9.41171C22.0391 9.03664 21.5304 8.82593 21 8.82593H14.68L15.64 4.25593C15.66 4.15593 15.67 4.04593 15.67 3.93593C15.67 3.52593 15.5 3.14593 15.23 2.87593L14.17 1.82593L7.59 8.40593C7.22 8.77593 7 9.27593 7 9.82593V19.8259C7 20.3564 7.21071 20.8651 7.58579 21.2401C7.96086 21.6152 8.46957 21.8259 9 21.8259H18C18.83 21.8259 19.54 21.3259 19.84 20.6059L22.86 13.5559C22.95 13.3259 23 13.0859 23 12.8259V10.8259ZM1 21.8259H5V9.82593H1V21.8259Z"/>
+                </svg>                         
+                <input type="radio" id="like1" name="likedislike1" >
+            </label>
+            <label for="dislike1" class="dislike-label">
+                <svg class="dislike-btn" width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.46094 14.988C1.46094 15.5185 1.67165 16.0272 2.04672 16.4023C2.4218 16.7773 2.9305 16.988 3.46094 16.988L9.78094 16.988L8.82094 21.558C8.80094 21.658 8.79094 21.768 8.79094 21.878C8.79094 22.288 8.96094 22.668 9.23094 22.938L10.2909 23.988L16.8709 17.408C17.2409 17.038 17.4609 16.538 17.4609 15.988V5.98804C17.4609 5.4576 17.2502 4.9489 16.8752 4.57382C16.5001 4.19875 15.9914 3.98804 15.4609 3.98804L6.46094 3.98804C5.63094 3.98804 4.92094 4.48804 4.62094 5.20804L1.60094 12.258C1.51094 12.488 1.46094 12.728 1.46094 12.988V14.988ZM23.4609 3.98804H19.4609L19.4609 15.988H23.4609L23.4609 3.98804Z"/>
+                </svg> 
+                <span>2</span>   
+                <input type="radio" id="dislike1" name="likedislike1">
+            </label>
+        </div>
+    </article>
+    </section>
+
+
+
+    <!--FOOTER  -->
+    <footer-component></footer-component>
+    <!--<footer>
+       
+      <nav class="footer" >
+         
+          <a href="https://www.facebook.com" class="fb">
+              <i class="fa-brands fa-facebook-f"></i> </a>
+  
+  
+          <a href="https://www.twitter.com" class="twitter" >
+              <i class="fa-brands fa-twitter"></i> </a>
+  
+  
+          <a href="https://www.instagram.com" class="insta">
+              <i class="fa-brands fa-instagram"></i> </a>
+          
+      </nav>
+      
+      <article class="end">
+         
+          &copy; 2023 <span style="color:#EE5151;">Yum</span>idy. All Rights Reserved.
+      </article>
+  
+  </footer>-->
+
+</main>
+
+    
+</body>
+
+<script>
+    function dsadsadsa()
+    {
+        console.log('123')
+    }
+</script>
+</html><!-- Zuragnii linkuudig oruulj ugsnuur SEO saijirsan hediich Best pracrtice 95 ruu unav mon SEOg saijruulah uudnees title iin door meta tag oruulav. -->

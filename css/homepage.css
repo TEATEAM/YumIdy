@@ -1,5 +1,5 @@
 /* CUSTOM PROPERTY--  entities defined by CSS authors that contain specific values to be reused throughout a document.*/
-/* how to create it 
+/* how to create it
 :root {
     --name: value;
 }
@@ -10,14 +10,14 @@ how to use it
 body{
     color: var(--primary-clr)
 }
-and we can use 
+and we can use
 .sales-point{
     color: va(--secondary-clr, yellow);
 } it will become yellow color.
 */
 @import url(root.css);
 @media (prefers-color-scheme: dark) {
-    :root{   
+    :root{
       --color-bg: #FFFFFF;
       --color-bg-second: #d9d9d9;
       --color-text: #0F0F0F;
@@ -56,11 +56,10 @@ body{
     padding: 10px;
  /*    margin-left: 7.12rem;
     margin-right: 7.12rem; */
-    
 }
 /* best Restaurantsig haruulah detailuud:  */
 .bestR_details {
-    width: 24rem; 
+    width: 24rem;
     height: 17.25rem;
     background: #272727;
     margin: var(--margin-bodySmall);
@@ -72,7 +71,7 @@ body{
         border-radius: 1.25rem;
     }
 
-   
+
 }
 /* ner bolon save hiihed ashiglah zurh icon */
 .IconName {
@@ -90,14 +89,19 @@ body{
     font-style: var(--font-style);
     color: var(--color-text);
 }
-.iconZurh{
+.heart-checkbox{
     background: none;
     border: none;
 
 }
 .iconZurh:hover{
    fill: var(color-text);
+   color: red;
 }
+/* input[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+} */
 
 
 
@@ -107,8 +111,6 @@ body{
     display: flex;
     justify-content: start;
     align-items: center;
-   
-  
 }
 
 .iconTsag {
@@ -119,7 +121,6 @@ body{
     height:var( --tsag-WH);
 
     /* hvcheer */
-   
 }
 
 .time{
@@ -175,7 +176,6 @@ body{
 & h5{
     color:var( --color-text) ;
     font-size: var(--font-sizeSmall);
-   
 }
 & button{
     background: none;
@@ -243,8 +243,7 @@ body{
     outline: none;
   /* x ig arilgah */
 
-}  
- 
+}
 & input[type="search"] {
     color:var( --color-bg); /* Change this to the desired font color */
 }
@@ -275,7 +274,7 @@ body{
     width: 59rem;
     height: 12.4rem;
     font-weight: var(--font-weight);
-    line-height: var(--line-height); 
+    line-height: var(--line-height);
     color: var(--color-text);
     text-shadow: 0px 4px 4px rgba(1, 1, 1, 0.25);
     font-size: var(--font-sizeTom);
@@ -299,7 +298,6 @@ body{
     font-family: var(--font-family);
     font-size: var(--font-sizeBR);
      color: var(--color-text);
-    
 }
 
 .bestR {
@@ -308,11 +306,10 @@ body{
     padding: 10px;
  /*    margin-left: 7.12rem;
     margin-right: 7.12rem; */
-    
 }
 /* best Restaurantsig haruulah detailuud:  */
 .bestR_details {
-    width: 24rem; 
+    width: 24rem;
     height: 17.25rem;
     background: #272727;
     margin: var(--margin-bodySmall);
@@ -323,8 +320,6 @@ body{
         height: 10rem;
         border-radius: 1.25rem;
     }
-
-   
 }
 
 .IconName {
@@ -361,8 +356,6 @@ body{
     display: flex;
     justify-content: start;
     align-items: center;
-   
-  
 }
 
 .iconTsag {
@@ -375,7 +368,6 @@ body{
     font-size: 0.8rem;
     color: #FFF;
     /* hvcheer */
-   
 }
 
 .time{
@@ -416,7 +408,6 @@ body{
     margin-top: 1rem;
 }
 .type {
- 
     padding: 0.25rem 0.625rem;
     gap: 0.5rem;
     border-radius: 6.25rem;
@@ -481,7 +472,6 @@ body{
     border-radius: var( --border-radius);
     margin: var(--margin-bodySmall);
     background: var( --color-bg-second);
-    
 }
 .sanalOgoh svg:hover{
     color: var(--color-accent);
@@ -543,7 +533,6 @@ body{
         stroke: var(--color-accent);
         stroke-width: 1.5;
       }
-      
       & .like-label:has(:checked)  {
         fill: var(--color-accent);
         stroke: var(--color-accent);
@@ -568,24 +557,101 @@ body{
         }
     }
   }
- 
 /*   <header>
   <a class="logo"  href="homepage.html" ><img class="logoImg" src="/accest/logo.svg" alt="logoImg"></a>
    <nav class="nevtreh">
        <button type="button" class="nevtreh">Нэвтрэх</button>
-   </nav>  
+   </nav>
 </header> */
 
 
   /* MEDIA */
-  @media (max-width: 1200px)
+  /* @media (max-width: 1200px)
   {
-    
     header{
         background: red;
     }
     .bestR{
-        
     }
 
+  } */
+
+
+  /* Card section css */
+  .idy-card{
+    width: 24rem;
+    height: 17.25rem;
+    background: #272727;
+    margin: var(--margin-bodySmall);
+    border-radius: 1.25rem;
+    position: relative;
+    /* font-family: var("Quicksand-Medium"); */
+    /* display: flex; */
+
+    & img {
+        width: 100%;
+        height: 10rem;
+        border-radius: 1.25rem;
+    }
+    & .cardInfo{
+        display: flex;
+        justify-content: space-evenly;
+        & .resName{
+            width:18rem;
+            font-family: var("Quicksand-Medium");
+            font-size: 1.125rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height:2rem; /* 133.333% */
+            letter-spacing: 0.00625rem;
+            color: var(--color-text);
+        }
+        & .heart-checkbox{
+          margin-top: 0.5rem ;
+        }
+        & .heart-checkbox :hover{
+            color: red;
+        }
+    }
+    & .cardInfo1{
+        display: flex;
+        & #tsagLogo{
+            width: 0.75rem;
+            height: 0.75rem;
+            flex-shrink: 0;
+            margin-left: 1rem;
+        }
+        & .time{
+            color: var(--color-text);
+            font-family: var("Quicksand-Medium");
+            font-size: 0.75rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1rem; /* 133.333% */
+            margin-left: 0.6rem;
+        }
+        & .price{
+            color: var(--color-text);
+            font-family: var("Quicksand-Medium");
+            font-size: 0.75rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1rem; /* 133.333% */
+            margin-left: 0.6rem;
+        }
+    }
+    & .foodType{
+        width: 3.5rem;
+        height: 1.5rem;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        padding: 0.25rem 0.625rem;
+        gap: 0.5rem;
+        border-radius: 6.25rem;
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 600;
+        color: #545563;
+        background: var(--color-text);
+    }
   }
