@@ -86,7 +86,7 @@ class IdyCard extends HTMLElement {
         if(likedState === "true"){
             this.shadowRoot.querySelector("idy-like-btn").setAttribute("checked",true);
         }
-        console.log("za lav ene ajillajin");
+        console.log("card-n callback");
     }
 
     static get observedAttributes() {

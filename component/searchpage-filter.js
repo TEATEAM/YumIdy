@@ -7,8 +7,14 @@
 class SearchpageFilter extends HTMLElement {
     constructor() {
         super();
-        this.eventChecked = false;
         this.#Render();
+        this.eventListenerAdded = false;
+        
+        // //filter-n component-оос shidsen eventiig barij avjiin
+        // this.addEventListener("checked", ()=>this.checkboxChecked(true));
+        // this.addEventListener("unchecked", ()=>this.checkboxChecked(false));
+        // this.addEventListener("click", (e)=>this.clicked(e));
+
     }
 
     #Render() {
@@ -47,28 +53,60 @@ class SearchpageFilter extends HTMLElement {
 
     connectedCallback(){
         //implementation
-        //checkbox eer darahad custom event uusjiin
-        var selectedMeals = document.querySelectorAll('input[name="meal[]"]:checked');
-        console.log(selectedMeals);
-        if(!this.eventChecked){
-            
+        //ene componentend click gdg event uushed clickHandler() duudagdanaa.
+        if(!this.eventListenerAdded){
+            this.eventListenerAdded = true;
+            this.addEventListener(
+                "click",
+                this.clickHandler, 
+                true
+            )
         }
         this.#Render();
-        checkboxes.addEventListener("click", ()=> {      
+    }
+    clickHandler(e){
+        
+        //checkbox eer darahad custom event uusjiin
+        // var selectedMeals = document.querySelectorAll('input[name="meal[]"]:checked');
+        // console.log(selectedMeals);
+        // checkboxes.addEventListener("click", ()=> {      
+        //     const event = new CustomEvent("filterData", {
+        //         bubbles: true,
+        //         composed: true,
+        //         detail:{
+        //             value: checkbox.getAttribute("value"),
+        //         }
+        //     })
+        //     console.log(checkbox);
+        //     document.dispatchEvent(event);
+        //     console.log("ajillajinaaa");
+        // })
+        //ug click hiisen zuil n "input" bwl checklesen checklegdeegu esehiig harna
+        if(e.target.tagName.toLowerCase() == "input")
+        {   
+            let isChecked = "false";
+            if(e.target.checked){       //checklegsnuu checklegdeeguiyu esehiig medne
+                isChecked = "true"; 
+            }
+            localStorage.setItem(e.target.getAttribute("value"), isChecked); //local deer hadgalah
+            //checkbox checklegdesn bol medeelleh CustomEvent
             const event = new CustomEvent("filterData", {
                 bubbles: true,
+                capture: true,
                 composed: true,
                 detail:{
-                    value: checkbox.getAttribute("value"),
+                    id: e.target.getAttribute("id"),
+                    name: e.target.getAttribute("name"),
+                    value: e.target.getAttribute("value"),
+                    checked: isChecked,
                 }
-            })
-            console.log(checkbox);
-            document.dispatchEvent(event);
-            console.log("ajillajinaaa");
-        })
+            }) 
+            console.log(e.target.getAttribute("value"));
+            //window ruu tsatsaj ugnu.
+            window.dispatchEvent(event);
+            console.log("filter dispatch tsatsagdlaa");
+        }
     }
-
-
     disconnectedCallback() {
         //implementation
     }

@@ -23,7 +23,10 @@ class IdyLikeBtn extends HTMLElement {
                 this.clickHandler, 
                 true
             )
+            console.log("like-btn nii call back");
         }
+        
+        console.log("like-btn nii gadnah call back");
     }
 
     // clickHandler function
