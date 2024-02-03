@@ -6,7 +6,7 @@ class Headercomponent extends HTMLElement {
 
     #render() {
       this.innerHTML = `
-      <script src="./AriComponents/res-cart.js"></script>
+      <script src="./component/res-cart.js"></script>
       <style>
       header{
         width: 100%;

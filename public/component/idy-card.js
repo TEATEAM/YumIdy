@@ -2,13 +2,14 @@ const template = document.createElement("template");
 
 template.innerHTML = `
     
-    <link rel="stylesheet" href="/css/resCard.css">
+    <link rel="stylesheet" href="./css/resCard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
     crossorigin="anonymous" 
     referrerpolicy="no-referrer" 
     />
-    <script type="module" src="/./component/review-star-wc.js"></script>
+    <script type="module" src="./review-star-wc.js"></script>
+    
     <article class="idy-card">
         <img class="foodImg">
         <div class="cardInfo">
