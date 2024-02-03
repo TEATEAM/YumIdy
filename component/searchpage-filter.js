@@ -88,7 +88,7 @@ class SearchpageFilter extends HTMLElement {
             if(e.target.checked){       //checklegsnuu checklegdeeguiyu esehiig medne
                 isChecked = "true"; 
             }
-            localStorage.setItem(e.target.getAttribute("value"), isChecked); //local deer hadgalah
+            localStorage.setItem(e.target.getAttribute("value"), isChecked); //local deer value, checked eseheer hadgalah
             //checkbox checklegdesn bol medeelleh CustomEvent
             const event = new CustomEvent("filterData", {
                 bubbles: true,

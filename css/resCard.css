@@ -23,11 +23,22 @@
             letter-spacing: 0.00625rem;
             color: var(--color-text);
         }
-        & .heart-checkbox{
-          margin-top: 0.5rem ;
+        & .heart-label {
+            cursor: pointer;
+            fill: none;
+            stroke: var(--color-text);
+            stroke-width: 0.2rem;
+            position: relative;
+            right: -60%;
+            margin-right: 5rem;
+          }
+        & #heart-checkbox {
+        display: none;
         }
-        & .heart-checkbox :hover{
-            color: red;
+        & .heart-label:has(:checked)  {
+        fill: var(--color-accent);
+        stroke: var(--color-accent);
+        stroke-width: 0.2rem;
         }
     }
     & .cardInfo1{
@@ -72,3 +83,5 @@
         background: var(--color-text);
     }
   }
+
+  

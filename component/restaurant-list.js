@@ -16,15 +16,12 @@ class RestaurantList extends HTMLElement {
             console.log("tsatssanaa barij avlaaa.")
             if(e.detail.checked){
                 this.addToList(e.detail);
+                this.querySelector("#"+e.datail.id).setAttribute("checked",true);
             }
             else{
                 this.removeFromList(e.detail);
             }
-        });
-        // let likedState = localStorage.getItem(this.getAttribute("name"));
-        // if(likedState === "true"){
-        //     this.shadowRoot.querySelector("idy-like-btn").setAttribute("checked",true);
-        // }
+        })
         console.log("card-n callback");
     }
     addToList(type){
@@ -33,7 +30,7 @@ class RestaurantList extends HTMLElement {
         this.renderRestaurants();
       }
     removeFromList(type) {
-        const index = this.restaurants.findIndex(c => c.value === type.value);
+        const index = this.checkedTypes.findIndex(c => c.value === type.value);
         if (resIndex !== -1) {
           this.checkedTypes.splice(index, 1);        
           localStorage.setItem("checkedTypes", JSON.stringify(this.checkedTypes));

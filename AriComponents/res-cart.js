@@ -10,32 +10,31 @@ class ResCart extends HTMLElement {
 
     render(){
         this.shadowRoot.innerHTML = `
-        
-      <style>
-        .cart-container {
-          color: var(--color-text);
-          width: 8.125rem;
-          height: 3.125rem;
-          background: none;
-          font-size: var(--font-sizeSmall);
-          border-radius: 1.25rem;
-          margin-right: var(--border-radius);
-          border:var(--border);
-          display: flex;
-          align-items: center;
-          &:hover {
-            cursor: pointer;
+        <style>
+          .cart-container {
+            color: var(--color-text);
+            width: 8.125rem;
+            height: 3.125rem;
+            background: none;
+            font-size: var(--font-sizeSmall);
+            border-radius: 1.25rem;
+            border:var(--border);
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            & :hover {
+              cursor: pointer;
+            }
+            & span {
+              color: var(--color-accent)
+            }
           }
-          & span {
-            color: var(--color-accent)
-          }
-        }
-      </style>
-      <div class="cart-container">
-        Дуртай
-        <span id="counter">${this.restaurants.length}</span>
-      </div>
-        `;
+        </style>
+        <div class="cart-container">
+          <p>Дуртай</p>
+          <span id="counter">${this.restaurants.length}</span>
+        </div>
+          `;
     }
 
     connectedCallback() {
@@ -62,11 +61,11 @@ class ResCart extends HTMLElement {
       }
     }
     readFromLocalStorage(){
-        const resList = JSON.parse(localStorage.getItem("cart"));
-        if(resList !== null){
-            this.restaurants = resList;
-            this.render()
-        }
+      const resList = JSON.parse(localStorage.getItem("cart"));
+      if(resList !== null){
+          this.restaurants = resList;
+          this.render()
+      }
     }
 
 }
