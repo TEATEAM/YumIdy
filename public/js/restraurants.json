@@ -1,14 +1,44 @@
-{ 
-      "id": 1,
-      "name": "",
-      "img": "",
-      "stars": "", 
-      "rank": "",
-      "openingHours": "",
-      "tag": "",
-      "description": "",
-      "meals": ["", ""],
-      "prices": [],
-      "cuisines":[], 
-      "dishes": []
-}
+[
+    { 
+        "id": 1,
+        "name": "",
+        "img": "",
+        "stars": "", 
+        "rank": "",
+        "openingHours": "",
+        "tag": "",
+        "description": "",
+        "meals": ["", ""],
+        "prices": [],
+        "cuisines":[], 
+        "dishes": []
+    },
+    { 
+        "id": 1,
+        "name": "",
+        "img": "",
+        "stars": "", 
+        "rank": "",
+        "openingHours": "",
+        "tag": "",
+        "description": "",
+        "meals": ["", ""],
+        "prices": [],
+        "cuisines":[], 
+        "dishes": []
+    },
+    { 
+        "id": 1,
+        "name": "",
+        "img": "",
+        "stars": "", 
+        "rank": "",
+        "openingHours": "",
+        "tag": "",
+        "description": "",
+        "meals": ["", ""],
+        "prices": [],
+        "cuisines":[], 
+        "dishes": []
+    }
+]
