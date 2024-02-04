@@ -154,7 +154,7 @@
       "dishes": ["4.1","4.2","4.3","4.4"]
   },
   {
-      "id": 13,
+      "id": 12,
       "name": "Naadam Bar & Restaurant, Shangri-La Ulaanbaatar",
       "img": "../accest/res-img/route22.jpg",
       "stars": "4.0", 
@@ -168,7 +168,7 @@
       "dishes": ["4.1","4.3","4.4"]
   },
   {
-      "id": 14,
+      "id": 13,
       "name": "Bluefin Cuisine D'Art",
       "img": "../accest/res-img/bluefin.jpg",
       "stars": "4.5", 
@@ -182,7 +182,7 @@
       "dishes": ["4.1","4.3","4.4"]
   },
   {
-      "id": 15,
+      "id": 14,
       "name": "Chili Shabu Shabu",
       "img": "../accest/res-img/chili.jpg",
       "stars": "4.3", 
