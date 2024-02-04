@@ -27,20 +27,34 @@
         "cuisines":[], 
         "dishes": []
     },
-    { 
-        "id": 1,
-        "name": "",
-        "img": "",
-        "stars": "", 
-        "rank": "",
-        "openingHours": "",
-        "tag": "",
-        "description": "",
-        "meals": ["", ""],
-        "prices": [],
-        "cuisines":[], 
-        "dishes": []
-    },
+    {
+      "id": 8,
+      "name": "Bluefin Le Bistro",
+      "img": "../accest/res-img/blueFin.jpg",
+      "stars": "3.5", 
+      "rank": "12",
+      "openingHours": "8:00AM-12:00AM",
+      "tag": "Pasta",
+      "description": "Хамгийн их порцтой",
+      "meals": ["1.1", "1.2"],
+      "prices": ["2.2"],
+      "cuisines":["3.3"], 
+      "dishes": ["4.1","4.3"] 
+     },
+     {
+      "id": 9,
+      "name": "Silk Road Bar & Grill",
+      "img": "../accest/res-img/silk.jpg",
+      "stars": "4.3", 
+      "rank": "12",
+      "openingHours": "12:00PM-11:30PM",
+      "tag": "Steak",
+      "description": "Хамгийн соёлтой үйлчилгээ",
+      "meals": ["1.2","1.3"],
+      "prices": ["2.3"],
+      "cuisines":["3.3"], 
+      "dishes": ["4.1", "4.3", "4.4"] 
+     },
     { 
       "id": 10,
       "name": "Rosewood Kitchen + Enoteca",
@@ -92,23 +106,10 @@
       "openingHours": "11:00AM-12:00AM",
       "tag": "",
       "description": "хамгийн тав тухтай орчин",
-      "meals": ["1.3"],
-      "prices": ["2.2"],
+      "meals": ["1.1", "1.2"],
+      "prices": ["2.1"],
       "cuisines":["3.4", "3.2"], 
-      "dishes": ["4.1","4.3","4.4"]
-  },
-  {
-      "id": 15,
-      "name": "Route 22 Restaurant & Wine Lounge",
-      "img": "../accest/res-img/route22.jpg",
-      "stars": "4.0", 
-      "rank": "6",
-      "openingHours": "12:00PM-2:00AM",
-      "tag": "Soup",
-      "description": "Хамгийн өргөн сонголттой",
-      "meals": ["1.3"],
-      "prices": ["2.2"],
-      "cuisines":["3.4", "3.2"], 
-      "dishes": ["4.1","4.3","4.4"] 
+      "dishes": ["4.2","4.3"]
   }
+ 
 ]
