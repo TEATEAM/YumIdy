@@ -6,6 +6,7 @@ class Restaurant {
     constructor(restaurant) {
         this.id = restaurant.id;
         this.name = restaurant.name;
+        this.img = restaurant.img;
         this.stars = restaurant.stars;
         this.rank = restaurant.rank;
         this.openingHours = restaurant.openingHours;
@@ -19,7 +20,7 @@ class Restaurant {
     render() {
         return `
         <li>
-           <img src="/accest/restaurantpage${this.id}.png" alt="img of restaurantpage${this.id}">
+           <img src="${this.img}" alt="img of ${this.name}">
            <div class="h_stars">
                <h2>${this.name}</h2>                        
                <review-star-wc class= "starinli" rating="${this.stars}" ratingID="restaurant${this.id}"></review-star-wc>
@@ -145,7 +146,7 @@ const cuisineFilter = params.getAll("cuisine");
 const dishFilter = params.getAll("dish");
 
 //Create RecentNews object, with url
-const resList = new restaurantList("https://api.jsonbin.io/v3/b/6582b163dc74654018862966",mealFilter, priceFilter, cuisineFilter, dishFilter);
+const resList = new restaurantList("https://api.jsonbin.io/v3/b/65bf440f266cfc3fde85865d",mealFilter, priceFilter, cuisineFilter, dishFilter);
 
 //Load content from RecentNewsURL
 document.addEventListener("DOMContentLoaded" , async() => {

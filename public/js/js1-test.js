@@ -415,14 +415,6 @@ class App{
         myapp.insertAdjacentHTML("afterbegin",myhtml);
     }
 }
-
-
-
-
-
-
-
-
 // export default class Restaurants{
 //     constructor(RestaurantUrl){
 //         this._restaurantList = [];

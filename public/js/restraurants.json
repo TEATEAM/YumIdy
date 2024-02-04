@@ -2,7 +2,7 @@
     { 
         "id": 1,
         "name": "The Bull Hotpot Restaurant",
-        "img": "../accest/res-img/thebull.jpg",
+        "img": "./accest/res-img/thebull.jpg",
         "stars": "4", 
         "rank": "6",
         "openingHours": "11:00AM-12:00AM",
@@ -16,7 +16,7 @@
     { 
         "id": 2,
         "name": "Tenger Buffet Restaurant",
-        "img": "../accest/res-img/tenger.jpg",
+        "img": "./accest/res-img/tenger.jpg",
         "stars": "4.5", 
         "rank": "5",
         "openingHours": "06:30AM-12:00AM",
@@ -30,7 +30,7 @@
     { 
         "id": 3,
         "name": "Mongolian's Restaurant",
-        "img": "../accest/res-img/mongolians.jpg",
+        "img": "./accest/res-img/mongolians.jpg",
         "stars": "5", 
         "rank": "3",
         "openingHours": "12:00PM-02:00AM",
@@ -44,7 +44,7 @@
     { 
         "id": 4,
         "name": "Modern Nomands",
-        "img": "../accest/res-img/modernnomands.jpg",
+        "img": "./accest/res-img/modernnomands.jpg",
         "stars": "4", 
         "rank": "5",
         "openingHours": "06:00AM-12:00PM",
@@ -58,7 +58,7 @@
     { 
         "id": 5,
         "name": "Bites",
-        "img": "../accest/res-img/bites.jpg",
+        "img": "./accest/res-img/bites.jpg",
         "stars": "4", 
         "rank": "8",
         "openingHours": "06:00AM-04:00PM",
@@ -72,7 +72,7 @@
     { 
         "id": 6,
         "name": "Hazara Restaurant",
-        "img": "../accest/res-img/hazara.jpg",
+        "img": "./accest/res-img/hazara.jpg",
         "stars": "4", 
         "rank": "8",
         "openingHours": "12:00PM-10:00PM",
@@ -86,7 +86,7 @@
     { 
         "id": 7,
         "name": "Namaste Restaurant",
-        "img": "../accest/res-img/namaste.jpg",
+        "img": "./accest/res-img/namaste.jpg",
         "stars": "4", 
         "rank": "8",
         "openingHours": "11:00AM-10:00PM",
@@ -100,7 +100,7 @@
     { 
         "id": 8,
         "name": "Silk Road Bar & Grill",
-        "img": "../accest/res-img/silk.jpg",
+        "img": "./accest/res-img/silk.jpg",
         "stars": "4.3", 
         "rank": "9",
         "openingHours": "12:00AM-11:30PM",
@@ -114,7 +114,7 @@
     { 
       "id": 9,
       "name": "Rosewood Kitchen + Enoteca",
-      "img": ".../accest/res-img/rosewood.jpg",
+      "img": "./accest/res-img/rosewood.jpg",
       "stars": "4.5", 
       "rank": "4",
       "openingHours": "11:30AM-10PM",
@@ -128,7 +128,7 @@
   {
       "id": 10,
       "name": "Route 22 Restaurant & Wine Lounge",
-      "img": ".../accest/res-img/naadam.jpg",
+      "img": "./accest/res-img/naadam.jpg",
       "stars": "4", 
       "rank": "8",
       "openingHours": "11:00AM-11PM",
@@ -142,7 +142,7 @@
   {
       "id": 11,
       "name": "Naadam Bar & Restaurant, Shangri-La Ulaanbaatar",
-      "img": ".../accest/res-img/route22.jpg",
+      "img": "./accest/res-img/route22.jpg",
       "stars": "4.0", 
       "rank": "6",
       "openingHours": "12:00PM-2:00AM",
@@ -156,7 +156,7 @@
   {
       "id": 12,
       "name": "Bluefin Cuisine D'Art",
-      "img": ".../accest/res-img/bluefin.jpg",
+      "img": "./accest/res-img/bluefin.jpg",
       "stars": "4.5", 
       "rank": "5",
       "openingHours": "11:00AM-12:00AM",
@@ -170,7 +170,7 @@
   {
       "id": 13,
       "name": "Chili Shabu Shabu",
-      "img": ".../accest/res-img/chili.jpg",
+      "img": "./accest/res-img/chili.jpg",
       "stars": "4.3", 
       "rank": "2",
       "openingHours": "10:00AM-10:00PM",
