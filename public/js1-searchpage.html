@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Page</title>
     <meta name=description content="Use the search box to find the best restaurants.">
-    <link rel="stylesheet" href="/css/searchpage.css">
+    <link rel="stylesheet" href="./css/searchpage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
     <!--wc-->
-    <script type="module" src="/./component/review-star-wc.js"></script>
-    <script type="module" src="/component/header-wc.js"></script>
-    <script type="module" src="/component/footer-wc.js"></script>
+    <script type="module" src="./component/review-star-wc.js"></script>
+    <script type="module" src="./component/header-wc.js"></script>
+    <script type="module" src="./component/footer-wc.js"></script>
     <script>  
         class Restaurant {
              //constuctor
@@ -25,7 +26,7 @@
              //build & return
              render() {
                  return `
-                    <img src="/accest/restaurantpage${this.id}.png" alt="img of restaurantpage${this.id}">
+                    <img src="./accest/restaurantpage${this.id}.png" alt="img of restaurantpage${this.id}">
                     <div class="h_stars">
                         <h2>${this.name}</h2>
                         <review-star-wc class= "starinli" rating="${this.stars}" ratingID="restaurant${this.id}"></review-star-wc>
@@ -462,7 +463,6 @@
                     const app = new App("restaurant_list");
                     app.init();
                 </script>
-                <script type="module" src="/./component/review-star-wc.js"></script>
             </article>
         </section>
     </main>

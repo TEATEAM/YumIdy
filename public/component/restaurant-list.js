@@ -7,18 +7,26 @@ class RestaurantList extends HTMLElement {
     constructor() {
         super();
         //implementation
-        this.checkedTypes = JSON.parse(localStorage.getItem("checkedTypes")); //checklegdsen typenuudig avaad local deer hadgalah
+        this.checkedTypes = []; //local deer bgaa medeellees checked typenuudig avaad local checkedTypes deer hadgalah
         this.renderRestaurants();
     }
     connectedCallback() {
         //window-d tsatssan eventiig barij avah
+
         window.addEventListener("filterData", (e) => {
-            console.log("tsatssanaa barij avlaaa.")
-            if(e.detail.checked){
+            console.log("tsatssanaa barij avlaaa.");
+            console.log(e.detail.typeid);
+            let checkedState = localStorage.getItem(e.detail.typeid);
+            console.log(checkedState);
+
+            if(checkedState === "true"){//checked?
+                console.log("add hiih ajillaa");
+                this.querySelector("searchpage-filter").setAttribute(e.detail.typeid, "true");//checked bolgoh
                 this.addToList(e.detail);
-                this.querySelector("#"+e.datail.id).setAttribute("checked",true);
             }
             else{
+                console.log("remove hiih ajillaa");
+                this.querySelector("searchpage-filter").setAttribute(e.detail.typeid, "false");
                 this.removeFromList(e.detail);
             }
         })
@@ -39,9 +47,22 @@ class RestaurantList extends HTMLElement {
     }
 
     renderRestaurants(){
-        const addedRes =`<restaurant-wc></restaurant-wc>`
-        document.querySelector("#restaurant_list").insertAdjacentHTML("beforeend" , addedRes);
-        
+        this.innerHTML=`
+        <section class="hero_container">
+            <searchpage-filter></searchpage-filter>
+        </section>
+        <section class="restaurant container">
+            <article class="restaurant_article">
+                <button type="button" class="filter_button">Sort by name</button>        
+                <ul  id="restaurant_list">
+                </ul>
+                <!--<script>
+                    const app = new App("restaurant_list");
+                    app.init();
+                </script>-->
+            </article>
+        </section>
+        `
     }
 }
 

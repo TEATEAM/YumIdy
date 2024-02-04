@@ -6,15 +6,15 @@
     <title>Yumidy home page</title>
     <meta name="description" content="Explore Yumidy to find the best restaurants, read reviews, and make informed dining choices.">
     <!---->
-    <link rel="stylesheet" href="/css/homepage.css">
+    <link rel="stylesheet" href="./css/homepage.css">
    <!-- wc -->
-    <script type="module" src="/component/header-wc.js"></script>
-    <script type="module" src="/component/footer-wc.js"></script>
-    <script type="module" src="./component-test/real-add-cart.js"></script>
-    <script type="module" src="./components/club-card.js"></script>
-    <script type="module" src="./components/club-like-btn.js"></script>
-    <script type="module" src="./component/like-btn.js"></script>
+    <script type="module" src="./component/header-wc.js"></script>
+    <script type="module" src="./component/footer-wc.js"></script>
     <script type="module" src="./component-test/cart-wc.js"></script>
+    <!-- wishlist-wc -->
+    <script src="./component/idy-like-btn.js"></script>
+    <script src="./component/idy-card.js"></script>
+    <script src="./component/res-cart.js"></script>
 </head>
 
 <body>
@@ -34,7 +34,7 @@
             </article>
 <!-- searchBar -->
             <form role="search" class="form">
-                <img class="searchIcon" src="/accest/Vector.png" alt="zurag">
+                <img class="searchIcon" src="./accest/Vector.png" alt="zurag">
                 <input type="search" placeholder="Хоолны газрын нэр, хоолны төрөл, газар........">
                 <input type="button" class="btn" onclick="window.location.href='/html/searchpage.html';" value="Хайх">
             </form>
@@ -42,7 +42,7 @@
 <!-- zuragtai heseg -->
   
         <article class="zuragHeseg">
-            <img class="hoolZurag" src="/accest/home.jpg" alt="hool">
+            <img class="hoolZurag" src="./accest/home.jpg" alt="hool">
             <h2 >Хаана юу идэхээ мэдэхгүй төөрөөд л явна уу? Биднийг сонго
                 <span style="color: #EE5151;">Yum</span>idy
             </h2>
@@ -57,7 +57,7 @@
             <a href="RestaurantPage.html">
               <article class="bestR_details">
 <!-- img tag дотор хоолны зураг байгаа -->
-                  <img src="/accest/img.png" alt="0">
+                  <img src="./accest/img.png" alt="0">
 <!-- Зурагны доор байрлах рес-н талаарх зарим мэдээлэл -->
                 <!-- Зураг дараах ICON болон РЕС-ын нэр -->
                   <div class="IconName">
@@ -86,7 +86,7 @@
 <!-- 2 DAHI NI -->
             <a href="RestaurantPage.html">
               <article class="bestR_details">
-                <img src="/accest/img1.png" alt="1">
+                <img src="./accest/img1.png" alt="1">
                 <div class="IconName">
                     <p class="nameRes"> Royal Sushi House</p>
                     <add-place-card></add-place-card>
@@ -111,7 +111,7 @@
 <!-- 3 DAHI NI -->           
             <div class="general">
               <article class="bestR_details">
-                <img src="/accest/img2.png" alt="2">
+                <img src="./accest/img2.png" alt="2">
                 <div class="IconName">
                     <p class="nameRes"> Royal Sushi House</p>
                     <add-place-card></add-place-card>
@@ -141,7 +141,7 @@
 <!-- 4 DAHI NI -->
             <a href="RestaurantPage.html">
               <article class="bestR_details">
-                  <img src="/accest/img3.png" alt="3">
+                  <img src="./accest/img3.png" alt="3">
                   <div class="IconName">
                       <p class="nameRes"> Royal Sushi House</p>
 
@@ -174,7 +174,7 @@
 
             <a href="RestaurantPage.html">
             <article class="bestR_details">
-                <img src="/accest/img4.png" alt="4">
+                <img src="./accest/img4.png" alt="4">
                 <div class="IconName">
                     <p class="nameRes"> Royal Sushi House</p>
                     <button  class="iconZurh">
@@ -206,7 +206,7 @@
 <!-- 6 DAHI NI -->
             <a href="RestaurantPage.html">
               <article class="bestR_details">
-                  <img src="/accest/img5.png" alt="5">
+                  <img src="./accest/img5.png" alt="5">
                   <div class="IconName">
                       <p class="nameRes"> Royal Sushi House</p>
 
@@ -250,7 +250,7 @@
       <article class="review1">
         <!--review bichsen hun: reviewer-name, reviewer-img -->
         <div class="reviewer" >
-            <img src="/accest/girl.png" alt="reviewer">
+            <img src="./accest/girl.png" alt="reviewer">
             <h3>Билгүүн</h3>
         </div>
         <div class="review-main">
@@ -271,7 +271,7 @@
                 Үйлчилгээ бол мэдэхгүй ээ, би өөрөө ажилладаг юм шиг л байсан. Захиалга өгөөд өөрөө хоолоо авч ширээн дээрээ очсон (би л нааш цаашаа гүйгээд) тэгдэг юм байлгүй дээ.
                 Нэг удаа ороход хангалттай санагдлаа. 
             </p>
-            <img src="/accest/reviewImage.png" alt="food review">    
+            <img src="./accest/reviewImage.png" alt="food review">    
             <!--like&dislike button-->
             <label for="like" class="like-label">
                 <span>23</span> 
@@ -292,7 +292,7 @@
     <article class="review2">
         <!--review bichsen hun: reviewer-name, reviewer-img -->
         <div class="reviewer" >
-            <img src="/accest/girl.png" alt="reviewer">
+            <img src="./accest/girl.png" alt="reviewer">
             <h3>Билгүүн</h3>
         </div>
         <div class="review-main">
@@ -313,7 +313,7 @@
                 Үйлчилгээ бол мэдэхгүй ээ, би өөрөө ажилладаг юм шиг л байсан. Захиалга өгөөд өөрөө хоолоо авч ширээн дээрээ очсон (би л нааш цаашаа гүйгээд) тэгдэг юм байлгүй дээ.
                 Нэг удаа ороход хангалттай санагдлаа. 
             </p>
-            <img src="/accest/reviewImage.png" alt="food review">    
+            <img src="./accest/reviewImage.png" alt="food review">    
             <!--like&dislike button-->
             <label for="like1" class="like-label">
                 <span>23</span> 
@@ -334,7 +334,5 @@
     </section>
     <footer-component></footer-component>
 </main>
-
-    
 </body>
-</html><!-- Zuragnii linkuudig oruulj ugsnuur SEO saijirsan hediich Best pracrtice 95 ruu unav mon SEOg saijruulah uudnees title iin door meta tag oruulav. -->
+</html>

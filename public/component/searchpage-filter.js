@@ -65,59 +65,44 @@ class SearchpageFilter extends HTMLElement {
         this.#Render();
     }
     clickHandler(e){
-        
-        //checkbox eer darahad custom event uusjiin
-        // var selectedMeals = document.querySelectorAll('input[name="meal[]"]:checked');
-        // console.log(selectedMeals);
-        // checkboxes.addEventListener("click", ()=> {      
-        //     const event = new CustomEvent("filterData", {
-        //         bubbles: true,
-        //         composed: true,
-        //         detail:{
-        //             value: checkbox.getAttribute("value"),
-        //         }
-        //     })
-        //     console.log(checkbox);
-        //     document.dispatchEvent(event);
-        //     console.log("ajillajinaaa");
-        // })
         //ug click hiisen zuil n "input" bwl checklesen checklegdeegu esehiig harna
         if(e.target.tagName.toLowerCase() == "input")
         {   
-            let isChecked = "false";
-            if(e.target.checked){       //checklegsnuu checklegdeeguiyu esehiig medne
-                isChecked = "true"; 
-            }
-            localStorage.setItem(e.target.getAttribute("value"), isChecked); //local deer value, checked eseheer hadgalah
+            let val = e.target.checked;
+            // if(e.target.checked){       //checklegsnuu checklegdeeguiyu esehiig medne
+            //     val = "true"; 
+            // }
+            localStorage.setItem(e.target.getAttribute("id"), val); //local deer id-r checked eseheer hadgalah
             //checkbox checklegdesn bol medeelleh CustomEvent
             const event = new CustomEvent("filterData", {
                 bubbles: true,
                 capture: true,
                 composed: true,
                 detail:{
-                    id: e.target.getAttribute("id"),
+                    typeid: e.target.getAttribute("id"),
                     name: e.target.getAttribute("name"),
                     value: e.target.getAttribute("value"),
-                    checked: isChecked,
+                    isChecked: val,
                 }
             }) 
-            console.log(e.target.getAttribute("value"));
-            //window ruu tsatsaj ugnu.
-            window.dispatchEvent(event);
+            console.log(e.target.getAttribute("id"));
+            //parent ruu n tsatsna
+            this.parentElement.dispatchEvent(event);
             console.log("filter dispatch tsatsagdlaa");
         }
     }
-    disconnectedCallback() {
-        //implementation
+    setAttribute(id,val){
+        console.log("set attr ajillaj bn");
+        document.getElementById(id).checked = val;
     }
+    // static get observedAttributes(){
+    //     return ["checked"];
+    // }
 
-    attributeChangedCallback(name, oldVal, newVal) {
-        //implementation
-    }
-
-    adoptedCallback() {
-        //implementation
-    }
+    // attributeChangedCallback(name, oldVal, newVal) {
+    //     if(name === "checked")
+    //         this.querySelector("#heart").checked = newVal != null;
+    // }
 
 }
 
