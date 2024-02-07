@@ -26,12 +26,18 @@ class ResCart extends HTMLElement {
               cursor: pointer;
             }
             & span {
-              color: var(--color-accent)
+              color: var(--color-accent);
+              padding-left: 5px;
+              text-decoration: none;
+            }
+            & .durtai{
+               margin-left: 1.5rem;
+               []
             }
           }
         </style>
         <div class="cart-container">
-          <p>Дуртай</p>
+          <p class="durtai">Дуртай</p>
           <span id="counter">${this.restaurants.length}</span>
         </div>
           `;

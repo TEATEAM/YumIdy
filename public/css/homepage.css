@@ -58,7 +58,7 @@ body{
     margin-right: 7.12rem; */
 }
 /* best Restaurantsig haruulah detailuud:  */
-.bestR_details {
+/* .bestR_details {
     width: 24rem;
     height: 17.25rem;
     background: #272727;
@@ -70,11 +70,9 @@ body{
         height: 10rem;
         border-radius: 1.25rem;
     }
-
-
-}
+} */
 /* ner bolon save hiihed ashiglah zurh icon */
-.IconName {
+/* .IconName {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -97,7 +95,7 @@ body{
 .iconZurh:hover{
    fill: var(color-text);
    color: red;
-}
+} */
 /* input[type="checkbox"]{
     appearance: none;
     -webkit-appearance: none;
@@ -107,7 +105,7 @@ body{
 
 
 /* une, tsagiin icon, neesen haasan esehiig ilerhiileh p tag */
-.timeIconPrice{
+/* .timeIconPrice{
     display: flex;
     justify-content: start;
     align-items: center;
@@ -119,8 +117,6 @@ body{
     line-height: var(--BR-lineHeight);
     width:var( --tsag-WH);
     height:var( --tsag-WH);
-
-    /* hvcheer */
 }
 
 .time{
@@ -148,7 +144,7 @@ body{
 .svgTseg{
     margin-left: var(--marginSVG-tseg);
     margin-right: var(--marginSVG-tseg);
-}
+} */
 
 /* BODY1*/
 
@@ -300,14 +296,13 @@ body{
      color: var(--color-text);
 }
 
-.bestR {
+/* .bestR {
     display: grid;
     grid-template-columns: auto auto auto;
     padding: 10px;
- /*    margin-left: 7.12rem;
-    margin-right: 7.12rem; */
+
 }
-/* best Restaurantsig haruulah detailuud:  */
+
 .bestR_details {
     width: 24rem;
     height: 17.25rem;
@@ -351,7 +346,7 @@ body{
 
 
 
-/* une, tsagiin icon, neesen haasan esehiig ilerhiileh p tag */
+
 .timeIconPrice{
     display: flex;
     justify-content: start;
@@ -363,11 +358,8 @@ body{
     margin-left: var(--Br-marginLeft);
     font-weight: var(--BR-fontWeight);
     line-height: var(--BR-lineHeight);
-   /*  width:var( --tsag-WH);
-    height:var( --tsag-WH); */
     font-size: 0.8rem;
     color: #FFF;
-    /* hvcheer */
 }
 
 .time{
@@ -398,7 +390,7 @@ body{
 }
 
 
-/* Rating bolon uniin medeelel */
+
 .typeOd{
     display: flex;
     justify-content: space-between;
@@ -418,7 +410,7 @@ body{
     font-style: var(--font-style);
     font-weight: 600;
     line-height: 1rem;
-}
+} */
 
 
 /* RECIENT REVIEWS */

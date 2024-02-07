@@ -2,7 +2,7 @@ class Headercomponent extends HTMLElement {
     constructor() {
       super();
       this.#render();
-    }
+    }n
 
     #render() {
       this.innerHTML = `
@@ -65,7 +65,8 @@ class Headercomponent extends HTMLElement {
         <a href="./likedres">
           <res-cart></res-cart>
         </a>
-        <button type="button" class="nevtreh">Нэвтрэх</button>  
+        <button type="button" class="nevtreh">Нэвтрэх
+        </button>  
       </header>
       `;
     }

@@ -13,17 +13,17 @@ template.innerHTML = `
     <article class="idy-card">
         <img class="foodImg">
         <div class="cardInfo">
-            <h4 class="resName"></h4>
-            <idy-like-btn></idy-like-btn>
+            <h4 class="resName"></h4>  <idy-like-btn></idy-like-btn>
         </div>
         <div class="cardInfo1">
             <i class="fa-regular fa-clock" id="tsagLogo"></i>
-            <p class="time"></p>
-            <p class="price"></p>
+            <span class="time"></span>
+            <span class="price"></span>
         </div>
-        <p class="foodType"></p>
+        <div class=cardInfo2>
+        <span class="foodType"></span>
         <review-star-wc class="rating"></review-star-wc>
-        <slot name="remove"></slot>
+        </div>
     </article>
 `
 class IdyCard extends HTMLElement {
@@ -120,11 +120,6 @@ class IdyCard extends HTMLElement {
                 break;
         }
     }
-
-    adoptedCallback() {
-        //implementation
-    }
-
 }
 
 window.customElements.define('idy-card', IdyCard);
