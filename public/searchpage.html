@@ -21,10 +21,13 @@
     <script type="module" src="./component/review-star-wc.js"></script>
     <script type="module" src="./component/header-wc.js"></script>
     <script type="module" src="./component/footer-wc.js"></script>
+    <script type="module" src="/public/component/idy-like-btn.js"></script>
+
 </head>
 <body>
     <header-component></header-component>
     <main>
+        <button type="button" class="search_button" onclick="location.reload()">Хайх</button>
         <section class="hero_container">
             <article  class="filter_checkbox">
                 <h3>Meals</h3>
@@ -55,12 +58,9 @@
                 </ul>
             </article>
         </section>
-        <section class="restaurant container">
-            <article class="restaurant_article">
-            <button type="button" class="filter_button" onclick="location.reload()">Хайх</button>        
-                <ul  id="restaurant_list">
-                </ul>
-            </article>
+        <section class="restaurant_container">        
+            <ul  id="restaurant_list">
+            </ul>
         </section>
     </main>
     <footer-component></footer-component>

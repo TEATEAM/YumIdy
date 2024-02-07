@@ -184,16 +184,14 @@ h2{
   margin: 1rem;
   & .review-header{
     display: flex;
-    border-bottom: 1px solid var(--color-text);
-    border-width: 100%;
     & .writeReview{
       margin-left: 60rem;
       width: 6rem;
       background: none;
-      border-radius: 1.25rem;
+      border-radius: 1rem;
       border:var(--border);
       font: var(--p-font);
-      color: var(--color-text);
+      color: var(--color-text); 
       text-align: center;
     }
     & .writeReview:hover{
@@ -202,6 +200,11 @@ h2{
       cursor: pointer;
       transition: .5s;
     }
+  }
+  & .line{
+    border-bottom: 1px solid var(--color-text);
+    border-width: 100%;
+    margin-top: 1rem;
   }
   & .review-sort-filters{
     display: flex;

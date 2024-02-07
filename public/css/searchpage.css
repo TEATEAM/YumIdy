@@ -7,7 +7,6 @@
       --color-span: #272727;
     }
 }
-
 *{
     margin: 0;
     padding: 0;
@@ -15,149 +14,115 @@
 }
 body{
     background:var(--color-bg); ;
-    font-family: var("Quicksand-Medium");
+    font-family: var(--Quicksand-Medium);
     color: var(--color-text);
 }
-/* Толгой хэсгийн хийх толгой хэсэг нь хоёр зүйл агуулдаг бөгөөд энэ нь нэвтрэх хэсэг болон лого агуулна. Лого-г хөдөлдөг анимашион болгон хийж байна. */
-header{
-    width: 100%;
-    height:5.4rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-family: var("Quicksand-Medium");
-    font-size: var( --font-sizeTom);
-   /*  border-bottom: 2px solid #D9D9D9; */
-   width: 100%;
-   height: 6.44rem;
-   background: var( --color-bg);
-   box-shadow: 0px 0px 10px 0px rgba(240, 251, 255, 0.20) inset;
-    
-   
-}
-/* header */
-/* Толгой хэсэг */
-/* logo section */
-.logo{
-    color: var(--color-accent);
-    text-decoration: none;
-    margin-left: 2.25rem;
-    padding: var(--header-padding);
-
-}
-/* толгой хэсгийн нэвтрэх хэсэг болон түүн дээр дээр даран өөр хуудасруу шилжих хэсгийн хийж байна. */
-.nevtreh{
-    color: var(--color-text);
-    font-size: var(--font-sizeSmall);
-    font-family: var("Quicksand-Medium");
-    margin: 1rem;
-}
-.nevtreh button{
-   border-radius: 1.25rem;
-   background: none;
-   margin-right: var(--border-radius);
-   width: 8.125rem;
-   height: 3.125rem;
-   border:var(--border);
-
-}
-.nevtreh :hover{
-    border-color:var(--color-text);
-}
-
 main{
     width: 100%;
     display: grid;
     grid-template-columns: 20% 70%;
     grid-gap: 1em 5em;
+    & .filter_checkbox{
+        width: 100%;
+        margin-left: 5%;
+        border-radius: 20px;
+        border: 2px solid var(--color-text);
+        display: flex;
+        flex-direction: column;
+        color: var(--color-text);
+        & h3{
+            padding: 20px;
+        }
+        & ul{
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+            padding: 20px;
+        }
+        & li{
+            display: flex;
+        }
+    }
+    & .search_button{
+        grid-column: 2;
+        width: 10%;
+        height: 3rem;
+        font: var(--font-p);    
+        color: var(--color-text);
+        background: var(--color-bg);
+        margin-top: 5%;
+        margin-left: 90%;
+        border:var(--border);
+        border-radius: 1.25rem;
+        padding: 2px;
+    }
+    & .search_button:hover{
+        color: var(--color-text);
+        background: var(--color-accent);
+        cursor: pointer;
+        transition: .5s;
+    }
+    & .restaurant_container{
+        margin-top: 0;
+    }
 }
-.filter_checkbox{
-    width: 100%;
-    border-radius: 20px;
-    border: 2px solid var(--color-text);
-    background: rgba(255, 255, 255, 0.00);
-    display: flex;
-    flex-direction: column;
-    margin-top: 105px;
+
+#restaurant_list{
     color: var(--color-text);
-}
-.filter_checkbox h3{
-    padding: 20px;
-}
-.filter_checkbox ul{
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
-    padding: 20px;
-}
-.filter_checkbox ul li{
-    display: flex;
-}
-.restaurant_article{
-    color: var(--color-text);
-    margin-top: 20px;
+    margin-bottom: 20px;    
     width: 100%;
-    height: 100%;
-    
+    height: auto;
+    background: var(--color-bg);    
+    & li{
+        list-style: none;
+    }
+    & article{
+        background: var(--color-bg-second);
+        border-style: none;
+        border-radius: 30px;
+        width: 100%;
+        height: auto;
+        margin-bottom: 2.4rem;
+        display: grid;
+        grid-template-areas:
+            'img name star heart'
+            'img rank rank rank'
+            'img time time time'
+            'img des des des';
+        align-items: center;
+        & h2 { grid-area: name; width: 20rem; }
+        & .rating { grid-area: star;}
+        & .wishlist { grid-area: heart;}
+        & .rank { grid-area: rank;}
+        & .time { grid-area: time;}
+        & .description { grid-area: des;}
+        & img{
+            width: 12rem;
+            height: 14rem;
+            border-radius: 40px;
+            object-fit: cover; 
+            padding: 1rem;
+            grid-area: img;
+        }
+        & .heart-label {
+            cursor: pointer;
+            fill: none;
+            stroke: var(--color-text);
+            stroke-width: 0.2rem;
+            position: relative;
+            right: -60%;
+            margin-right: 5rem;
+          }
+        & #heart-checkbox {
+        display: none;
+        }
+        & .heart-label:has(:checked) {
+        fill: var(--color-accent);
+        stroke: var(--color-accent);
+        stroke-width: 0.2rem;
+        }
+    }
 }
-
-#restaurant_list li{
-    display: grid;
-    grid-template-columns: 0.5fr 3fr;
-    border-style: none;
-    border-radius: 30px;
-    background: rgba(217, 217, 217, 0.12);
-    height: 20%;
-    margin-top: 50px;
-}
-
-#restaurant_list img{
-    width: 10.93563rem;
-    height: 12.01306rem;
-    flex-shrink: 0;
-    border-radius: 40px;
-    object-fit: cover; 
-    padding: 1rem;
-
-}
-.h_stars{
-    display: grid;
-    padding: 1rem;
-    grid-row: 1;
-    grid-column: 2;
-    grid-template-columns: 1fr 2fr;
-}
-.starinli{
-    margin-top: -0.8rem;
-    grid-row: 1;
-    grid-column: 2;
-
-}
-.paragraphs{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    grid-row: 2;
-    grid-column: 1;
-    justify-content: space-between;
-}
-
-.filter_button{
-    width: 20%;
-    height: 37.154px;
-    flex-shrink: 0;
-    border-radius: 1.25rem;
-    color: var(--color-text);
-    background: var(--color-bg);
-    margin-left: 80%;
-    padding: 2px;
-
-}
-.filter_button:hover{
-    cursor: pointer;
-    border:var(--border);
-}
-
 
     /*@media (min-width: 768px) {
         header {

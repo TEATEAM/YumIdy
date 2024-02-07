@@ -20,16 +20,17 @@ class Restaurant {
     render() {
         return `
         <li>
-           <img src="${this.img}" alt="img of ${this.name}">
-           <div class="h_stars">
-               <h2>${this.name}</h2>                        
-               <review-star-wc class= "starinli" rating="${this.stars}" ratingID="restaurant${this.id}"></review-star-wc>
-               <div class="paragraphs">
-                   <p>#${this.rank} of 300</p>
-                   <p>${this.openingHours}</p>
-                   <p>${this.description}</p>
-               </div>
-           </div>
+           <article>
+                <img src="${this.img}" alt="img of ${this.name}">        
+                <h2>${this.name}</h2> 
+                <review-star-wc class="rating" rating="${this.stars}" ratingID="restaurant${this.id}"></review-star-wc>
+                <div class="wishlist">
+                    <idy-like-btn class="heart"></idy-like-btn>
+                </div>
+                <p class="rank">#${this.rank} of 300</p>
+                <p class="time">${this.openingHours}</p>
+                <p class="description">${this.description}</p>
+            </article>
         </li>
        `;
     }
@@ -77,7 +78,6 @@ function updateURL() {
 var checkboxes = document.querySelectorAll('input[name="meal[]"], input[name="price[]"], input[name="cuisine[]"], input[name="dish[]"]');
 checkboxes.forEach(function(checkbox) {
     checkbox.addEventListener('change', updateURL);
-    console.log("")
 });
 
 
