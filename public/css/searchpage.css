@@ -116,7 +116,7 @@ main{
     height: 12.01306rem;
     flex-shrink: 0;
     border-radius: 40px;
-    
+    object-fit: cover; 
     padding: 1rem;
 
 }
@@ -135,6 +135,7 @@ main{
 }
 .paragraphs{
     display: flex;
+    width: 100%;
     flex-direction: column;
     grid-row: 2;
     grid-column: 1;
