@@ -78,7 +78,8 @@ class IdyCard extends HTMLElement {
         const isIdyHeartBtn = e.composedPath().includes(this.shadowRoot.querySelector("idy-like-btn"));
 
         if(!isIdyHeartBtn) {
-            window.location.href = `./html/restaurantpage.html`;
+            const resId = this.getAttribute("id");
+            window.location.href = `./about.html?id=${resId}`;
         }
     }
     connectedCallback() {
