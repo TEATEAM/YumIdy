@@ -98,6 +98,7 @@ export default class restaurantList{
         await fetch(this._restauranListUrl)
         .then(result => {
             result.json().then(data => {
+                    console.log("fetch");
 
                     //filter by meals&prices&cuisines&dishes     
                     const filteredArray = data.record.filter( restaurantItem => (restaurantItem.meals.includes(this.mealFilter[0]) ||
@@ -146,7 +147,7 @@ const cuisineFilter = params.getAll("cuisine");
 const dishFilter = params.getAll("dish");
 
 //Create RecentNews object, with url
-const resList = new restaurantList("https://api.jsonbin.io/v3/b/65bf440f266cfc3fde85865d",mealFilter, priceFilter, cuisineFilter, dishFilter);
+const resList = new restaurantList("http://localhost:3000/restaurants",mealFilter, priceFilter, cuisineFilter, dishFilter);
 
 //Load content from RecentNewsURL
 document.addEventListener("DOMContentLoaded" , async() => {

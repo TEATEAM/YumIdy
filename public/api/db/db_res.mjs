@@ -10,13 +10,13 @@ class DbRes{
         `
         return restaurant;
     }
-    async selectResById(resId) {
-        const club = await sql`
-            SELECT * FROM public.restaurant
-            WHERE "clubId" = ${resId}
-        `;
-        return club;
-    }
+    // async selectResById(resId) {
+    //     const club = await sql`
+    //         SELECT * FROM public.restaurant
+    //         WHERE "clubId" = ${resId}
+    //     `;
+    //     return club;
+    // }
 }
 
 const dbRes = new DbRes();

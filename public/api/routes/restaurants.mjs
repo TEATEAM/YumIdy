@@ -12,23 +12,23 @@ class Restaurants{
             res.status(400).send("error occured");
         }
     }
-    async getResById(req, res){
-        const resId = req.params.id;
+    // async getResById(req, res){
+    //     const resId = req.params.id;
 
-        try{
-            const restaurant  = await dbRes.selectResById(resId);
+    //     try{
+    //         const restaurant  = await dbRes.selectResById(resId);
             
-            if(!restaurant){
-                res.status(404).send("Not Found");
-            }
-            else{
-                res.status(200).send(restaurant);
-            }
-        } catch(error){
-            console.log("Error fetching restaurant by id", error);
-            res.status(500).send("Internal Server Error");
-        }
-    }
+    //         if(!restaurant){
+    //             res.status(404).send("Not Found");
+    //         }
+    //         else{
+    //             res.status(200).send(restaurant);
+    //         }
+    //     } catch(error){
+    //         console.log("Error fetching restaurant by id", error);
+    //         res.status(500).send("Internal Server Error");
+    //     }
+    // }
 }
 
 const restaurants = new Restaurants();

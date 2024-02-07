@@ -1,7 +1,7 @@
 import path from 'path';
 import express from 'express';
-import cookieParser from 'cookie-parser';
-//import cors from 'cors';
+// import cookieParser from 'cookie-parser';
+// import cors from 'cors';
 
 import restaurants from './routes/restaurants.mjs';
 // import user from './routes/users.mjs';
@@ -15,38 +15,38 @@ const options = {
     root: path.join(__dirname)
 };
 
-app.use(cookieParser());
+// app.use(cookieParser());
 app.use(express.json());
 //app.use(cors());
 
 app.use(express.static('public'));
 
 
-app.get('/', (req, res) => {
-    res.sendFile('./index.html', options);
-});
+// app.get('/', (req, res) => {
+//     res.sendFile('./index.html', options);
+// });
 
 //Buh res-n medeelliig avah
 app.get('/restaurants', async (req, res) => {
   await restaurants.getRestaurants(req, res);
 });
 
-app.get('/searchrestaurants', async(req, res) => {
-  res.sendFile('./searchpage.html', options);
-})
+// app.get('/searchrestaurants', async(req, res) => {
+//   res.sendFile('./searchpage.html', options);
+// })
 
 //res-g id-aar ni avah
 app.get('/restaurans/:id', async(req, res) => {
     await restaurants.getResById(req, res);
 });
 
-app.get('/aboutrestaurant', async(req, res) => {
-  res.sendFile('./restaurantpage.html', options);
-})
+// app.get('/aboutrestaurant', async(req, res) => {
+//   res.sendFile('./restaurantpage.html', options);
+// })
 
-app.get('/likedrestaruants', async(req, res) => {
-  res.sendFile('./liked.html', options);
-})
+// app.get('/likedrestaruants', async(req, res) => {
+//   res.sendFile('./liked.html', options);
+// })
 
 
 // //Burtguuleh
