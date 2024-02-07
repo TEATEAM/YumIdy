@@ -1,7 +1,7 @@
 import path from 'path';
 import express from 'express';
 // import cookieParser from 'cookie-parser';
-// import cors from 'cors';
+import cors from 'cors';
 
 import restaurants from './routes/restaurants.mjs';
 // import user from './routes/users.mjs';
@@ -28,9 +28,15 @@ app.use(express.static('public'));
 
 //Buh res-n medeelliig avah
 app.get('/restaurants', async (req, res) => {
-  await restaurants.getRestaurants(req, res);
+    try {
+        const response = await fetch('http://localhost:3000/restaurants');
+        const data = await response.json();
+        res.json(data);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
 });
-
 // app.get('/searchrestaurants', async(req, res) => {
 //   res.sendFile('./searchpage.html', options);
 // })

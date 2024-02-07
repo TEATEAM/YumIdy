@@ -98,6 +98,7 @@ export default class restaurantList{
         await fetch(this._restauranListUrl)
         .then(result => {
             result.json().then(data => {
+                    
                     console.log("fetch");
 
                     //filter by meals&prices&cuisines&dishes     
