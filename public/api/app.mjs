@@ -35,7 +35,7 @@ app.get('/restaurants', async (req, res) => {
 // })
 
 //res-g id-aar ni avah
-app.get('/restaurans/:id', async(req, res) => {
+app.get('/restaurants/:id', async(req, res) => {
     await restaurants.getResById(req, res);
 });
 
