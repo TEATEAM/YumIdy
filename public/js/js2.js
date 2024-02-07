@@ -102,10 +102,8 @@ export default class restaurantList{
                     console.log("fetch");
 
                     //filter by meals&prices&cuisines&dishes     
-                    const filteredArray = data.record.filter( restaurantItem => (restaurantItem.meals.includes(this.mealFilter[0]) ||
-                                                                                restaurantItem.meals.includes(this.mealFilter[1]) ||
-                                                                                restaurantItem.meals.includes(this.mealFilter[2]) ||
-                                                                                restaurantItem.prices.includes(this.priceFilter[0]) ||
+                    const filteredArray = data.record.filter( restaurantItem => (restaurantItem.meals.includes(this.mealFilter[0]) || restaurantItem.meals.includes(this.mealFilter[1]) || restaurantItem.meals.includes(this.mealFilter[2]) ||
+ restaurantItem.prices.includes(this.priceFilter[0]) ||
                                                                                 restaurantItem.prices.includes(this.priceFilter[1]) ||
                                                                                 restaurantItem.prices.includes(this.priceFilter[2]) ||
                                                                                 restaurantItem.prices.includes(this.priceFilter[2]) ||
