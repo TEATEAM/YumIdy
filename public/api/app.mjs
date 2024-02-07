@@ -1,7 +1,7 @@
 import path from 'path';
 import express from 'express';
 import cookieParser from 'cookie-parser';
-import cors from 'cors';
+//import cors from 'cors';
 
 import restaurants from './routes/restaurants.mjs';
 // import user from './routes/users.mjs';
@@ -17,7 +17,7 @@ const options = {
 
 app.use(cookieParser());
 app.use(express.json());
-app.use(cors());
+//app.use(cors());
 
 app.use(express.static('public'));
 
