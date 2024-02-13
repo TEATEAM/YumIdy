@@ -21,5 +21,5 @@ function display(resData) {
         <idy-card id="${resData[4].id}" img="${resData[4].img}" name="${resData[4].name}" type="${resData[4].tag}" time="${resData[4].openingHours}" price="Cheap-eats" star="${resData[4].stars}"></idy-card>
         <idy-card id="${resData[5].id}" img="${resData[5].img}" name="${resData[5].name}" type="${resData[5].tag}" time="${resData[5].openingHours}" price="Mid-range" star="4"></idy-card>
         `  
-  }
+    }
 

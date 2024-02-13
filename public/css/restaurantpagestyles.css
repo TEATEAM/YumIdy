@@ -184,7 +184,7 @@ h2{
   margin: 1rem;
   & .review-header{
     display: flex;
-    & .writeReview{
+    & #writeReview{
       margin-left: 60rem;
       width: 6rem;
       background: none;
@@ -194,7 +194,7 @@ h2{
       color: var(--color-text); 
       text-align: center;
     }
-    & .writeReview:hover{
+    & #writeReview:hover{
       color: var(--color-text);
       background: var(--color-accent);
       cursor: pointer;
@@ -327,6 +327,119 @@ h2{
     }
   }
 }
+#modalbox{
+  display: none;
+}
+/* BODY HESEG NI UNDSEN HUYR HESEGTEI BOGOOD UG HESGIIG HIIJ BAIGAA HESEG */
+.body{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* BODY hesgiin zvvn tal */
+  & .left{
+    color: #FFF;
+  }
+  /* tomoor bichsen ugiig taruulj baina */
+  & .left h1{
+    display: flex;
+    justify-content: flex-end;
+    width: 31.8125rem;
+    height: 10.375rem;
+    flex-direction: column;
+    flex-shrink: 0;
+    font-family:  'Quicksand', sans-serif;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 4.375rem; /* 175% */
+  }
+
+  /* zuragtai hesgiig taaruulj baina. */
+  & .left img{
+    width: 28.46438rem;
+    height: 31.402rem;
+    border-radius: 1.25rem;
+    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+  }
+  /*Restaurantin neriig taaruulj baina.*/
+  & .left p{
+    display: flex;
+    width: 28.5625rem;
+    height: 3.82888rem;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFF;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2.2255rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.05431rem; /* 92.308% */
+    letter-spacing: 0.00856rem;
+  }
+
+
+  /* BODY hesgiin baruun tal */
+  & .right{
+    color: #FFF;
+  }
+  & .right .rate{
+   /*  width: 30rem;
+    height: 6.5625rem;
+    flex-shrink: 0; */
+  }
+  & .right h4{
+    color: #FFF;
+    font-family:  'Quicksand', sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+/* Review star using radio shuu */
+.star-radio {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+  
+  .radio-input {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .radio-label {
+    cursor: pointer;
+    font-size: 0;
+    color: var(--color-span);
+    transition: color 0.1s ease-in-out;
+  }
+  
+  .radio-label:before {
+    content: "★";
+    display: inline-block;
+    font-size: 2rem;
+  }
+  
+  .radio-input:checked ~ .radio-label {
+    color: var(--color-accent);
+  }
+  
+  .radio-label:hover,
+  .radio-label:hover ~ .radio-label {
+    color: var(--color-accent);
+  }
+  
+  .radio-input:checked + .radio-label:hover,
+  .radio-input:checked + .radio-label:hover ~ .radio-label,
+  .radio-input:checked ~ .radio-label:hover,
+  .radio-input:checked ~ .radio-label:hover ~ .radio-label,
+  .radio-label:hover ~ .radio-input:checked ~ .radio-label {
+    color: var(--color-accent);
+  }
+
+
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {

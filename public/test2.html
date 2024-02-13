@@ -12,15 +12,25 @@
     <script type="module" src="/./component/review-star-wc.js"></script>
 </head>
 <body>
+    <header>
+        <!--  logo heseg -->
+        <a class="logo"  href="/index.html" ><img class="logoImg" src="/accest/logo.svg" alt="logoImg"></a>
+        <!--  suuderleh zuraas -->
+        
+         <!-- nevtreh hesgiin button -->
 
-<section class="writeReview">
+             <button type="button" class="nevtreh">Нэвтрэх</button>
+         
+     </header>
+ 
+<section class="body">
    <section class="left">
     <h1>Таны зочилсон газар ямархуу байв?</h1>
     <img src="/accest/hool.png" alt="zoogiin gazrin orchnii zurag" width="300px" height="400px">
     <p>chili shabu shabu&sushi</p>
-</section>
+   </section>
 
-<section class="right">
+   <section class="right">
     <article class="rate">
         <h4>Таны хоол таалагдсан уу?</h4>
         <form class="star-rating" id="food">
@@ -82,20 +92,22 @@
     </article>
 
     <article>
-        <form>
+        <form action="/server-хаяг" method="POST">
             <label for="comment">Сэтгэгдэл бичих:</label>
             <textarea id="comment" name="comment" cols="30" rows="10">Энд бичээрэй</textarea>
+            <button type="submit">Илгээх</button>
         </form>
      </article>
 
      <article>
-        <form>
+        <form action="/server-хаяг" method="POST" enctype="multipart/form-data">
             <label for="file">Зураг оруулах:</label>
             <input type="file" id="file" name="file">
+            <button type="submit">Илгээх</button>
         </form>
     </article>
 
-     <nav> <button type="submit">Илгээх</button>
+     <nav> <button type="submit">Үргэлжлүүлэх</button></nav>
 </section>
 
 </section>

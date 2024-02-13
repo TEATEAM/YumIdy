@@ -2,13 +2,13 @@ import sql from "./db.mjs";
 
 class DbResComment{
     constructor(){}
-    async addCom(star1, star2, star3, text, resId){
+    async addCom(star1, star2, star3, setgegdel, resId){
         try{
             const result = await sql`
             INSERT INTO public.comment
             (star1, star2, star3, setgegdel, "resId")
-            VALUES (${star1}, ${star2}, ${star3}, ${text},${resId})
-            RETURNING "commentId"
+            VALUES (${star1}, ${star2}, ${star3}, ${setgegdel},${resId})
+            RETURNING "commentId";
             `;
 
             const commentId = result[0].commentId;

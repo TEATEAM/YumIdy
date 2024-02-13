@@ -1,12 +1,13 @@
 import dbComment from "../db/db_comment.mjs";
+
 class Comment{
     constructor(){}
 
     async writeComment(req, res){
         try{
-            const {star1, star2, star3, text, resId} = req.body;
+            const {star1, star2, star3, setgegdel, resId} = req.body;
             //huselt ni neg body-toi ter ni json aguulj baidag.
-            await dbComment.addCom(star1, star2, star3, text, resId);
+            await dbComment.addCom(star1, star2, star3, setgegdel, resId);
 
             res.status(201).json({
                 message: 'Comment added successfully'
@@ -20,18 +21,19 @@ class Comment{
         }
     }
     async getCommentByResId(req, res){
-        const resId = req.params.id;
+        const resId = req.params.id;//url -s n res-nhaa id g avna
 
         try{
-            const comment = await dbComment.selectCommentByResId(resId);
-
-            if(comment){
+            const comment = await dbComment.selectCommentByResId(resId);//db-s resid r commentuudig haij olood avna
+            //
+            if(comment){//comment-g res ruu sendleh
                 res.status(200).send(comment);
             }
             else{
-                res.status(404).send("Not Found");
+                res.status(404).send("Not Found");//commentgui bol 404 not found page uguh
             }
         }
+        //ymr neg error garval ter erroriin msg-g ugnu
         catch(error){
             console.error("Error fetching comment by resId:", error);
             res.status(500).send("Internal Server Error");
