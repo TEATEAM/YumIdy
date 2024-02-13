@@ -63,14 +63,18 @@ INSERT INTO public.restaurant(
 INSERT INTO public.restaurant(
 	id, name, img, stars, rank, "openingHours", tag, description, meals, prices, cuisines, dishes)
 	VALUES (13, 'Chili Shabu Shabu', './accest/res-img/chili.jpg', 4.2, 9, '10:00AM-10:00PM', 'Soup', 'Conveniently located in the downtown UB, CHILI presents delicious featured broths made of fresh ingredients that wonderfully pairs with different tastes and hotpot toppings.', ARRAY['1.3'], ARRAY['2.3'], ARRAY['3.2','3.3'], ARRAY['4.1','4.2','4.3','4.4']);
--- comment
+-- COMMENT
+
 -- Table: public.comment
 
 -- DROP TABLE IF EXISTS public.comment;
 
+-- First, create the sequence for commentId
+CREATE SEQUENCE IF NOT EXISTS "comment_commentId_seq";
+
 CREATE TABLE IF NOT EXISTS public.comment
 (
-    "commentId" integer NOT NULL,
+    "commentId" integer NOT NULL DEFAULT nextval('"comment_commentId_seq"'::regclass),
     star1 integer NOT NULL,
     star2 integer NOT NULL,
     star3 integer NOT NULL,
