@@ -11,11 +11,11 @@ class DbRes{
         return restaurant;
     }
     async selectResById(resId) {
-        const club = await sql`
+        const res = await sql`
             SELECT * FROM public.restaurant
             WHERE "id" = ${resId}
         `;
-        return club;
+        return res;
     }
 }
 
