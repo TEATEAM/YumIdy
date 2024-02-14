@@ -281,19 +281,35 @@ function writeComment(resId){
 
             commentForm.addEventListener('submit', (event) => {
                 event.preventDefault();//
+                var food_rating, atmosphere_rating, service_rating,i;
+                var radio = document.getElementsByName('food');
+                for (i = 0; i < radio.length; i++) {
+                    if (radio[i].checked)
+                    food_rating = radio[i].value;
+                }
+                radio = document.getElementsByName('atmosphere');
+                for (i = 0; i < radio.length; i++) {
+                    if (radio[i].checked)
+                    atmosphere_rating = radio[i].value;
+                }
+                radio = document.getElementsByName('service');
+                for (i = 0; i < radio.length; i++) {
+                    if (radio[i].checked)
+                    service_rating = radio[i].value;
+                }
+                console.log(food_rating);
+                console.log(atmosphere_rating);
+                console.log(service_rating);
                 
-                // const food_rating = document.getElementById('food').value;
-                // const atmosphere_rating = document.getElementById('atmosphere').value;
-                // const service_rating = document.getElementById('service').value;
                 const commentInput = document.getElementById('comment').value;
                 console.log(commentInput); 
 
-                if (commentInput.trim() !== '') {//hoooson bish bol
+                if (commentInput.trim() !== '' &&  ) {//hoooson bish bol
 
                     const commentData = { //commentiin datag ugnu
-                        star1: 4,
-                        star2: 4,
-                        star3: 3,
+                        star1: food_rating,
+                        star2: atmosphere_rating,
+                        star3: service_rating,
                         setgegdel: commentInput,
                         resId: resId,
                     };
@@ -342,6 +358,7 @@ function displayComments(comments) {
     const commentSection = document.querySelector('.comment-section');
     commentSection.innerHTML = '';
     comments.forEach(comment =>{
+        var average_rating = (comment.star1 + comment.star2 + comment.star3)/3;
         let commenthmtl=
         `
             <article>
@@ -351,7 +368,7 @@ function displayComments(comments) {
             </div>
             <div class="review-main">
                 <!--review star, date time, report-->
-                <review-star-wc rating="4" ratingID="res-Review-rating"></review-star-wc>   
+                <review-star-wc rating="${average_rating}" ratingID="Review-rating${comment.commentId}"></review-star-wc>   
                 <button type="button" name="report">
                     <i class="fa-regular fa-flag" style="font-size: 15px; color: #ee5151;"></i>        
                 </button>
