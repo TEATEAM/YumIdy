@@ -41,13 +41,14 @@ h2{
   margin: 1rem;
   & .Restaurant-header{
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;  
     /*hovertei*/  
     & .heart:hover, button:hover{
       opacity: 0.8;
     }
     & h2{
-      margin-right: 1rem;
+      /* margin-right: 1rem; */
     }
     & .heart-label {
       cursor: pointer;
@@ -55,8 +56,8 @@ h2{
       stroke: var(--color-text);
       stroke-width: 0.2rem;
       position: relative;
-      right: -60%;
-      margin-right: 5rem;
+      /* right: -60%; */
+      /* margin-right: 5rem; */
     }
     & #heart-checkbox {
       display: none;
@@ -68,8 +69,8 @@ h2{
     }
     & .share{
       position: relative  ;
-      right: -58%;
-      margin-right: 2rem;
+      /* right: -58%; */
+      /* margin-right: 2rem; */
       fill: var(--color-text)
     }  
   }
@@ -185,8 +186,9 @@ h2{
   margin: 1rem;
   & .review-header{
     display: flex;
+    justify-content: space-between;
     & #writeReview{
-      margin-left: 60rem;
+      /* margin-left: 60rem; */
       width: 6rem;
       background: none;
       border-radius: 1rem;
