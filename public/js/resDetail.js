@@ -366,7 +366,7 @@ function displayComments(comments) {
             <article>
             <div class="reviewer" >
                 <img src="./accest/girl.png" alt="reviewer">
-                <h3>Билгүүн</h3>
+                <h3>Зулаа Ариунаа</h3>
             </div>
             <div class="review-main">
                 <!--review star, date time, report-->

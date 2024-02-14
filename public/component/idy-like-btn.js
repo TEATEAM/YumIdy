@@ -78,7 +78,7 @@ class IdyLikeBtn extends HTMLElement {
 
     attributeChangedCallback(name, oldVal, newVal) {
         if(name === "checked")
-            this.querySelector("#heart").checked = newVal != null;
+            this.querySelector("#heart-checkbox").checked = newVal != null;
     }
 
 }
