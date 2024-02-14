@@ -6,6 +6,11 @@ class ResLiked extends HTMLElement {
     }
     render(){
         this.shadowRoot.innerHTML = `
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" 
+        />
         <link rel="stylesheet" href="./css/resCard.css">
         <link rel="stylesheet" href="./css/card-container.css">
         <div class="card-container-1" id = "cards-container"></div>

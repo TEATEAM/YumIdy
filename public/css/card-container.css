@@ -1,12 +1,12 @@
 #cards-container{
     display: grid;
     grid-template-columns: auto auto;
+    margin-bottom: 2rem;
 }.card-container-1 {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-
 #cards-container {
     display: grid;
     grid-template-columns: auto auto;
