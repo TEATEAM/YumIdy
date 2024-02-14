@@ -297,15 +297,11 @@ function writeComment(resId){
                     if (radio[i].checked)
                     service_rating = radio[i].value;
                 }
-                console.log(food_rating);
-                console.log(atmosphere_rating);
-                console.log(service_rating);
-                
+    
                 const commentInput = document.getElementById('comment').value;
                 console.log(commentInput); 
 
-                if (commentInput.trim() !== '' &&  ) {//hoooson bish bol
-
+                if (commentInput.trim() !== ''&& food_rating !== undefined&& atmosphere_rating !== undefined&& service_rating !== undefined) {//hoooson bish bol
                     const commentData = { //commentiin datag ugnu
                         star1: food_rating,
                         star2: atmosphere_rating,
@@ -327,10 +323,15 @@ function writeComment(resId){
                         return response.json();
                     }).then(responseData => {
                         console.log('Comment posted successfully:', responseData);
+                        alert("Comment posted successfully");
                         getComments(resId);
+                        window.location.href = URLSearchParams(window.location.search);
                     }).catch(error => {
                         console.error("Error posting comment:", error.message);
                     });
+                }
+                else{
+                    alert("Талбараа бүрэн бөглөөрэй");
                 }
             });
 }
