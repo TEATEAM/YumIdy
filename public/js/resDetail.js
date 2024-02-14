@@ -281,27 +281,28 @@ function writeComment(resId){
 
             commentForm.addEventListener('submit', (event) => {
                 event.preventDefault();//
+
                 var food_rating, atmosphere_rating, service_rating,i;
                 var radio = document.getElementsByName('food');
                 for (i = 0; i < radio.length; i++) {
                     if (radio[i].checked)
-                    food_rating = radio[i].value;
+                        food_rating = radio[i].value;
                 }
                 radio = document.getElementsByName('atmosphere');
                 for (i = 0; i < radio.length; i++) {
                     if (radio[i].checked)
-                    atmosphere_rating = radio[i].value;
+                        atmosphere_rating = radio[i].value;
                 }
                 radio = document.getElementsByName('service');
                 for (i = 0; i < radio.length; i++) {
                     if (radio[i].checked)
-                    service_rating = radio[i].value;
+                        service_rating = radio[i].value;
                 }
     
                 const commentInput = document.getElementById('comment').value;
                 console.log(commentInput); 
 
-                if (commentInput.trim() !== ''&& food_rating !== undefined&& atmosphere_rating !== undefined&& service_rating !== undefined) {//hoooson bish bol
+                if (commentInput !== ''&& food_rating !== undefined&& atmosphere_rating !== undefined&& service_rating !== undefined) {//hoooson bish bol
                     const commentData = { //commentiin datag ugnu
                         star1: food_rating,
                         star2: atmosphere_rating,
