@@ -1,20 +1,4 @@
-/* CUSTOM PROPERTY--  entities defined by CSS authors that contain specific values to be reused throughout a document.*/
-/* how to create it
-:root {
-    --name: value;
-}
-for example
-:root{
-    --primary-clr: red;}
-how to use it
-body{
-    color: var(--primary-clr)
-}
-and we can use
-.sales-point{
-    color: va(--secondary-clr, yellow);
-} it will become yellow color.
-*/
+
 @import url(root.css);
 @media (prefers-color-scheme: dark) {
     :root{
@@ -31,127 +15,71 @@ and we can use
     box-sizing: border-box;
 }
 body{
+    width: 100%;
     background:var(--color-bg) ;
     font-family: var("Quicksand-Medium");
     color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
 }
 /* BEST RESTAURANT  */
 /* Home page-ний Best restaurants хэсгийг хийсэн нь: */
-.ug {
-    margin-top: 10.9rem;
-    margin-left: var(--margin-bodySmall);
-    width: 25.0625rem;
-    height: 3.125rem;
-    font-weight: 700;
-    line-height: 3.125rem;
-    font: var(--ug-font);
-    font-family: var(--font-family);
-    font-size: var(--font-sizeBR);
-    color: var(--color-text);
-}
-
-.bestR {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 10px;
- /*    margin-left: 7.12rem;
-    margin-right: 7.12rem; */
-}
-/* best Restaurantsig haruulah detailuud:  */
-/* .bestR_details {
-    width: 24rem;
-    height: 17.25rem;
-    background: #272727;
-    margin: var(--margin-bodySmall);
-    border-radius: 1.25rem;
-
-    & img {
-        width: 100%;
-        height: 10rem;
-        border-radius: 1.25rem;
+.resCard{
+    width: 100%;
+    & .ug {
+        margin-top: 10.9rem;
+        margin-left: var(--margin-bodySmall);
+        width: 25.0625rem;
+        height: 3.125rem;
+        font-weight: 700;
+        line-height: 3.125rem;
+        font: var(--ug-font);
+        font-family: var(--font-family);
+        font-size: var(--font-sizeBR);
+        color: var(--color-text);
     }
-} */
-/* ner bolon save hiihed ashiglah zurh icon */
-/* .IconName {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    & .bestR {
+        align-items: center;
+        max-width: 1440px;
+        margin: 0 auto;
+        margin-bottom: 4rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    }
 }
 
-.nameRes{
-    letter-spacing: var(  --letter-spacing);
-    font-family: var(--font-family);
-    font-size: 1.125rem;
-    font-style: var(--font-style);
-    color: var(--color-text);
-}
-.heart-checkbox{
-    background: none;
-    border: none;
 
-}
-.iconZurh:hover{
-   fill: var(color-text);
-   color: red;
-} */
-/* input[type="checkbox"]{
-    appearance: none;
-    -webkit-appearance: none;
-} */
-
-
-
-
-/* une, tsagiin icon, neesen haasan esehiig ilerhiileh p tag */
-/* .timeIconPrice{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
-
-.iconTsag {
-    margin-left: var(--Br-marginLeft);
-    font-weight: var(--BR-fontWeight);
-    line-height: var(--BR-lineHeight);
-    width:var( --tsag-WH);
-    height:var( --tsag-WH);
-}
-
-.time{
-    width: 2.44rem;
-    height: var(--Br-marginLeft);
-    margin-left: 0.38rem;
-    font-family: var(--font-family);
-    font-size: var( --tsag-WH );
-    font-style: var(--font-style);
-    font-weight: var(--BR-fontWeight);
-    line-height: var(--BR-lineHeight);
-    color: var(--color-text);
-}
-
-.price{
-    height: var(--Br-marginLeft);
-    width: 7rem;
-    font-size: var( --tsag-WH);
-    font-style: var(--font-style);
-    font-weight: var(--BR-fontWeight);
-    line-height: var(--BR-lineHeight);
-    color: var(--color-text);
-}
-
-.svgTseg{
-    margin-left: var(--marginSVG-tseg);
-    margin-right: var(--marginSVG-tseg);
-} */
 
 /* BODY1*/
 
 /* Homepage-ны эхний хэсгийн текст, searchBar, зураг хэсгүүдийг хийх болно. */
 .body1{
+    width: 100%;
     text-align: center;
+    /* 5 төрлөөр хайлт хийж болох бөгөөд уг хэсгийг эдит хийсэн нь: */
+    & .search {
+        display: flex;
+        justify-content: space-evenly;
+        /* figma deer hailtuudin hoorondoh zai haragdahgui baisan tul duraaraa avav. */
+        margin-left: 14.375rem;
+        margin-right: 14.375rem;
+    
+        & h5{
+            color:var( --color-text) ;
+            font-size: var(--font-sizeSmall);
+        }
+        & button{
+            background: none;
+            border: none;
+        }
+        & button :hover{
+            text-decoration: underline;
+            text-decoration-color:var(--color-accent);
+        }
+    }
 }
+
 .text1 h2{
     text-shadow: var(--text-shadow);
     font-size: var(--font-sizeTom);
@@ -161,41 +89,17 @@ body{
     margin-top: 6rem;
     margin-bottom: 4rem;
 }
-/* 5 төрлөөр хайлт хийж болох бөгөөд уг хэсгийг эдит хийсэн нь: */
-.search {
-    display: flex;
-    justify-content: space-evenly;
-    /* figma deer hailtuudin hoorondoh zai haragdahgui baisan tul duraaraa avav. */
-    margin-left: 14.375rem;
-    margin-right: 14.375rem;
-
-& h5{
-    color:var( --color-text) ;
-    font-size: var(--font-sizeSmall);
-}
-& button{
-    background: none;
-    border: none;
-}
-& button :hover{
-    text-decoration: underline;
-    text-decoration-color:var(--color-accent);
-}
-}
 
 /* SEARCHBAR formtoi heseg*/
 /* Search Bar хэсэг энэ хэсэгт яг хайлт хийх хэсгээ бичиж өгөх хэсгийг хийсэн */
-
 .form{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: var(--searchBar-width);
+    width: 80%;
     height: var(--searchBar-height);
-    margin-left: 17%;
+    margin-left: 10%;
     margin-top: 3.0625rem;
-    flex: 1;
-    outline: none;
     border-radius: var(--searchBar-radius);
     background: #fff;
     border: var(--border);
@@ -252,32 +156,31 @@ body{
 .zuragHeseg{
     position: relative;
 
-& .hoolZurag{
-    align-items: center;
-    margin-top: 63px;
-    width: 70.5rem;
-    height: 26rem;
-    object-fit: cover;
-    border-radius: 71px;
-    background: linear-gradient(180deg, rgba(199,200,210,0.00), rgba(25,25,25,0.40) 20.39%,rgba(14, 14, 14, 0.50) 45.39%, rgba(0, 0, 0, 0.40) 70.39%, rgba(199, 200, 210, 0.00) 95.92%);
-    filter: blur(4.5px);
-}
-& h2{
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 59rem;
-    height: 12.4rem;
-    font-weight: var(--font-weight);
-    line-height: var(--line-height);
-    color: var(--color-text);
-    text-shadow: 0px 4px 4px rgba(1, 1, 1, 0.25);
-    font-size: var(--font-sizeTom);
-    font-style: var(--font-style);
-    font-family: Quicksand;
-    /* hucheer tohiruulsan heseg */
-}
+    & .hoolZurag{
+        align-items: center;
+        margin-top: 63px;
+        width: 90%;
+        height: 26rem;
+        object-fit: cover;
+        border-radius: 71px;
+        background: linear-gradient(180deg, rgba(199,200,210,0.00), rgba(25,25,25,0.40) 20.39%,rgba(14, 14, 14, 0.50) 45.39%, rgba(0, 0, 0, 0.40) 70.39%, rgba(199, 200, 210, 0.00) 95.92%);
+        filter: blur(4.5px);
+    }
+    & h2{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        height: 12.4rem;
+        font-weight: var(--font-weight);
+        line-height: var(--line-height);
+        color: var(--color-text);
+        text-shadow: 0px 4px 4px rgba(1, 1, 1, 0.25);
+        font-size: var(--font-sizeTom);
+        font-style: var(--font-style);
+        font-family: Quicksand;
+    }
 }
 
 /* BODY 2 */
@@ -296,163 +199,46 @@ body{
      color: var(--color-text);
 }
 
-/* .bestR {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 10px;
-
-}
-
-.bestR_details {
-    width: 24rem;
-    height: 17.25rem;
-    background: #272727;
-    margin: var(--margin-bodySmall);
-    border-radius: 1.25rem;
-
-    & img {
-        width: 100%;
-        height: 10rem;
-        border-radius: 1.25rem;
-    }
-}
-
-.IconName {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
-
-.nameRes{
-    letter-spacing: var(  --letter-spacing);
-    font-family: var(--font-family);
-    font-size: 1.125rem;
-    font-style: var(--font-style);
-    color: var(--color-text);
-}
-.iconZurh{
-    font-size: 1.5rem;
-    flex-shrink: 0;
-    background: none;
-    border: none;
-    color: #FFF;
-}
-.iconZurh:hover{
-   fill: var(--color-text);
-}
-
-
-
-
-
-.timeIconPrice{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
-
-.iconTsag {
-    align-items: center;
-    margin-left: var(--Br-marginLeft);
-    font-weight: var(--BR-fontWeight);
-    line-height: var(--BR-lineHeight);
-    font-size: 0.8rem;
-    color: #FFF;
-}
-
-.time{
-    width: 2.44rem;
-    height: var(--Br-marginLeft);
-    margin-left: 0.38rem;
-    font-family: var(--font-family);
-    font-size: var( --tsag-WH );
-    font-style: var(--font-style);
-    font-weight: var(--BR-fontWeight);
-    line-height: var(--BR-lineHeight);
-    color: var(--color-text);
-}
-
-.price{
-    height: var(--Br-marginLeft);
-    width: 7rem;
-    font-size: var( --tsag-WH);
-    font-style: var(--font-style);
-    font-weight: var(--BR-fontWeight);
-    line-height: var(--BR-lineHeight);
-    color: var(--color-text);
-}
-
-.svgTseg{
-    margin-left: var(--marginSVG-tseg);
-    margin-right: var(--marginSVG-tseg);
-}
-
-
-
-.typeOd{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-top: 1rem;
-}
-.type {
-    padding: 0.25rem 0.625rem;
-    gap: 0.5rem;
-    border-radius: 6.25rem;
-    background: #FFF;
-    border-color: #FFF;
-    font-family: var(--font-family);
-    font-size: var( --tsag-WH);
-    font-style: var(--font-style);
-    font-weight: 600;
-    line-height: 1rem;
-} */
-
-
 /* RECIENT REVIEWS */
 .sanalOgoh{
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
 
-&.sanalOgoh button{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    width: 9.5rem;
-    height: 3.35rem;
-    border-radius: 1.25rem;
-    background: none;
-    margin-right:var(--margin-bodySmall);
-    border:var(--border);
-    font-size: var( --font-sizeSmall);
-    font-style: var(--font-style);
-    font-weight: var(--BR-fontWeight);
-    line-height: 3.125rem;
-    color: var(--color-text);
-    margin-top: 5.94rem;
-}
-& .recentReviews{
-    margin-top: 5.94rem;
-    margin-left: var(--margin-bodySmall);
-    width: 25.0625rem;
-    height: 3.125rem;
-    font-weight: 700;
-    line-height: 3.125rem;
-    font: var(--ug-font);
-    font-family: var(--font-family);
-    font-size: var(--font-sizeBR);
-    color: var(--color-text);
-}
+    &.sanalOgoh button{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: 9.5rem;
+        height: 3.35rem;
+        border-radius: 1.25rem;
+        background: none;
+        margin-right:var(--margin-bodySmall);
+        border:var(--border);
+        font-size: var( --font-sizeSmall);
+        font-style: var(--font-style);
+        font-weight: var(--BR-fontWeight);
+        line-height: 3.125rem;
+        color: var(--color-text);
+        margin-top: 5.94rem;
+    }
+    & .recentReviews{
+        margin-top: 5.94rem;
+        margin-left: var(--margin-bodySmall);
+        width: 25.0625rem;
+        height: 3.125rem;
+        font-weight: 700;
+        line-height: 3.125rem;
+        font: var(--ug-font);
+        font-family: var(--font-family);
+        font-size: var(--font-sizeBR);
+        color: var(--color-text);
+    }
 }
 
 /* RECENT REVIEW MAIN */
 
 .recentReview{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -469,178 +255,87 @@ body{
     color: var(--color-accent);
 }
 /*review*/
-.recentR article{
-    margin-top: 3rem;
-    background-color: var(--color-bg-second);
-    padding: 2rem;
-    border-radius: 1rem;
-    display: flex;
-    & .reviewer{
-      align-self: start;
-      & img{
-        border-radius: 100%;
-        width: 6.5rem;
-        height: 6.5rem;
-      }
-      & h3{
-        font: var(--p-font);
-        text-align: center;
-      }
-
-    }
-    & .review-main{
-      margin-left: 1rem;
-      & span{
-        font: var(--p-font);
-        font-size: 0.8rem;
-        color: var(--color-span);
-      }
-      & p{
-        margin-top: 1.5rem;
-        display: block;
-        font: var(--p-font);
-        padding-right:25%;
-        line-height: 1.5rem;
-        word-spacing: normal;
-      }
-      & img{
-        display: block;
-        margin-top: 1.5rem;
-        margin-bottom: 2rem;
-        width: 10.25rem;
-        height: 12.625rem;
-      }
-      & .dislike-label, & .like-label{
-        margin-left: 1rem;
-        cursor: pointer;
-        fill: none;
-        stroke: var(--color-accent);
-        stroke-width: 1.5;
-        & :hover{
-          opacity: 0.8;
-        }
-      }
-      & .dislike-label:has(:checked)  {
-        fill: var(--color-accent);
-        stroke: var(--color-accent);
-        stroke-width: 1.5;
-      }
-      & .like-label:has(:checked)  {
-        fill: var(--color-accent);
-        stroke: var(--color-accent);
-        stroke-width: 1.5;
-      }
-      & input {
-        display: none;
-      }
-      & label > span{
-        font: var(--p-font);
-        font-size: 0.8rem;
-        font-weight: bold;
-      }
-
-    }
-    & button{
-        background-color: transparent;
-        border-width: 0;
-        & :hover{
-            cursor: pointer;
-            opacity: 0.8;
-        }
-    }
-  }
-/*   <header>
-  <a class="logo"  href="homepage.html" ><img class="logoImg" src="/accest/logo.svg" alt="logoImg"></a>
-   <nav class="nevtreh">
-       <button type="button" class="nevtreh">Нэвтрэх</button>
-   </nav>
-</header> */
-
-
-  /* MEDIA */
-  /* @media (max-width: 1200px)
-  {
-    header{
-        background: red;
-    }
-    .bestR{
-    }
-
-  } */
-
-
-  /* Card section css */
-  /* .idy-card{
-    width: 24rem;
-    height: 17.25rem;
-    background: #272727;
-    margin: var(--margin-bodySmall);
-    border-radius: 1.25rem;
-    position: relative;
-    & img {
+.recentR{
+    width: 100%;
+    & article{
         width: 100%;
-        height: 10rem;
-        border-radius: 1.25rem;
-    }
-    & .cardInfo{
+        margin-top: 3rem;
+        background-color: var(--color-bg-second);
+        padding: 2rem;
+        border-radius: 1rem;
         display: flex;
-        justify-content: space-evenly;
-        & .resName{
-            width:18rem;
-            font-family: var("Quicksand-Medium");
-            font-size: 1.125rem;
-            font-style: normal;
-            font-weight: 700;
-            line-height:2rem; 
-            letter-spacing: 0.00625rem;
-            color: var(--color-text);
+        & .reviewer{
+          align-self: start;
+          & img{
+            border-radius: 100%;
+            width: 6.5rem;
+            height: 6.5rem;
+          }
+          & h3{
+            font: var(--p-font);
+            text-align: center;
+          }
+    
         }
-        & .heart-checkbox{
-          margin-top: 0.5rem ;
-        }
-        & .heart-checkbox :hover{
-            color: red;
-        }
-    }
-    & .cardInfo1{
-        display: flex;
-        & #tsagLogo{
-            width: 0.75rem;
-            height: 0.75rem;
-            flex-shrink: 0;
+        & .review-main{
+          margin-left: 1rem;
+          & span{
+            font: var(--p-font);
+            font-size: 0.8rem;
+            color: var(--color-span);
+          }
+          & p{
+            margin-top: 1.5rem;
+            display: block;
+            font: var(--p-font);
+            padding-right:25%;
+            line-height: 1.5rem;
+            word-spacing: normal;
+          }
+          & img{
+            display: block;
+            margin-top: 1.5rem;
+            margin-bottom: 2rem;
+            width: 10.25rem;
+            height: 12.625rem;
+          }
+          & .dislike-label, & .like-label{
             margin-left: 1rem;
+            cursor: pointer;
+            fill: none;
+            stroke: var(--color-accent);
+            stroke-width: 1.5;
+            & :hover{
+              opacity: 0.8;
+            }
+          }
+          & .dislike-label:has(:checked)  {
+            fill: var(--color-accent);
+            stroke: var(--color-accent);
+            stroke-width: 1.5;
+          }
+          & .like-label:has(:checked)  {
+            fill: var(--color-accent);
+            stroke: var(--color-accent);
+            stroke-width: 1.5;
+          }
+          & input {
+            display: none;
+          }
+          & label > span{
+            font: var(--p-font);
+            font-size: 0.8rem;
+            font-weight: bold;
+          }
+    
         }
-        & .time{
-            color: var(--color-text);
-            font-family: var("Quicksand-Medium");
-            font-size: 0.75rem;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 1rem; 
-            margin-left: 0.6rem;
-        }
-        & .price{
-            color: var(--color-text);
-            font-family: var("Quicksand-Medium");
-            font-size: 0.75rem;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 1rem; 
-            margin-left: 0.6rem;
+        & button{
+            background-color: transparent;
+            border-width: 0;
+            & :hover{
+                cursor: pointer;
+                opacity: 0.8;
+            }
         }
     }
-    & .foodType{
-        width: 3.5rem;
-        height: 1.5rem;
-        margin-left: 1rem;
-        margin-top: 1rem;
-        padding: 0.25rem 0.625rem;
-        gap: 0.5rem;
-        border-radius: 6.25rem;
-        font-size: 0.75rem;
-        font-style: normal;
-        font-weight: 600;
-        color: #545563;
-        background: var(--color-text);
-    }
-  } */
+}

@@ -9,7 +9,7 @@ class Headercomponent extends HTMLElement {
       <script src="./component/res-cart.js"></script>
       <style>
       header{
-        width: 100%;
+      width: 100%;
         height:5.4rem;
         display: flex;
         align-items: center;
