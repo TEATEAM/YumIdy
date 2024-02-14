@@ -2,7 +2,7 @@ class Headercomponent extends HTMLElement {
     constructor() {
       super();
       this.#render();
-    }n
+    }
 
     #render() {
       this.innerHTML = `
@@ -62,7 +62,7 @@ class Headercomponent extends HTMLElement {
           </defs>
         </svg>        
         </a>
-        <a href="./likedres">
+        <a href="./resLiked.html">
           <res-cart></res-cart>
         </a>
         <button type="button" class="nevtreh">Нэвтрэх

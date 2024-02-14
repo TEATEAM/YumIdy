@@ -1,7 +1,6 @@
 const template = document.createElement("template");
 
 template.innerHTML = `
-    
     <link rel="stylesheet" href="./css/resCard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
@@ -16,7 +15,7 @@ template.innerHTML = `
             <h4 class="resName"></h4>  <idy-like-btn></idy-like-btn>
         </div>
         <div class="cardInfo1">
-            <i class="fa-regular fa-clock" id="tsagLogo"></i>
+           <i class="fa-regular fa-clock" id="tsagLogo"></i>
             <span class="time"></span>
             <span class="price"></span>
         </div>
@@ -24,6 +23,7 @@ template.innerHTML = `
         <span class="foodType"></span>
         <review-star-wc class="rating"></review-star-wc>
         </div>
+        <slot name="remove"></slot>
     </article>
 `
 class IdyCard extends HTMLElement {

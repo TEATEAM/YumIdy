@@ -21,6 +21,7 @@ class ResCart extends HTMLElement {
             border:var(--border);
             display: flex;
             align-items: center;
+            margin-left: 280%;
             text-decoration: none;
             & :hover {
               cursor: pointer;
