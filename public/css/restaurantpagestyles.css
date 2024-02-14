@@ -328,117 +328,133 @@ h2{
     }
   }
 }
+/* writeReview css */
 #modalbox{
   display: none;
-}
-/* BODY HESEG NI UNDSEN HUYR HESEGTEI BOGOOD UG HESGIIG HIIJ BAIGAA HESEG */
-.body{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  /* BODY hesgiin zvvn tal */
+  margin: 5rem;
+  padding: 0.8rem;
+  border-radius: 1.25rem;
+  border:var(--border);
+  background-color: rgba(15,15,15, 0.5);
   & .left{
-    color: #FFF;
+      width: 50%;
+      display: inline-block;
+      align-self: center;
+      margin-left: 5rem;
+      background: none;
+      color: var(--color-text);
+      font-weight: bolder;
+      & img{
+          width: 18rem;
+          height: 20rem;
+          object-fit: cover;
+      }
+      & p{
+          text-align: center;
+          width: 18rem;
+          font: normal bold 1.5rem 'quicksand';
+      }
+      & h1{
+          text-align: center;
+          width: 18rem;
+          font: normal bold 1.2rem 'quicksand';
+      }
   }
-  /* tomoor bichsen ugiig taruulj baina */
-  & .left h1{
-    display: flex;
-    justify-content: flex-end;
-    width: 31.8125rem;
-    height: 10.375rem;
-    flex-direction: column;
-    flex-shrink: 0;
-    font-family:  'Quicksand', sans-serif;
-    font-size: 2.5rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 4.375rem; /* 175% */
-  }
-
-  /* zuragtai hesgiig taaruulj baina. */
-  & .left img{
-    width: 28.46438rem;
-    height: 31.402rem;
-    border-radius: 1.25rem;
-    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
-  }
-  /*Restaurantin neriig taaruulj baina.*/
-  & .left p{
-    display: flex;
-    width: 28.5625rem;
-    height: 3.82888rem;
-    flex-direction: column;
-    justify-content: center;
-    color: #FFF;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 2.2255rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 2.05431rem; /* 92.308% */
-    letter-spacing: 0.00856rem;
-  }
-
-
-  /* BODY hesgiin baruun tal */
   & .right{
-    color: #FFF;
+      display: inline-block;
+      width: 50%;
+      background: none;
+      & h4{
+          margin-top: 0.8rem;
+          margin-bottom: 0.8rem;
+          color: var(--color-text);
+          font:  normal lighter 1.2rem 'quicksand';
+      }
+      & #service{
+          margin-top: 0.8rem;
+          margin-bottom: 0.8rem;
+      }
+      & .setgegdel {
+          color: var(--color-text);
+          font:  normal lighter 1.2rem 'quicksand';
+      }
+      & input[type=text] {
+          width: 97%;
+          height: 10rem;
+          margin-top: 0.8rem;
+          margin-bottom: 0.8rem;
+          font: normal lighter 0.8rem 'quicksand';
+          background-color: var(--color-text);
+          border-radius: var(--border-radius);
+          border-width: 0;
+      }
+      & input[type=text]::placeholder{
+          position: absolute;
+          top: 0.8rem;
+          color: var(--color-span);
+      }
+      & #commentBtn{
+          width: 8rem;
+          height: 3rem;
+          background: none;
+          font:  normal lighter 1.2rem 'quicksand';
+          color: var(--color-text);
+          border-radius: 1.25rem;
+          border:var(--border);
+        }
+      & #commentBtn:hover{
+      color: var(--color-text);
+      background: var(--color-accent);
+      cursor: pointer;
+      transition: .5s;
+      }
   }
-  & .right .rate{
-   /*  width: 30rem;
-    height: 6.5625rem;
-    flex-shrink: 0; */
+  & #closeModal{
+      font-size: 2rem;
+      margin-right: 1rem;
+      color: var(--color-text);
   }
-  & .right h4{
-    color: #FFF;
-    font-family:  'Quicksand', sans-serif;
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  & #closeModal:hover{
+      cursor: pointer;
   }
 }
-/* Review star using radio shuu */
+/* star css */
 .star-radio {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-  }
-  
-  .radio-input {
-    position: fixed;
-    opacity: 0;
-    pointer-events: none;
-  }
-  
-  .radio-label {
-    cursor: pointer;
-    font-size: 0;
-    color: var(--color-span);
-    transition: color 0.1s ease-in-out;
-  }
-  
-  .radio-label:before {
-    content: "★";
-    display: inline-block;
-    font-size: 2rem;
-  }
-  
-  .radio-input:checked ~ .radio-label {
-    color: var(--color-accent);
-  }
-  
-  .radio-label:hover,
-  .radio-label:hover ~ .radio-label {
-    color: var(--color-accent);
-  }
-  
-  .radio-input:checked + .radio-label:hover,
-  .radio-input:checked + .radio-label:hover ~ .radio-label,
-  .radio-input:checked ~ .radio-label:hover,
-  .radio-input:checked ~ .radio-label:hover ~ .radio-label,
-  .radio-label:hover ~ .radio-input:checked ~ .radio-label {
-    color: var(--color-accent);
-  }
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+.radio-input {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+}
+.radio-label {
+  cursor: pointer;
+  font-size: 0;
+  color: var(--color-span);
+  transition: color 0.1s ease-in-out;
+}
+.radio-label:before {
+  content: "★";
+  display: inline-block;
+  font-size: 2rem;
+}
+.radio-input:checked ~ .radio-label {
+  color: var(--color-accent);
+}
+.radio-label:hover,
+.radio-label:hover ~ .radio-label {
+  color: var(--color-accent);
+}
+.radio-input:checked + .radio-label:hover,
+.radio-input:checked + .radio-label:hover ~ .radio-label,
+.radio-input:checked ~ .radio-label:hover,
+.radio-input:checked ~ .radio-label:hover ~ .radio-label,
+.radio-label:hover ~ .radio-input:checked ~ .radio-label {
+  color: var(--color-accent);
+} /* star css end here */
+
 
 
 

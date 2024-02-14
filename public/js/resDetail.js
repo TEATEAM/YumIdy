@@ -128,82 +128,70 @@ function displayDetails(resData) {
             </div>
             <!-- writereview modalbox -->
             <div id="modalbox" class="modal">
-                <section class="body">
-                    <span id="closeModal" class="close-button">&times;</span>
-                    <section class="left">
-                     <h1>Таны зочилсон газар ямархуу байв?</h1>
-                     <img src="${resData[0].img}" alt="restaurant img of ${resData[0].name}" width="300px" height="400px">
-                     <p>${resData[0].name}</p>
-                    </section>
-                 
-                    <section class="right">
-                        <form class="comment-form">
-                        <article class="rate">
-                            <h4>Таны хоол таалагдсан уу?</h4>
-                            <div class="star-radio" id="food">
-                                <input class="radio-input" type="radio" id="star5-food" name="food" value="5" />
-                                <label class="radio-label" class for="star5-food" title="5 stars">5 stars</label>
-                            
-                                <input class="radio-input" type="radio" id="star4-food" name="food" value="4" />
-                                <label class="radio-label" for="star4-food" title="4 stars">4 stars</label>
-                            
-                                <input class="radio-input" type="radio" id="star3-food" name="food" value="3" />
-                                <label class="radio-label" for="star3-food" title="3 stars">3 stars</label>
-                            
-                                <input class="radio-input" type="radio" id="star2-food" name="food" value="2" />
-                                <label class="radio-label" for="star2-food" title="2 stars">2 stars</label>
-                            
-                                <input class="radio-input" type="radio" id="star1-food" name="food" value="1" />
-                                <label class="radio-label" for="star1-food" title="1 star">1 star</label>
-                            </div>
-                        </article>
-                    
-                        <article class="rate">
-                            <h4>Таны ая тухтай байдлыг хангаж чадсан уу?</h4>
-                            <div class="star-radio" id="atmosphere">
-                                <input class="radio-input" type="radio" id="star5-atmosphere" name="atmosphere" value="5" />
-                                <label class="radio-label" class for="star5-atmosphere" title="5 stars">5 stars</label>
-                            
-                                <input class="radio-input" type="radio" id="star4-atmosphere" name="atmosphere" value="4" />
-                                <label class="radio-label" for="star4-atmosphere" title="4 stars">4 stars</label>
-                            
-                                <input class="radio-input" type="radio" id="star3-atmosphere" name="atmosphere" value="3" />
-                                <label class="radio-label" for="star3-atmosphere" title="3 stars">3 stars</label>
-                            
-                                <input class="radio-input" type="radio" id="star2-atmosphere" name="atmosphere" value="2" />
-                                <label class="radio-label" for="star2-atmosphere" title="2 stars">2 stars</label>
-                            
-                                <input class="radio-input" type="radio" id="star1-atmosphere" name="atmosphere" value="1" />
-                                <label class="radio-label" for="star1-atmosphere" title="1 star">1 star</label>
-                            </div>
-                        </article>
+                <section class="left">
+                    <p>Таны зочилсон газар ямархуу байв?</p>
+                    <img src="./accest/res-img/modernnomands.jpg" alt="restaurant img of ">
+                    <h1>Modern Nomands mongolian</h1>
+                </section>
+                <section class="right">
+                    <form class="comment-form">
+                        <h4>Таны хоол таалагдсан уу?</h4>
+                        <div class="star-radio" id="food">
+                            <input class="radio-input" type="radio" id="star5-food" name="food" value="5" />
+                            <label class="radio-label" for="star5-food" title="5 stars">5 stars</label>
                         
-                        <article class="rate">
-                            <h4>Үйлчилгээ нь ямархуу байсан бэ?</h4>
-                            <div class="star-radio" id="service">
-                                <input class="radio-input" type="radio" id="star5-service" name="service" value="5"/>
-                                <label class="radio-label" class for="star5-service" title="5 stars" for="service">5 stars</label>
-                            
-                                <input class="radio-input" type="radio" id="star4-service" name="service" value="4" />
-                                <label class="radio-label" for="star4-service" title="4 stars" for="service">4 stars</label>
-                            
-                                <input class="radio-input" type="radio" id="star3-service" name="service" value="3" />
-                                <label class="radio-label" for="star3-service" title="3 stars" for="service">3 stars</label>
-                            
-                                <input class="radio-input" type="radio" id="star2-service" name="service" value="2" />
-                                <label class="radio-label" for="star2-service" title="2 stars" for="service">2 stars</label>
-                            
-                                <input class="radio-input" type="radio" id="star1-service" name="service" value="1" />
-                                <label class="radio-label" for="star1-service" title="1 star" for="service">1 star</label>
-                            </div>
-                        </article>
-            
-                        <label for="comment">Сэтгэгдэл бичих:</label>
+                            <input class="radio-input" type="radio" id="star4-food" name="food" value="4" />
+                            <label class="radio-label" for="star4-food" title="4 stars">4 stars</label>
+                        
+                            <input class="radio-input" type="radio" id="star3-food" name="food" value="3" />
+                            <label class="radio-label" for="star3-food" title="3 stars">3 stars</label>
+                        
+                            <input class="radio-input" type="radio" id="star2-food" name="food" value="2" />
+                            <label class="radio-label" for="star2-food" title="2 stars">2 stars</label>
+                        
+                            <input class="radio-input" type="radio" id="star1-food" name="food" value="1" />
+                            <label class="radio-label" for="star1-food" title="1 star">1 star</label>
+                        </div>
+                        <h4>Таны ая тухтай байдлыг хангаж чадсан уу?</h4>
+                        <div class="star-radio" id="atmosphere">
+                            <input class="radio-input" type="radio" id="star5-atmosphere" name="atmosphere" value="5" />
+                            <label class="radio-label" for="star5-atmosphere" title="5 stars">5 stars</label>
+                        
+                            <input class="radio-input" type="radio" id="star4-atmosphere" name="atmosphere" value="4" />
+                            <label class="radio-label" for="star4-atmosphere" title="4 stars">4 stars</label>
+                        
+                            <input class="radio-input" type="radio" id="star3-atmosphere" name="atmosphere" value="3" />
+                            <label class="radio-label" for="star3-atmosphere" title="3 stars">3 stars</label>
+                        
+                            <input class="radio-input" type="radio" id="star2-atmosphere" name="atmosphere" value="2" />
+                            <label class="radio-label" for="star2-atmosphere" title="2 stars">2 stars</label>
+                        
+                            <input class="radio-input" type="radio" id="star1-atmosphere" name="atmosphere" value="1" />
+                            <label class="radio-label" for="star1-atmosphere" title="1 star">1 star</label>
+                        </div>
+                        <h4>Үйлчилгээ нь ямархуу байсан бэ?</h4>
+                        <div class="star-radio" id="service">
+                            <input class="radio-input" type="radio" id="star5-service" name="service" value="5"/>
+                            <label class="radio-label" for="star5-service" title="5 stars" for="service">5 stars</label>
+                        
+                            <input class="radio-input" type="radio" id="star4-service" name="service" value="4" />
+                            <label class="radio-label" for="star4-service" title="4 stars" for="service">4 stars</label>
+                        
+                            <input class="radio-input" type="radio" id="star3-service" name="service" value="3" />
+                            <label class="radio-label" for="star3-service" title="3 stars" for="service">3 stars</label>
+                        
+                            <input class="radio-input" type="radio" id="star2-service" name="service" value="2" />
+                            <label class="radio-label" for="star2-service" title="2 stars" for="service">2 stars</label>
+                        
+                            <input class="radio-input" type="radio" id="star1-service" name="service" value="1" />
+                            <label class="radio-label" for="star1-service" title="1 star" for="service">1 star</label>
+                        </div>
+                        <label for="comment" class="setgegdel">Сэтгэгдэл бичих:</label>
                         <input type="text" name="comment" id ="comment" placeholder="Энд бичээрэй"/>
                         <input type="submit" id = "commentBtn" value="Илгээх"/>
                     </form>
-                    </section>
-                 </section>
+                </section>
+                <span id="closeModal" class="close-button">&times;</span>
             </div>
             <div class="line"></div>
             <!--niit sanaliin medeelel, hailt hiih, sortloh-->

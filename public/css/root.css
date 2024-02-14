@@ -4,13 +4,13 @@
     --color-bg-second: #272727;
     --color-text: #FFFFFF;
     --color-span: #988e8e;
-    --p-font: normal lighter 1rem 'Quicksand'; 
-    --h-font: normal bold 2rem 'Quicksand'; 
-    --footer-font: normal bold 1rem 'Quicksand';
-    --Quicksand-Medium: Medium bold 1rem 'Quicksand';
+    --p-font: normal lighter 1rem 'quicksand'; 
+    --h-font: normal bold 2rem 'quicksand'; 
+    --footer-font: normal bold 1rem 'quicksand';
+    --Quicksand-Medium: Medium bold 1rem 'quicksand';
     
     /*homepage-ariunaa*/
-     --font-family: 'Quicksand', sans-serif ;
+     --font-family: 'quicksand', sans-serif ;
      --font-sizeTom: 2.5rem;
      --font-weight: 700;
      --line-height: 50px;
