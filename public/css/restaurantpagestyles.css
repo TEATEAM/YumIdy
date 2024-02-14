@@ -38,7 +38,7 @@ h2{
   font:var(--h-font);
 }
 .Restaurant-info{
-  margin: 1rem;
+  margin: 2rem;
   & .Restaurant-header{
     display: flex;
     justify-content: space-between;
@@ -68,8 +68,8 @@ h2{
       stroke-width: 0.2rem;
     }
     & .share{
-      position: relative  ;
-      margin-left: 1.5rem;
+      position: relative;
+      margin-left: 2rem;
       fill: var(--color-text)
     }  
   }
@@ -128,8 +128,8 @@ h2{
         font: var(--p-font);
       }
       & .rt-location{
-        margin-left: -2.5rem;
         margin-top: 2rem;
+        margin-right: 2.5rem;
         text-align: center;
         line-height: normal;
         & i{
@@ -185,7 +185,7 @@ h2{
   }
 }
 .Reviews{
-  margin: 1rem;
+  margin: 2rem;
   & .review-header{
     display: flex;
     justify-content: space-between;
@@ -260,8 +260,8 @@ h2{
     width: 90%;
     height: auto;
     margin-top: 3rem;
-    background-color: var(--color-bg-second);
     padding: 2rem;
+    background-color: var(--color-bg-second);
     border-radius: 1rem;
     display: flex;
     & .reviewer{
@@ -285,6 +285,14 @@ h2{
         display: flex;
         justify-content: space-between;
         width: 100%;
+      }
+      & button{
+        background-color: transparent;
+        border-width: 0;
+        & :hover{
+            cursor: pointer;
+            opacity: 0.8;
+        }
       }
       & p{
         width: 100%;
@@ -464,26 +472,78 @@ h2{
   color: var(--color-accent);
 } /* star css end here */
 
-
-
-
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-
-}
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  
-}
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  
-}
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  
-}
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  
+@media only screen and (max-width: 1066px) {
+  .Restaurant-info{
+    margin: 1rem;
+    & .Restaurant-header{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; 
+      & .res_main{
+        display: flex;
+        & review-star-wc{
+          margin-left: 1rem;
+        }
+      } 
+      & .res_icons{
+        display: none;
+      }
+       
+    }
+    & #Restaurant-overview{
+      display: inline;
+      margin-top: 3rem;
+      margin-left: 0;
+      align-items: center;
+      & .Restaurant-details{
+        width: 100%;
+        height: 35rem;
+        padding: 3rem;
+        background-color: var(--color-bg-second);
+        border-radius: 1.25rem;
+        & h3{
+          position: relative;
+          margin: 0;
+        }
+      }
+      & .Restaurant-images{
+        display: inline;
+        & .img-big{
+          width: 100%;
+          height: 10rem;
+          align-self: center;
+          margin-left: 0;
+          object-fit: cover;
+          border-radius: 1.5rem;
+        }
+        & .img-small{
+          display: none;
+        }
+      }
+    }
+  }
+  #modalbox{
+    display: none;
+    width: 100%;
+    margin-left: 0;
+    border: none;
+    & .right{
+      width: 100%;
+    }
+    & .left{
+      display: none;
+    }
+  }
+  .Reviews{
+    margin: 1rem;
+    & .review-sort-filters{
+      display: none;
+    }
+  }
+  .comment-section{
+    & article{
+      width: 100%;
+    }
+  }
 }

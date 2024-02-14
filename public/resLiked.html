@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liked</title>
-    <script type="module" src="./component/header-wc.js"></script>
-    <script type="module" src="./component/footer-wc.js"></script>
-    <script type="module" src="./component/review-star-wc.js"></script>
-    <script type="module" src="./component/res-liked.js"></script>
-
-    <script src="./component/idy-card.js"></script>
-
     <link rel="stylesheet" href="./css/homepage.css">
     <link rel="stylesheet" href="./css/resCard.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
     crossorigin="anonymous" 
     referrerpolicy="no-referrer" 
     />
+     <!-- wc -->
+     <script type="module" src="./component/header-wc.js"></script>
+     <script type="module" src="./component/footer-wc.js"></script>
+     <script type="module" src="./component/review-star-wc.js"></script>
+     <!-- wishlist-wc -->
+     <script src="./component/idy-like-btn.js"></script>
+     <script src="./component/idy-card.js"></script>
+     <script src="./component/res-cart.js"></script>
 
     <style>
         main h1 {
@@ -30,7 +30,7 @@
 <body>
     <header-component></header-component>
     <main>
-        <h1>Таны дуртай ресторанууд❤️</h1>
+        <h1>Таны дуртай ресторанууд:</h1>
         <res-liked></res-liked>
     </main>
     <footer-component></footer-component>

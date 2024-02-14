@@ -14,25 +14,35 @@ class ResCart extends HTMLElement {
           .cart-container {
             color: var(--color-text);
             width: 8.125rem;
-            height: 3.125rem;
+            height: 2.79875rem;
             background: none;
-            font-size: var(--font-sizeSmall);
             border-radius: 1.25rem;
             border:var(--border);
             display: flex;
             align-items: center;
             text-decoration: none;
-            & :hover {
-              cursor: pointer;
-            }
+            font-family:'quicksand';
             & span {
+              font-family:'arial';
+              font-size: var(--font-sizeSmall);
+              font-weight: lighter;
               color: var(--color-accent);
               padding-left: 5px;
+              padding-top: 3px;
               text-decoration: none;
             }
             & .durtai{
-               margin-left: 1.5rem;
-               []
+              font-size: var(--font-sizeSmall);
+              margin-left: 1.5rem;
+            }
+          }
+          .cart-container:hover{
+            color: var(--color-text);
+            background: var(--color-accent);
+            cursor: pointer;
+            transition: .5s;
+            & span {
+              color: var(--color-text);
             }
           }
         </style>

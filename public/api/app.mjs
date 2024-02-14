@@ -34,7 +34,10 @@ app.post('/writecomment', async(req, res) => {
   await comment.writeComment(req, res);
 });
 
-
+//Buh com-n medeelliig avah
+app.get('/comments', async (req, res) => {
+  await comment.getComments(req,res);
+});
 //Resiin id-aar commentuudiin jagsaaltiig avah
 app.get('/comments/:id', async(req, res) =>{
   await comment.getCommentByResId(req, res);

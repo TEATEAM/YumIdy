@@ -27,6 +27,12 @@ class DbResComment{
         `;
         return comment;
     }
+    async selectAllCom(){
+        const comments = await sql`
+        SELECT * FROM public.comment
+        `
+        return comments;
+    }
 }
 
 const dbComment = new DbResComment();

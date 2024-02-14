@@ -9,23 +9,26 @@ class Headercomponent extends HTMLElement {
       <script src="./component/res-cart.js"></script>
       <style>
       header{
-      width: 100%;
+        width: 100%;
         height:5.4rem;
+        padding: 2rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        font-size: var( --font-sizeTom);
-        padding: 1.1rem;
         background: rgba(15, 15, 15, 0.10);
-        box-shadow: 0px 4px 4px 0px rgba(240, 251, 255, 0.20);      
+        box-shadow: 0px 4px 4px 0px rgba(240, 251, 255, 0.20);
+        & .header-buttons{
+          display: flex;
+        }      
         & .nevtreh{
           width: 8.125rem;
           height: 3.125rem;
+          margin-left: 1rem;
           background: none;
           font-size: var(--font-sizeSmall);
+          font-family:'quicksand';
           color: var(--color-text);
           border-radius: 1.25rem;
-          margin-right: var(--border-radius);
           border:var(--border);
         }
         & .nevtreh:hover{
@@ -34,6 +37,7 @@ class Headercomponent extends HTMLElement {
           cursor: pointer;
           transition: .5s;
         }
+
       }
       </style>
       <header>
@@ -62,11 +66,10 @@ class Headercomponent extends HTMLElement {
           </defs>
         </svg>        
         </a>
-        <a href="./resLiked.html">
-          <res-cart></res-cart>
-        </a>
-        <button type="button" class="nevtreh">Нэвтрэх
-        </button>  
+        <div class="header-buttons">
+          <a href="./resLiked.html" style="text-decoration:none;"><res-cart></res-cart></a>
+          <button type="button" class="nevtreh">Нэвтрэх</button> 
+        <div>
       </header>
       `;
     }

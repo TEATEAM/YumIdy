@@ -39,6 +39,15 @@ class Comment{
             res.status(500).send("Internal Server Error");
         }
     }
+    async getComments(req,res){
+        try{
+            const result  = await dbComment.selectAllCom();
+            this.restaurants = result;
+            res.status(200).send(result);
+        } catch(error){
+            res.status(400).send("error occured");
+        }
+    }
 }
 
 const comment = new Comment();

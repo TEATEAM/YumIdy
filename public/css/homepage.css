@@ -17,7 +17,7 @@
 body{
     width: 100%;
     background:var(--color-bg) ;
-    font-family: var("Quicksand-Medium");
+    font-family: 'quicksand';
     color: var(--color-text);
     margin: 0;
     padding: 0;
@@ -28,7 +28,9 @@ body{
 .resCard{
     width: 100%;
     & .ug {
-        margin-top: 10.9rem;
+        /* margin-top: 10.9rem; */
+        margin-top: 3rem;
+        margin-bottom: 2rem;
         margin-left: var(--margin-bodySmall);
         width: 25.0625rem;
         height: 3.125rem;
@@ -81,13 +83,14 @@ body{
 }
 
 .text1 h2{
+    font-family: 'quicksand';
     text-shadow: var(--text-shadow);
     font-size: var(--font-sizeTom);
     font-weight: var(--font-weight);
     line-height: var(--line-height);
     height: var(--line-height);
-    margin-top: 6rem;
-    margin-bottom: 4rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 /* SEARCHBAR formtoi heseg*/
@@ -100,19 +103,22 @@ body{
     height: var(--searchBar-height);
     margin-left: 10%;
     margin-top: 3.0625rem;
-    border-radius: var(--searchBar-radius);
-    background: #fff;
-    border: var(--border);
-    /* gollohgui baisan tul hucheer golluulsan */
+    border: 5px solid var(--color-accent);
+    border-radius: 2.6rem;
+    background: var(--color-text);
+    & #searchbar::placeholder{
+      font-family: 'quicksand';
+      font-weight: lighter;
+      color: rgba(0, 0, 0, 0.2);
+    }
 
 & .btn{
-    width: 4.625rem;
-    height: 2.5625rem;
+    width: 6rem;
+    height: 3rem;
     justify-content: center;
     border: var(--border);
     align-items: center;
-    border-radius: var(--searchBar-radius);
-    /* baruun tiish bolohgui baisan tul hvch hereglev. */
+    border-radius: 1.5rem;
     margin-right: 1.5rem;
     background: var(--color-text);
     color: var( --color-accent);
@@ -121,10 +127,11 @@ body{
     font-size: var(--font-sizeSmall);
     font-family: var( --font-family);
 }
-
-/* zasah!!! */
 & .btn:hover{
-    border-color:#FFF;
+  color: var(--color-text);
+  background: var(--color-accent);
+  cursor: pointer;
+  transition: .5s;
 }
 & input{
     border: none;
@@ -195,112 +202,88 @@ body{
     line-height: 3.125rem;
     font: var(--ug-font);
     font-family: var(--font-family);
-    font-size: var(--font-sizeBR);
-     color: var(--color-text);
-}
-
-/* RECIENT REVIEWS */
-.sanalOgoh{
-    width: 100%;
-
-    &.sanalOgoh button{
-        display: flex;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-        width: 9.5rem;
-        height: 3.35rem;
-        border-radius: 1.25rem;
-        background: none;
-        margin-right:var(--margin-bodySmall);
-        border:var(--border);
-        font-size: var( --font-sizeSmall);
-        font-style: var(--font-style);
-        font-weight: var(--BR-fontWeight);
-        line-height: 3.125rem;
-        color: var(--color-text);
-        margin-top: 5.94rem;
-    }
-    & .recentReviews{
-        margin-top: 5.94rem;
-        margin-left: var(--margin-bodySmall);
-        width: 25.0625rem;
-        height: 3.125rem;
-        font-weight: 700;
-        line-height: 3.125rem;
-        font: var(--ug-font);
-        font-family: var(--font-family);
-        font-size: var(--font-sizeBR);
-        color: var(--color-text);
-    }
+    font-size: var(--font-sizeTom);
+    color: var(--color-text);
 }
 
 /* RECENT REVIEW MAIN */
 
-.recentReview{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left:var(--margin-bodySmall);
-    margin-right: var(--margin-bodySmall);
-    margin-bottom: 4rem;
-    width: 81.62rem;
-    height: 31.6875rem;
-    border-radius: var( --border-radius);
-    margin: var(--margin-bodySmall);
-    background: var( --color-bg-second);
-}
-.sanalOgoh svg:hover{
-    color: var(--color-accent);
-}
 /*review*/
 .recentR{
     width: 100%;
+    & .recentReviews{
+      margin-top: 3rem;
+      margin-left: var(--margin-bodySmall);
+      font-weight: 700;
+      font: var(--ug-font);
+      font-family: var(--font-family);
+      font-size: var(--font-sizeTom);
+      color: var(--color-text);
+    }
     & article{
-        width: 100%;
-        margin-top: 3rem;
-        background-color: var(--color-bg-second);
-        padding: 2rem;
-        border-radius: 1rem;
-        display: flex;
-        & .reviewer{
-          align-self: start;
-          & img{
-            border-radius: 100%;
-            width: 6.5rem;
-            height: 6.5rem;
-          }
-          & h3{
-            font: var(--p-font);
-            text-align: center;
-          }
-    
+      width: 95%;
+      height: auto;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      margin-left: var(--margin-bodySmall);
+      padding: 2rem;
+      background-color: var(--color-bg-second);
+      border-radius: 1rem;
+      display: flex;
+      & .reviewer{
+        align-self: start;
+        & img{
+          border-radius: 100%;
+          width: 6.5rem;
+          height: 6.5rem;
         }
-        & .review-main{
-          margin-left: 1rem;
+        & h3{
+          font: var(--p-font);
+          text-align: center;
+        }
+    
+      }
+      & .review-main{
+        display: inline-block;
+        margin-left: 1rem;
+        width: 90%;
+        & .rating-report{
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+        }
+        & button{
+          background-color: transparent;
+          border-width: 0;
+          & :hover{
+              cursor: pointer;
+              opacity: 0.8;
+          }
+        }
+        & p{
+          width: 100%;
+          margin-top: 1.5rem;
+          margin-bottom: 1.5rem;
+          font: var(--p-font);
+          text-align: justify;
+        }
+        & .comment-reaction{
+          width: 7rem;
+          display: flex;
+          justify-content: space-between;
           & span{
-            font: var(--p-font);
-            font-size: 0.8rem;
+            display: block;
+            align-items: center;
+            font: normal bold 0.8rem 'quicksand'; 
             color: var(--color-span);
           }
-          & p{
-            margin-top: 1.5rem;
-            display: block;
-            font: var(--p-font);
-            padding-right:25%;
-            line-height: 1.5rem;
-            word-spacing: normal;
-          }
-          & img{
-            display: block;
-            margin-top: 1.5rem;
-            margin-bottom: 2rem;
-            width: 10.25rem;
-            height: 12.625rem;
+          & svg{
+            margin: 5%;
           }
           & .dislike-label, & .like-label{
-            margin-left: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             cursor: pointer;
             fill: none;
             stroke: var(--color-accent);
@@ -314,6 +297,7 @@ body{
             stroke: var(--color-accent);
             stroke-width: 1.5;
           }
+          
           & .like-label:has(:checked)  {
             fill: var(--color-accent);
             stroke: var(--color-accent);
@@ -322,20 +306,7 @@ body{
           & input {
             display: none;
           }
-          & label > span{
-            font: var(--p-font);
-            font-size: 0.8rem;
-            font-weight: bold;
-          }
-    
         }
-        & button{
-            background-color: transparent;
-            border-width: 0;
-            & :hover{
-                cursor: pointer;
-                opacity: 0.8;
-            }
-        }
+      }
     }
 }
