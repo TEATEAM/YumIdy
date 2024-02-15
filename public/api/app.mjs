@@ -1,6 +1,5 @@
 import path from 'path';
 import express from 'express';
-import cors from 'cors';
 
 import restaurants from './routes/restaurants.mjs';
 import comment from './routes/comment.mjs';
@@ -16,7 +15,6 @@ const port = 3000;
 
 app.use(express.static('public'));
 app.use(express.json());
-app.use(cors());
 
 const __dirname = path.resolve(path.dirname(''));
 const options = {
