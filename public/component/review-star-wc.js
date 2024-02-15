@@ -1,7 +1,6 @@
 class ReviewStarWc extends HTMLElement {
     constructor() {
         super();
-
     }
     connectedCallback() {
       this.rating = this.getAttribute("rating") ?? 0;
@@ -75,7 +74,6 @@ class ReviewStarWc extends HTMLElement {
       }
       this.updateContent();
   }
-    
 }
 
 window.customElements.define('review-star-wc', ReviewStarWc);

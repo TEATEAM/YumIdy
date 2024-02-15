@@ -47,7 +47,6 @@ class ResLiked extends HTMLElement {
 
             const removeBtn = document.createElement('p');
             removeBtn.setAttribute("slot", "remove");
-            // removeBtn.setAttribute("id", "close");
             removeBtn.innerHTML = `&times;`;
 
             resCard.appendChild(removeBtn);
