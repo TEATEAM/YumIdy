@@ -22,18 +22,6 @@ class IdyLikeBtn extends HTMLElement {
             <input name="heart-checkbox" id="heart-checkbox" type="checkbox">
         </label>
         `
-        // this.innerHTML = `
-        // <div class="heart-checkbox">
-        //     <input type="checkbox" id="heart"/>
-        //     <label for="heart"><i class="fa-solid fa-heart"></i></label>
-        // </div>
-        // `;
-        // this.innerHTML = `
-        // <div class="heart-checkbox" id="heart-button">
-        //   <input type="checkbox" id="heart"/>
-        //   <label for="heart"><i class="fa-solid fa-heart"></i></label>
-        // </div>
-        // `;
     }
     // Уг зүрх дээр click дарах үед clickHandler function ажиллана.
     connectedCallback() {
