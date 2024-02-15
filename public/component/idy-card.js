@@ -23,7 +23,7 @@ template.innerHTML = `
         <span class="foodType"></span>
         <review-star-wc class="rating"></review-star-wc>
         </div>
-        <slot name="remove"></slot>
+        <slot name="remove"></slot><!--liked ruu orohod ustgah-->
     </article>
 `
 class IdyCard extends HTMLElement {

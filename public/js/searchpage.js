@@ -15,6 +15,7 @@ class Restaurant {
         this.prices = restaurant.prices;
         this.cuisines = restaurant.cuisines;
         this.dishes = restaurant.dishes;
+        addEventListener("click", (e)=>this.clicked(e));
     }
     //build & return
     render() {
@@ -33,6 +34,9 @@ class Restaurant {
             </article>
         </li>
        `;
+    }
+    clicked(e){
+        window.location.href = `./about.html?id=${this.id}`;
     }
 }
 

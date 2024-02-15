@@ -1,12 +1,18 @@
 class ReviewStarWc extends HTMLElement {
     constructor() {
         super();
-        this.rating = this.getAttribute("rating") ?? 0;
-        this.ratingID = this.getAttribute("ratingID") ?? "default";//ratingid n yund zoriulsan rating star gdgiig ilerhiine
-        this.labelinput = this.getAttribute("labelinput") ?? "";
-        this.class = this.getAttribute("class") ?? "";
-        this.percent = this.rating/5*100;
-        this.innerHTML = `
+
+    }
+    connectedCallback() {
+      this.rating = this.getAttribute("rating") ?? 0;
+      this.ratingID = this.getAttribute("ratingID") ?? "default";//ratingid n yund zoriulsan rating star gdgiig ilerhiine
+      this.labelinput = this.getAttribute("labelinput") ?? "";
+      this.class = this.getAttribute("class") ?? "";
+      this.updateContent();
+    }
+    updateContent() {
+      this.percent = this.rating/5*100;
+      this.innerHTML = `
         <style>
         label{
           font:var(--p-font) ;
@@ -30,25 +36,28 @@ class ReviewStarWc extends HTMLElement {
         `;
     }
     static get observedAttributes() {
-      return ["rating", "ratingID", "labelinput", "class"];
+      return["rating", "ratingID", "labelinput", "class"];
     }
-
-    attributeChangedCallback(name, oldVal, newVal) { 
-      switch(name){
-        case "rating":
-          this.rating = newVal;
-          break;
-        case "ratingID":
-          this.ratingID = newVal;
-          break;
-        case "labelinput":
-          this.labelinput = newVal;
-          break;
-        case "class":
-          this.class = newVal;
-          break;
-      }
-    }
+    // attributeChangedCallback(name, oldVal, newVal) { 
+    //   switch(name){
+    //     case "rating":
+    //       this.rating = newVal;
+    //       break;
+    //     case "ratingID":
+    //       console.log("za nguu ym chin");
+    //       this.ratingID = newVal;
+    //       break;
+    //     case "labelinput":
+    //       this.labelinput = newVal;
+    //       break;
+    //     case "class":
+    //       this.class = newVal;
+    //       break;
+    //       case "percent":
+    //             this.percent = newVal;
+    //             break;
+    //   }
+    // }
     setAttribute(name, newVal){
       switch(name){
         case "rating":
@@ -64,7 +73,8 @@ class ReviewStarWc extends HTMLElement {
           this.class = newVal;
           break;
       }
-    }
+      this.updateContent();
+  }
     
 }
 

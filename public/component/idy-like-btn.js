@@ -44,10 +44,7 @@ class IdyLikeBtn extends HTMLElement {
                 this.clickHandler, 
                 true
             )
-            console.log("like-btn nii call back");
         }
-        
-        console.log("like-btn nii gadnah call back");
     }
 
     // clickHandler function
@@ -68,7 +65,7 @@ class IdyLikeBtn extends HTMLElement {
                     composed: true
                 });
             this.parentElement.dispatchEvent(event);
-            console.log("tsatsagdlaa");
+            console.log("like iin event tsatsagdlaa");
         }
     }
 

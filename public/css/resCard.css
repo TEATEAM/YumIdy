@@ -99,3 +99,53 @@ position: relative;
         margin-right: 0.6rem;
     }
 }
+/* search-card */
+li{
+    list-style: none;
+    & article{
+        background: var(--color-bg-second);
+        border-style: none;
+        border-radius: 30px;
+        width: 100%;
+        height: auto;
+        margin-bottom: 2.4rem;
+        display: grid;
+        grid-template-areas:
+            'img name star heart'
+            'img rank rank rank'
+            'img time time time'
+            'img des des des';
+        align-items: center;
+        & h2 { grid-area: name; width: 20rem; }
+        & .rating { grid-area: star;}
+        & .wishlist { grid-area: heart;}
+        & .rank { grid-area: rank;}
+        & .time { grid-area: time;}
+        & .description { grid-area: des;}
+        & img{
+            width: 12rem;
+            height: 14rem;
+            border-radius: 40px;
+            object-fit: cover; 
+            padding: 1rem;
+            grid-area: img;
+        }
+        & .heart-label {
+            cursor: pointer;
+            fill: none;
+            stroke: var(--color-text);
+            stroke-width: 0.2rem;
+            position: relative;
+            right: -60%;
+            margin-right: 5rem;
+          }
+        & #heart-checkbox {
+        display: none;
+        }
+        & .heart-label:has(:checked) {
+        fill: var(--color-accent);
+        stroke: var(--color-accent);
+        stroke-width: 0.2rem;
+        }
+    }
+}
