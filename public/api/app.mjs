@@ -5,21 +5,22 @@ import cors from 'cors';
 import restaurants from './routes/restaurants.mjs';
 import comment from './routes/comment.mjs';
 
-
+// express js-n jishee bogood routes-s tohiruulj, todorhoildog
 const app = express();
+// Serverees irj bui huseltiig sonsoh portin dugaar.
 const port = 3000;
 const __dirname = path.resolve(path.dirname(''));
 const options = {
     root: path.join(__dirname)
 };
 
-// app.use(cookieParser());
+app.use(cookieParser());
 app.use(express.json());
 app.use(cors());
 
 app.use(express.static('public'));
 
-//Buh res-n medeelliig avah
+// Res-n bvh medeelliig avdag get function 
 app.get('/restaurants', async (req, res) => {
   await restaurants.getRestaurants(req,res);
 });
@@ -42,5 +43,5 @@ app.get('/comments', async (req, res) => {
 app.get('/comments/:id', async(req, res) =>{
   await comment.getCommentByResId(req, res);
 })
-
+// 3000 zam deer ajillaluuhaar tohiruulsan
 app.listen(port, () => console.log(`App listening on port http://localhost:${port}`));

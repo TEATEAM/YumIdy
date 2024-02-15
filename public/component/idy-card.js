@@ -39,7 +39,7 @@ class IdyCard extends HTMLElement {
     }
 
     heartBtnClicked(val){
-        console.log("received");
+        console.log("za yuch bsn irseen");
         
         let Resdata = {
             id: this.getAttribute("id"),
