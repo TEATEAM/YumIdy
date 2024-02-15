@@ -9,8 +9,9 @@ import comment from './routes/comment.mjs';
 import swaggerUi from 'swagger-ui-express';
 import swaggerJsondoc from 'swagger-jsdoc';
 
-
+// express js-n jishee bogood routes-s tohiruulj, todorhoildog
 const app = express();
+// Serverees irj bui huseltiig sonsoh portin dugaar.
 const port = 3000;
 
 app.use(express.static('public'));
@@ -365,5 +366,5 @@ app.get('/comments', async (req, res) => {
 app.get('/comments/:id', async(req, res) =>{
   await comment.getCommentByResId(req, res);
 })
-
+// 3000 zam deer ajillaluuhaar tohiruulsan
 app.listen(port, () => console.log(`App listening on port http://localhost:${port}`));

@@ -2,8 +2,10 @@ import dbRes from "../db/db_res.mjs";
 
 class Restaurants{
     constructor() {
+        // map ni restaurantin talaarh medeelliig hadgaldag.
         this.restaurants = new Map();
     }
+    // HTTP huelt(request) bolon hariu(response) zohitsuulah zorilgotoi async function ni bvh restaurantin medeelel avdaad result variable-d hadgalaad ok statustai res ilgeedeg.
     async getRestaurants(req, res){
         try{
             const result  = await dbRes.selectAllRes();
@@ -14,6 +16,7 @@ class Restaurants{
         }
     }
     async getResById(req, res){
+        // Resid-ыг res.params aas gargaj avdag.
         const resId = req.params.id;
 
         try{

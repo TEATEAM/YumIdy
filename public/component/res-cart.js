@@ -76,9 +76,12 @@ class ResCart extends HTMLElement {
         this.render();
       }
     }
+    // hadgalsan res-ni jagsaaltig localstorag-s gargana
     readFromLocalStorage(){
+      // getItem ni cart keyte0 utgig local-s gargaj parse ni hadgalsan json moriig object bolgon horvuulehed ashigladag.
       const resList = JSON.parse(localStorage.getItem("cart"));
       if(resList !== null){
+        // sergeesen list-r shinchlene  
           this.restaurants = resList;
           this.render()
       }

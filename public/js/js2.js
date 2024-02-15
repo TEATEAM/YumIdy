@@ -70,14 +70,12 @@ function updateURL() {
 
     // Update the URL
     newURL = window.location.origin + window.location.pathname + '?' + params.join('&');
-    history.pushState(null, '', newURL);
     //window.location.href = newURL; 
 }
 // Attach event listeners to checkboxes
 var checkboxes = document.querySelectorAll('input[name="meal[]"], input[name="price[]"], input[name="cuisine[]"], input[name="dish[]"]');
 checkboxes.forEach(function(checkbox) {
     checkbox.addEventListener('change', updateURL);
-    console.log("")
 });
 
 

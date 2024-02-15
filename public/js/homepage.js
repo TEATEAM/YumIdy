@@ -1,16 +1,21 @@
+// ene code ni 3000-ruu get huselt gargahin tuld FetchApi ashiglaj baina.
+// http://localhost:3000/restaurants ug URL-ruu get huselt ehluulne. 
 fetch(`http://localhost:3000/restaurants`).then(response => {
+    // response zugeer baigaa esehiig shalgadag. hervee asuudaltai bol http aldaani medeelel throw hiine.
     if(!response.ok){
         throw new Error(`HTTP error! Status: ${response.status}`);
     }
+    // hervee zugeer bol response-g json bolgon huleej avna.
     const jsonData = response.json();
     return jsonData;
+    // deer baigaa json ogogdliig resData huleej avna.
 }).then(resData => {        
     display(resData);       
 }).catch(error => {
     console.error("Error fetching restaurant details:", error.message);
 })
 
-//Delgerengui medeelliig delgetsleh
+// Delgerengui medeelliig delgetsleh
 function display(resData) {
     console.log(resData[0].stars);
     document.querySelector('.bestR').innerHTML =
@@ -34,7 +39,7 @@ fetch(`http://localhost:3000/comments`).then(response => {
     console.error("Error fetching comment details:", error.message);
 })
 
-//Delgerengui medeelliig delgetsleh
+// Delgerengui medeelliig delgetsleh
 function displayCom(comData) {
     const commentSection = document.querySelector('.recentR');
     var average_rating1 = (comData[0].star1 + comData[0].star2 + comData[0].star3)/3;
