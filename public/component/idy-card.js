@@ -75,6 +75,7 @@ class IdyCard extends HTMLElement {
     }
 
     clicked(e){
+        // ide-like-btn mon esehiig shalgaj baina.
         const isIdyHeartBtn = e.composedPath().includes(this.shadowRoot.querySelector("idy-like-btn"));
 
         if(!isIdyHeartBtn) {

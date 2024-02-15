@@ -14,7 +14,7 @@ const options = {
     root: path.join(__dirname)
 };
 
-app.use(cookieParser());
+// app.use(cookieParser());
 app.use(express.json());
 app.use(cors());
 
