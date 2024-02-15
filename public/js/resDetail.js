@@ -308,7 +308,7 @@ function writeReview(resId){
                         resId: resId,
                     };
                     console.log("fhaha");
-                    fetch('http://localhost:3000/writeReview', {
+                    fetch('http://localhost:3000/writecomment', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
